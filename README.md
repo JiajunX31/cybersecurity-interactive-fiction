@@ -1,1 +1,1 @@
-# step-cybersecurity
+# STEP-cybersecurity
