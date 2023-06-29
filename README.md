@@ -1,1 +1,1 @@
-# STEP-cybersecurity
+# Cybersecurity Interactive Fiction
