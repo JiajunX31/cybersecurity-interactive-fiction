@@ -14,6 +14,7 @@
     "watch:twee": "tweego -o dist/index.html -m src/modules/ --head=\"src/head-content.html\" project -w",
     "testmode:twee": "tweego -o dist/index.html -m src/modules/ --head=\"src/head-content.html\" project -t",
     "build": "npm run compile:src && npm run compile:twee",
+    "rebuild": "npm run build && tweego -d -o dist/index.twee dist/index.html",
     "build:test": "npm run compile:src && npm run testmode:twee"
   },
   "keywords": [
@@ -49,5 +50,7 @@
     "IE >= 9",
     "Opera >= 12"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
