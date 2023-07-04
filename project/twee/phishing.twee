@@ -2,17 +2,20 @@
 Splitting up topics like this can make it easier for organisation.*/
 
 ::  PhishingIntroduction [nobr]
-As you browse through the Messenger group, a video link catches your attention. Curiosity piques your interest, but you remember the importance of staying cautious online. After all, you've learned about the risks of phishing scams. You know that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
+A1, A2, and A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
-As you contemplate your response, you recall the different characters within the group and their online habits. It's crucial to identify who might be most vulnerable to such phishing attempts.
+Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something [[suspect|PhishingTooltip1]] about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
-[[Choose wisely|PhishingChoice]] to protect yourself and your fellow students from potential threats...
+Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a [[bulk-phishing scam|PhishingTooltip2]].
+<br>
+[[A1|A1Choice]], [[A2|A2Choice]], OR [[A3|A3Choice]]
 
-:: PhishingChoice [nobr]
-In no particular order, you try to remember some of the most memorable characters in the group:
-<br>
-[[EMMA|EmmaChoice]]: Incredibly outspoken and the most generous person you'll ever meet, this total social butterfly is always posting and making new friends online.
-<br>
+:: PhishingTooltip1
+Phishing is a way of sending fraudulent e-mails, which contain malicious or no-purpose junk links for fun or to conduct crimes. It can also be done by calling a particular person. It can trick people into giving their personal details like credit card information, and passwords to another individual.
 
-:: EmmaChoice [nobr]
-Insert text here.
+<<return "GO BACK!">>
+
+:: PhishingTooltip2
+Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the ‘prize’.
+
+<<return "GO BACK!">>
