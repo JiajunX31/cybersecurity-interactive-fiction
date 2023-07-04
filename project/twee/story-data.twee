@@ -1,2 +1,8 @@
+:: StoryTitle
+Cybersecurity and You!
+
 :: StoryInit
 <<set $studentIntroduction = []>>
+
+:: Start
+Let's [[start|StudentIntroductions]]!
