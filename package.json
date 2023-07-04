@@ -1,6 +1,6 @@
 {
   "name": "step-cybersecurity",
-  "version": "0.1.0.0",
+  "version": "0.0.1",
   "//": [
     "project structure adopted from: https://github.com/ChapelR/tweego-setup",
     "TODO: add description"
@@ -48,5 +48,6 @@
     "last 10 Firefox versions",
     "IE >= 9",
     "Opera >= 12"
-  ]
+  ],
+  "dependencies": {}
 }

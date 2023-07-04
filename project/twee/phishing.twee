@@ -1,0 +1,18 @@
+/* .twee files are all combined together when compiling to the final HTML file. 
+Splitting up topics like this can make it easier for organisation.*/
+
+::  PhishingIntroduction [nobr]
+As you browse through the Messenger group, a video link catches your attention. Curiosity piques your interest, but you remember the importance of staying cautious online. After all, you've learned about the risks of phishing scams. You know that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
+<br>
+As you contemplate your response, you recall the different characters within the group and their online habits. It's crucial to identify who might be most vulnerable to such phishing attempts.
+<br>
+[[Choose wisely|PhishingChoice]] to protect yourself and your fellow students from potential threats...
+
+:: PhishingChoice [nobr]
+In no particular order, you try to remember some of the most memorable characters in the group:
+<br>
+[[EMMA|EmmaChoice]]: Incredibly outspoken and the most generous person you'll ever meet, this total social butterfly is always posting and making new friends online.
+<br>
+
+:: EmmaChoice [nobr]
+Insert text here.

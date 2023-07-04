@@ -1,5 +1,12 @@
 :: StoryTitle
-Tweego Basic Setup
+Cybersecurity and You
 
 :: Start
-@@#hello;Hello World!@@
+HELLO. This is some basic setup.
+
+GOTO: [[new page|NewPage]].
+
+:: NewPage
+This is a new page called NewPage.
+
+Test out the [[phishing|PhishingIntroduction]] storyline.
