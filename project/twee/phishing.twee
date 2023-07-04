@@ -19,3 +19,12 @@ Phishing is a way of sending fraudulent e-mails, which contain malicious or no-p
 Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the ‘prize’.
 
 <<return "GO BACK!">>
+
+:: A1Choice
+You chose wrong!
+
+:: A2Choice
+You chose correctly!
+
+:: A3Choice
+You chose wrong!
