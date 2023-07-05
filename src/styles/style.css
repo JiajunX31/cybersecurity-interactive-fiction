@@ -1,11 +1,7 @@
 body {
   background-color: #d6d6d6;
-}
 
-span {
-  color: #d6d6d6;
 }
-
 
 /*UI-BAR*/
 #ui-bar {
@@ -158,4 +154,15 @@ i {
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.macro-cycle::before {
+	content: "\e826\00a0";
+	font-family: tme-fa-icons;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
 }

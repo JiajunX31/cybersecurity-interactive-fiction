@@ -2,13 +2,19 @@
 Splitting up topics like this can make it easier for organisation.*/
 
 ::  PhishingIntroduction [nobr]
-A1, A2, and A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
+$A1, $A2, and $A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
 Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something [[suspect|PhishingTooltip1]] about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
-Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a [[bulk-phishing scam|PhishingTooltip2]].
+Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a [[bulk-phishing scam|PhishingTooltip2]]:
 <br>
-[[A1|BulkPhishingChoice][$Bulk = "A1"]], [[A2|BulkPhishingChoice][$Bulk = "A2"]], OR [[A3|BulkPhishingChoice][$Bulk = "A3"]]
+<<cycle "$Bulk">>
+    <<option "$A1" A1>>
+    <<option "$A2" A1>>
+    <<option "$A3" A1>>
+<</cycle>>
+<br>
+Once you've made your choice, let's [[turn the page|BulkPhishingChoice]]...
 
 :: PhishingTooltip1
 Phishing is a way of sending fraudulent e-mails, which contain malicious or no-purpose junk links for fun or to conduct crimes. It can also be done by calling a particular person. It can trick people into giving their personal details like credit card information, and passwords to another individual.
@@ -16,7 +22,7 @@ Phishing is a way of sending fraudulent e-mails, which contain malicious or no-p
 <<return "GO BACK!">>
 
 :: PhishingTooltip2
-Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the ‘prize’.
+Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the 'prize'.
 
 <<return "GO BACK!">>
 
@@ -32,50 +38,61 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 <br>
 [Insert brilliant text here, explaining that A2 is the most vulnerable and why.]
 <br>
-A2: ...hey! I'm not sure that I can really deny it, but do you have to call me out like that?!
+$A2: ...hey! I'm not sure that I can really deny it, but do you have to call me out like that?!
 <br>
-A1: Yeah, yeah. Anyways. I’ve got to go and check my [[emails|SpearPhishingIntroduction]], matriculation is really complicated and I don’t want to mess anything up. 
+$A1: Yeah, yeah. Anyways. I've got to go and check my [[emails|SpearPhishingIntroduction]], matriculation is really complicated and I don't want to mess anything up. 
 
 :: SpearPhishingIntroduction [nobr]
 
-While A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password [[promptly|SpearTooltip1]]. What [[red flags|SpearTooltip2]] can you spot in this situation?
-
+While $A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password [[promptly|SpearTooltip1]]. What [[red flags|SpearTooltip2]] can you spot in this situation?
+<br>
 <<include "SpearCycle">>
-
-A1: Oh wow, all of these emails look really suspicious for some reason. Better not actually give them my password! 
-
+<br>
+$A1: Oh wow, all of these emails look really suspicious for some reason. Better not actually give them my password! 
+<br>
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
-:: SpearCycle
+:: SpearCycle [nobr]
 The first email's suspicious because...
-<<<<silently>>
-    <<cycle $email1Answer>>
-        <<option "its got a weird logo." 1>>
-        <<option "it's trying to pressure me!" 2>>
-        <<option "it has awful formatting." 3>>
-        <<option "it has terrible grammar and spelling!" 4>>
-        <<option "it's generic." 5>>
-    <</cycle>>
-<</silently>>>>
-
+<<cycle "$email1Answer">>
+    <<option "its got a weird logo." 1>>
+    <<option "it's trying to pressure me!" 2>>
+    <<option "it has awful formatting." 3>>
+    <<option "it has terrible grammar and spelling!" 4>>
+    <<option "it's generic." 5>>
+<</cycle>>
+<br>
 And the second email's weird because...
-<<<<silently>>
-    <<cycle $email1Answer>>
-        <<option "its got a silly logo." 1>>
-        <<option "it's trying to rush me!" 2>>
-        <<option "its formatted oddly." 3>>
-        <<option "obviously nobody spellchecked it." 4>>
-        <<option "it reads like really bad automail." 5>>
-    <</cycle>>
-<</silently>>>>
-
+<<cycle "$email2Answer">>
+    <<option "its got a silly logo." 1>>
+    <<option "it's trying to rush me!" 2>>
+    <<option "its formatted oddly." 3>>
+    <<option "obviously nobody spellchecked it." 4>>
+    <<option "it reads like really bad automail." 5>>
+<</cycle>>
+<br>
 Finally, the third email's suspicious because...
-<<<<silently>>
-    <<cycle $email1Answer>>
-        <<option "its got a grainy logo." 1>>
-        <<option "it's trying to hurry me up!" 2>>
-        <<option "its got really odd formatting." 3>>
-        <<option "it has terrible grammar and spelling!" 4>>
-        <<option "it's obviously not specifically for me." 5>>
-    <</cycle>>
-<</silently>>>>
+<<cycle "$email3Answer">>
+    <<option "its got a grainy logo." 1>>
+    <<option "it's trying to hurry me up!" 2>>
+    <<option "its got really odd formatting." 3>>
+    <<option "it has terrible grammar and spelling!" 4>>
+    <<option "it's obviously not specifically for me." 5>>
+<</cycle>>
+
+:: SpearPhishingChoice [nobr]
+<<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
+Luckily, $A1 has much better instincts than you.
+<br>
+$A1: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
+<<else>>
+$A1: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
+<</if>>
+<br>
+$A3: Eh? Who are you talking to? Why're you turned to the side like you're a TV game show host?
+<br>
+$A1: The audience. Duh. Now, for a smooth [[transition|AirdropIntroduction]]...
+
+:: AirdropIntroduction [nobr]
+
+[oops! 404!]

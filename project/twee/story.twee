@@ -2,27 +2,27 @@
 The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away for home for the school year...
 <br>
 <<if $studentIntroduction.includes("A1")>>
-    [[ARCHETYPE 1|A1]] - an international first year student studying anthropology. They're excited to be here!
+    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology. They're excited to be here!
 <<else>>
-    [[ARCHETYPE 1|A1]] - an international first year student studying anthropology.
+    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A2")>>
-    [[ARCHETYPE 2|A2]] - an international third year student studying psychology. Probably the one most likely to be YOUR boss after uni.
+    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology. Probably the one most likely to be YOUR boss after uni.
 <<else>>
-    [[ARCHETYPE 2|A2]] - an international third year student studying psychology.
+    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A3")>>
-    [[ARCHETYPE 3|A3]] - a domestic second year student studying computer science. Did you know that they've been coding since they were three, in a cave with a box of scraps?
+    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science. Did you know that they've been coding since they were three, in a cave with a box of scraps?
 <<else>>
-    [[ARCHETYPE 3|A3]] - a domestic second year student studying computer science.
+    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A4")>>
-    [[ARCHETYPE 4|A4]] - a x year student studying xxx. And that's all you're going to know. What are you, a cop?
+    [[$A4.toUpperCase()|A4]] - a x year student studying xxx. And that's all you're going to know. What are you, a cop?
 <<else>>
-    [[ARCHETYPE 4|A4]] - a x year student studying xxx.
+    [[$A4.toUpperCase()|A4]] - a x year student studying xxx.
 <</if>>
 <br>
 <br>
@@ -34,7 +34,8 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 
 :: A1 [nobr]
 <<set $studentIntroduction.pushUnique("A1")>>
-GIVEN_NAME SURNAME
+<<print $A1.toUpperCase()>>
+<br>
 <br>
 This is their first time away from home in a completely new country, but they're super excited to start studying once the semester starts! Although they're quite active online and have already organised a group chat for the incoming anthropology students, 'cybersecurity' is just a 13 letter word to them. In their own words: "I'm just no good with computers..."
 <br>
@@ -44,7 +45,8 @@ But university is a time and place for pushing new boundaries and opening up new
 
 :: A2 [nobr]
 <<set $studentIntroduction.pushUnique("A2")>>
-GIVEN_NAME SURNAME
+<<print $A2.toUpperCase()>>
+<br>
 <br>
 This is their third year at the University of St Andrews and everything's now pretty much routine. A high-flyer, both inside and outside of the classroom, cybersecurity just isn't really that much of an issue. They have much more important stuff to focus on, like applying for internships, emailing staff, attending all the freshers events, and keeping their thousands of followers up-to-date! Having that many friends is hard work after all!
 <br>
@@ -54,7 +56,8 @@ But all of that routine may come crashing down at any moment, especially if they
 
 :: A3 [nobr]
 <<set $studentIntroduction.pushUnique("A3")>>
-GIVEN_NAME SURNAME
+<<print $A3.toUpperCase()>>
+<br>
 <br>
 As a CS student who's in their second year at university, 'cybersecurity' is a 13 letter word that's gotten really, really old. It's part of their lectures, it's part of their coursework, and at this rate it's going to be a part of their dreams. Lay off already--they already know how to keep themselves safe online. In any case, they're hoping to score a part-time job this year now that they've sort of gotten into the groove of university life--bills are hard to pay, you know!
 <br>
@@ -64,7 +67,8 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 
 :: A4 [nobr]
 <<set $studentIntroduction.pushUnique("A4")>>
-GIVEN_NAME SURNAME
+<<print $A4.toUpperCase()>>
+<br>
 <br>
 Attending remotely this year for personal reasons.
 <br>
