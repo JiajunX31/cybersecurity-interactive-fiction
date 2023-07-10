@@ -6,7 +6,7 @@ Cybersecurity and You!
 {
 	"ifid": "AFD3B0CA-1649-4127-AF2C-40698CE9EA90",
 	"format": "SugarCube",
-	"format-version": "2.30.0",
+	"format-version": "2.36.1",
 	"start": "Start",
 	"zoom": 1
 }
@@ -23,7 +23,7 @@ Cybersecurity and You!
 :: PhishingIntroduction [nobr] {"position":"100,100","size":"100,100"}
 $A1, $A2, and $A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
-Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something [[suspect|PhishingTooltip1]] about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
+Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something [[suspicious|PhishingTooltip1]] about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
 Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a [[bulk-phishing scam|PhishingTooltip2]]:
 <br>
@@ -77,7 +77,7 @@ Once you've finished figuring out what exactly makes these emails so untrustwort
 :: SpearCycle [nobr] {"position":"725,100","size":"100,100"}
 The first email's suspicious because...
 <<cycle "$email1Answer">>
-    <<option "its got a weird logo." 1>>
+    <<option "it's got a weird logo." 1>>
     <<option "it's trying to pressure me!" 2>>
     <<option "it has awful formatting." 3>>
     <<option "it has terrible grammar and spelling!" 4>>
@@ -86,18 +86,18 @@ The first email's suspicious because...
 <br>
 And the second email's weird because...
 <<cycle "$email2Answer">>
-    <<option "its got a silly logo." 1>>
+    <<option "it's got a silly logo." 1>>
     <<option "it's trying to rush me!" 2>>
-    <<option "its formatted oddly." 3>>
+    <<option "it's formatted oddly." 3>>
     <<option "obviously nobody spellchecked it." 4>>
     <<option "it reads like really bad automail." 5>>
 <</cycle>>
 <br>
 Finally, the third email's suspicious because...
 <<cycle "$email3Answer">>
-    <<option "its got a grainy logo." 1>>
+    <<option "it's got a grainy logo." 1>>
     <<option "it's trying to hurry me up!" 2>>
-    <<option "its got really odd formatting." 3>>
+    <<option "it's got really odd formatting." 3>>
     <<option "it has terrible grammar and spelling!" 4>>
     <<option "it's obviously not specifically for me." 5>>
 <</cycle>>
