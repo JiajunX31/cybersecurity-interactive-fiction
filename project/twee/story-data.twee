@@ -3,10 +3,10 @@ Cybersecurity and You!
 
 :: StoryInit
 <<set $studentIntroduction = []>>
-<<set $A1 to "Hana">>
-<<set $A2 to "Haoran">>
-<<set $A3 to "Noah">>
-<<set $A4 to "Robin">>
+<<set $A1 to "A1">>
+<<set $A2 to "A2">>
+<<set $A3 to "A3">>
+<<set $A4 to "A4">>
 
 :: Start
 Let's [[start|StudentIntroductions]]!
