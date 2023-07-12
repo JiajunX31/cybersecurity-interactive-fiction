@@ -166,3 +166,11 @@ i {
 	line-height: 1;
 	speak: none;
 }
+
+#menu{
+  margin-bottom: none;
+}
+
+#menu-core {
+	display: none;
+}
