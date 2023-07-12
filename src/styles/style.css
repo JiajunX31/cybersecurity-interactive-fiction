@@ -2,7 +2,7 @@
 
 body {
   background-color: #d6d6d6;
-  height: 100dvh; /* for mobile compatibility */
+  height: 100dvh; /* dvh and dvw for mobile compatibility */
   width: 100dvw;
 }
 
@@ -15,10 +15,8 @@ body {
 /*--------------------*/
 /*       UI-BAR       */
 /*--------------------*/
-/* N.B. the ui bar is removed in script.js */
 #ui-bar {
   background-color: #007dc5;
-  display: none;
 }
 
 #ui-dialog-title {
@@ -27,25 +25,22 @@ body {
   font-size: 1.5em;
   text-align: center;
   text-transform: uppercase;
-  display:none;
 }
 
 #ui-dialog-body {
   background-color: #d6d6d6;
   font-family: 'EB Garamond', 'Newsreader', 'Crimson Text', serif;
   font-size: 1.2em;
-  display:none;
 }
 
- #ui-dialog-titlebar {
+#ui-dialog-titlebar {
   font-family: 'Vollkorn SC', 'Crimson Text', serif;  
   padding: .2em 3.5em .2em 7em;
-  display:none;
 }
 
 #sidebar {
   color: #d6d6d6;
-  display: none;
+  margin: 0 !important;
 }
 
 ul {
@@ -120,24 +115,49 @@ a.link-internal:hover{
 /*      PASSAGE       */
 /*--------------------*/
 #story {
-  margin: 0;
+  margin: 0 !important; /* override margin in ui-bar.css (built-in) */
   width: 100%;
   height: 100%;
+
+  /* Center children (i.e. #passages) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -3em; /* position slightly higher than centre */
 }
 
 #passages {
-  margin: 0;
-  width: 100%;
-  height: 100%;
+  /* use nvl textbox as default for passages */
   max-width: none; /* this is important */
+  margin: auto;
+  width: 75%;
+  height: 75%; /* ideally I would like max(75%, auto) but it doesn't work... */
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+/* responsive for smaller laptop or mobile screens*/
+@media screen and (max-width: 1600px) {
+  #story {
+    top: 0;
+  }
+  #passages {
+    height: auto;
+    max-height: none;
+  }
+}
+@media screen and (max-height: 600px) {
+  #story {
+    top: 0;
+  }
 }
 
 .passage {
-  width: 100%; /* not sure why this doesn't inherit from #passages */
-  height: 100%;
   font-size: 2em;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-  color: #202024;
+  color: #ffffff;
   line-height: 1.5em;
 }
 
@@ -252,27 +272,3 @@ But you're sure it's there.
   }
 }
 */
-
-.container {
-  /* Center child */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*flex-direction: column;*/
-  height: 100%;
-}
-
-.boxnvl {
-  margin: auto;
-  width: 70dvw;
-  height: 70dvh;
-  padding: 2em;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-
-
-
-

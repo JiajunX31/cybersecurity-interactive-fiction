@@ -12,4 +12,4 @@ $(document).on(":passagerender", function (event) {
 	}
 });
 
-UIBar.destroy(); /* remove the ui sidebar */
+Config.ui.stowBarInitially = true;
