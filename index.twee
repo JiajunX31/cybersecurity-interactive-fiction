@@ -17,7 +17,7 @@ Cybersecurity and You!
 
 
 :: Story JavaScript [script]
-"use strict";Config.cleanupWikifierOutput=!0,$(document).on(":passagerender",(function(t){var n=$(t.content).find(".macro-cycle");n.length&&(n.attr("aria-label",(function(t){return"(click to change) "+$(this).text()})),n.on("click",(function(t){$(this).find("p").contents().unwrap(),$(this).attr("aria-label","(click to change) "+$(this).text())})))}));
+"use strict";Config.cleanupWikifierOutput=!0,$(document).on(":passagerender",(function(t){var n=$(t.content).find(".macro-cycle");n.length&&(n.attr("aria-label",(function(t){return"(click to change) "+$(this).text()})),n.on("click",(function(t){$(this).find("p").contents().unwrap(),$(this).attr("aria-label","(click to change) "+$(this).text())})))})),$(document).on(":passagestart",(function(t){t.passage.tags.includes("noreturn")||(State.variables.return=t.passage.title)}));
 
 
 :: PhishingIntroduction [nobr] {"position":"100,100","size":"100,100"}
@@ -176,7 +176,7 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A4")>>
-    [[$A4.toUpperCase()|A4]] - a x year student studying xxx. And that's all you're going to know.<br>What are you, a cop?
+    [[$A4.toUpperCase()|A4]] - a x year student studying xxx.<br>And that's all you're going to know. What are you, a cop?
 <<else>>
     [[$A4.toUpperCase()|A4]] - a x year student studying xxx.
 <</if>>
@@ -189,7 +189,7 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <</if>>
 
 
-:: A1 [nobr] {"position":"475,225","size":"100,100"}
+:: A1 [noreturn nobr] {"position":"475,225","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A1")>>
 <<print $A1.toUpperCase()>>
 <br>
@@ -201,7 +201,7 @@ But university is a time and place for pushing new boundaries and opening up new
 <<return "GO BACK">>
 
 
-:: A2 [nobr] {"position":"600,225","size":"100,100"}
+:: A2 [noreturn nobr] {"position":"600,225","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A2")>>
 <<print $A2.toUpperCase()>>
 <br>
@@ -213,7 +213,7 @@ But all of that routine may come crashing down at any moment, especially if they
 <<return "GO BACK">>
 
 
-:: A3 [nobr] {"position":"725,225","size":"100,100"}
+:: A3 [noreturn nobr] {"position":"725,225","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A3")>>
 <<print $A3.toUpperCase()>>
 <br>
@@ -225,7 +225,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <<return "GO BACK">>
 
 
-:: A4 [nobr] {"position":"850,225","size":"100,100"}
+:: A4 [noreturn nobr] {"position":"850,225","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A4")>>
 <<print $A4.toUpperCase()>>
 <br>
