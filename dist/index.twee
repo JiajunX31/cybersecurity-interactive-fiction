@@ -29,8 +29,8 @@ Which character do you think would be most at risk? As you contemplate your resp
 <br>
 <<cycle "$Bulk">>
     <<option "$A1" A1>>
-    <<option "$A2" A1>>
-    <<option "$A3" A1>>
+    <<option "$A2" A2>>
+    <<option "$A3" A3>>
 <</cycle>>
 <br>
 Once you've made your choice, let's [[turn the page|BulkPhishingChoice]]...
