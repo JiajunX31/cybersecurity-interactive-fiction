@@ -11,3 +11,9 @@ $(document).on(":passagerender", function (event) {
 		});
 	}
 });
+
+$(document).on(':passagestart', function (ev) {
+	if (!ev.passage.tags.includes('noreturn')) {
+		State.variables.return = ev.passage.title;
+	}
+});
