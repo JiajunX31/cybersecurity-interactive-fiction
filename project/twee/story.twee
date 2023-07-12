@@ -1,4 +1,5 @@
 :: StudentIntroductions [nobr]
+<div class='container'> <div class='boxnvl'>
 The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away for home for the school year...
 <br>
 <<if $studentIntroduction.includes("A1")>>
@@ -31,8 +32,10 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <<else>>
     To move on with the story, maybe you should get to know all of our main characters?
 <</if>>
+</div> </div>
 
 :: A1 [nobr]
+<div class='container'> <div class='boxnvl'>
 <<set $studentIntroduction.pushUnique("A1")>>
 <<print $A1.toUpperCase()>>
 <br>
@@ -42,8 +45,10 @@ This is their first time away from home in a completely new country, but they're
 But university is a time and place for pushing new boundaries and opening up new horizons! Will they be able to prove that self-defeating, horribly limiting, characterisation wrong? Find out, next time in 'CYBERSECURITY AND YOU'!
 <br>
 <<return "GO BACK">>
+</div> </div>
 
 :: A2 [nobr]
+<div class='container'> <div class='boxnvl'>
 <<set $studentIntroduction.pushUnique("A2")>>
 <<print $A2.toUpperCase()>>
 <br>
@@ -53,8 +58,10 @@ This is their third year at the University of St Andrews and everything's now pr
 But all of that routine may come crashing down at any moment, especially if they continue to be so lacksadaisical about their safety online...
 <br>
 <<return "GO BACK">>
+</div> </div>
 
 :: A3 [nobr]
+<div class='container'> <div class='boxnvl'>
 <<set $studentIntroduction.pushUnique("A3")>>
 <<print $A3.toUpperCase()>>
 <br>
@@ -64,8 +71,10 @@ As a CS student who's in their second year at university, 'cybersecurity' is a 1
 But in their quest to get some electricity-gas-and-water money, will they find something more sinister instead?
 <br>
 <<return "GO BACK">>
+</div> </div>
 
 :: A4 [nobr]
+<div class='container'> <div class='boxnvl'>
 <<set $studentIntroduction.pushUnique("A4")>>
 <<print $A4.toUpperCase()>>
 <br>
@@ -73,3 +82,4 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 Attending remotely this year for personal reasons.
 <br>
 <<return "GO BACK">>
+</div> </div>

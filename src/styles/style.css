@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
 body {
   background-color: #d6d6d6;
-
+  height: 100dvh; /* for mobile compatibility */
+  width: 100dvw;
 }
 
-/*UI-BAR*/
+* {
+  box-sizing: border-box; /* takes padding and margins into account; no scrollbars*/
+}
+
+
+
+/*--------------------*/
+/*       UI-BAR       */
+/*--------------------*/
+/* N.B. the ui bar is removed in script.js */
 #ui-bar {
   background-color: #007dc5;
+  display: none;
 }
 
 #ui-dialog-title {
@@ -14,26 +27,31 @@ body {
   font-size: 1.5em;
   text-align: center;
   text-transform: uppercase;
+  display:none;
 }
 
 #ui-dialog-body {
   background-color: #d6d6d6;
   font-family: 'EB Garamond', 'Newsreader', 'Crimson Text', serif;
   font-size: 1.2em;
+  display:none;
 }
 
  #ui-dialog-titlebar {
   font-family: 'Vollkorn SC', 'Crimson Text', serif;  
   padding: .2em 3.5em .2em 7em;
+  display:none;
 }
 
 #sidebar {
   color: #d6d6d6;
+  display: none;
 }
 
 ul {
   list-style: none;
   text-align: center;
+  margin: 0 !important;
 }
 
 h1#story-title {
@@ -65,8 +83,13 @@ h1#story-title {
   font-family: 'Vollkorn SC', serif;
 }
 
-/*menu*/
 
+
+/*--------------------*/
+/*        menu        */
+/*--------------------*/
+
+/*
 a.link-internal{
   color: #007dc5;
 }
@@ -90,12 +113,31 @@ a.link-internal:hover{
 #menu #menu-core {
   margin-top: 1em;
 }
+*/
 
-/*PASSAGE*/
+
+/*--------------------*/
+/*      PASSAGE       */
+/*--------------------*/
+#story {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#passages {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none; /* this is important */
+}
+
 .passage {
-  font-family: 'EB Garamond', 'Newsreader', 'Crimson Text', serif;
+  width: 100%; /* not sure why this doesn't inherit from #passages */
+  height: 100%;
   font-size: 2em;
-  color: #231f20;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  color: #202024;
   line-height: 1.5em;
 }
 
@@ -128,6 +170,12 @@ i {
   color: #c60c46;
   text-decoration: none;
 }
+
+
+
+/*--------------------*/
+/*      TOOLTIPS      */
+/*--------------------*/
 
 /* Tooltip container */
 .tooltip {
@@ -166,3 +214,65 @@ i {
 	line-height: 1;
 	speak: none;
 }
+
+
+
+/*--------------------*/
+/*        test        */
+/*--------------------*/
+
+
+/*
+myriad pro and sans serif font family:
+
+font-family: 'Myriad-Pro', 'Arial', sans-serif;
+*/
+
+
+/*
+css above, html below (can put directly into twee file)
+
+.aliens:hover {
+  opacity: 0;
+  transition: 1s all ease;
+ }
+
+<br>
+There is a spooky UFO in the sky.
+<br>
+<div class="aliens">When you look at it, it disappears.</div>
+<br>
+But you're sure it's there.
+*/
+
+/*
+@media(min-width:750px) {
+  .W\(30\%\)--sm {
+    width: 30%;
+  }
+}
+*/
+
+.container {
+  /* Center child */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+  height: 100%;
+}
+
+.boxnvl {
+  margin: auto;
+  width: 70dvw;
+  height: 70dvh;
+  padding: 2em;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
