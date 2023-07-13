@@ -45,26 +45,3 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 
 :: Start
 Let's [[start|StudentIntroductions]]!
-
-:: StoryCaption [nobr]
-<<if $studentIntroduction.includesAny("A1", "A2", "A3", "A4")>>
-    CHARACTER LIST
-<</if>>
-
-:: StoryMenu [nobr]
-
-<<if $studentIntroduction.includes("A1")>>
-    [[$A1.toUpperCase()|A1]]
-<</if>>
-<<if $studentIntroduction.includes("A2")>>
-    [[$A2.toUpperCase()|A2]]
-<</if>>
-<<if $studentIntroduction.includes("A3")>>
-    [[$A3.toUpperCase()|A3]]
-<</if>>
-<<if $studentIntroduction.includes("A4")>>
-    [[$A4.toUpperCase()|A4]]
-<</if>>
-
-
-    
