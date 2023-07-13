@@ -3,19 +3,19 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <br>
 <br>
 <<if $studentIntroduction.includes("A1")>>
-    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>They're excited to be here!
+    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>They're excited to be here!<br>
 <<else>>
     [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A2")>>
-    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.
+    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
 <<else>>
     [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A3")>>
-    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?
+    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
 <<else>>
     [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.
 <</if>>
