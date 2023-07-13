@@ -43,25 +43,28 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 
 :: BulkPhishingChoice [nobr]
 <<if $Bulk == "A1">>
-    You chose wrong!
+    Not quite!
 <<elseif $Bulk == "A2">>
     You chose correctly!
 <<elseif $Bulk == "A3">>
-    You chose wrong!
+    Not quite!
 <</if>>
 <br>
 <br>
-[Insert brilliant text here, explaining that A2 is the most vulnerable and why.]
+$A2 would be the most vulnerable to a bulk-phishing attack on social media because they have a large online following, making them more exposed, with plenty of data to use in an attack. They're more likely to befriend strangers and be exposed to compromised accounts. Their popularity and busy schedule may lead to a lack of focus on cybersecurity, making them more susceptible. If large amounts of personal data are available, spear-phishing attacks could also be effective.
 <br>
 <br>
-$A2: ...hey! I'm not sure that I can really deny it, but do you have to call me out like that?!
+$A3: Just so you guys know, there is a compromised account on the Messenger group posting a dodgy link—don't click it.
 <br>
 <br>
-$A1: Yeah, yeah. Anyways. I've got to go and check my [[emails|SpearPhishingIntroduction]], matriculation is really complicated and I don't want to mess anything up. 
+$A2: Yeah, I was caught out by one of those before—what a nightmare. The one I clicked on said “it looks like someone you know was in this crash”. I just clicked it out of curiosity and panic. It took me to a new login screen, and I put in all my details—next thing you know, the account is compromised and all my friends are being sent the same message.
+<br>
+<br>
+$A1: Oh wow, I almost clicked on that! Also be right back, I have [[matriculation emails|SpearPhishingIntroduction]] to attend to!
 
 
 :: SpearPhishingIntroduction [nobr]
-While $A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password [[promptly|SpearTooltip1]]. What [[red flags|SpearTooltip2]] can you spot in this situation?
+While $A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password <<link"promptly">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip1");Dialog.wiki(Story.get("SpearTooltip1").processText());Dialog.open();<</script>><</link>>. What <<link"red flags">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip2");Dialog.wiki(Story.get("SpearTooltip2").processText());Dialog.open();<</script>><</link>> can you spot in this situation?
 <br>
 <br>
 <<include "SpearCycle">>
@@ -100,6 +103,12 @@ Finally, the third email's suspicious because...
     <<option "it's obviously not specifically for me." 5>>
 <</cycle>>
 
+:: SpearTooltip1
+Spear-phishing attacks are done to target a specific individual. The most common attacks ask for a one-time-password mostly from senior citizens or teenagers, giving strangers access to their accounts.
+
+:: SpearTooltip2
+Look out for the following: quality of company logo, presence of unique information, use of a pressuring/threatening tone, bad or irregular formatting, poor grammar/spelling, if the email address corresponds with the address the sender is claiming to be (check if possible).
+
 :: SpearPhishingChoice [nobr]
 <<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
 Luckily, $A1 has much better instincts than you.
@@ -114,7 +123,56 @@ $A1: Hey, you've got everything right! Looks like you're as good as me when it c
 $A3: Eh? Who are you talking to? Why're you turned to the side like you're a TV game show host?
 <br>
 <br>
-$A1: The audience. Duh. Now, for a smooth [[transition|AirdropIntroduction]]...
+$A1: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
 
-:: AirdropIntroduction [nobr]
-[oops! 404!]
+:: FilesharingIntroduction [nobr]
+As $A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions $A3 might take is the most likely to protect their online activity?
+<br><br>
+<<cycle "$fileshare1">>
+    <<option "Before memes, $A3 decides to double-check that their drink purchase made it through and they haven't accidentally defrauded The Union. So, they open up their banking app." 1>>
+    <<option "Instead of trusting the public Wi-Fi, they decide to go overboard and use the VPN their mom insisted that they download before uni. Ugh. What a pain. But being nagged is more annoying." 2>>
+    <<option "Bored, $A3 checks their social media accounts and posts to the society's Twitter page 'where are you guys?' without any privacy settings." 3>>
+<</cycle>>
+<br><br>
+Then, $A3 faces the [[consequences of their actions|FilesharingChoice1]]!
+
+:: FilesharingTooltip1
+Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
+
+:: FilesharingTooltip2
+VPN (Virtual Private Network): A technology that creates a secure and encrypted connection over a public network, such as the internet, providing anonymity for users, usually comes at an extra financial cost. 
+
+:: FilesharingChoice1 [nobr]
+<<if $fileshare1 eq 2>>
+No consequences! $A3 has successfully escaped the gauntlet and only needs to face the smug attitude of their mother, who has once again, been proven to be entirely correct.
+<<else>>
+<<if $fileshare1 eq 1>>Dire consequences! Alas, $A3 has run the risk of exposing their banking details to all and sundry!<<elseif $fileshare1 eq 2>>Medium consequences!<</if>>
+<br><br>
+They should've probably used a VPN, which provides a secure and encrypted connection over a public Wi-Fi network. Using an unencrypted public Wi-Fi network to access financial data carries huge risk. Namely, malicious actors can easily and silently intercept the connection and see the data you are providing. A VPN puts a private server between you and the destination, meaning all the data gets filtered through the private server and encrypted. That means, data you enter over the public Wi-Fi network will now be indecipherable.
+<</if>>
+<br><br><center>...</center><br><br>
+$A3 realises that the society meeting was actually two hours ago. Oops! <<if $fileshare1 eq 2>>They might have remembered to use a VPN, but that isn't really worth much if they're missing entire meetings!<</if>> In a great stroke of luck, they see $A1 and $A2 passing by and wave them over. 
+<br><br>
+$A3: Hey guys, society meeting got cancelled… 
+<br><br>
+$A1: Oh, why?
+<br><br>
+$A3, lying: Dunno. I think something to do with the speaker double-booking with another uni…
+<br><br>
+$A2: That's no good, they should've told you in advance! How long were you even waiting? You should email a complaint.
+<br><br>
+$A3: Let's just forget it. I didn't wait too long anyway. Look, just sit down, alright? Tell me about your Fresher's week so far.
+<br><br>
+Just then, $A1 receives a pop-up notification on their device saying, "Wi-Fi connection available. Connect now!". Please select the option that is the best action for $A1 to take.
+<br><br>
+<<cycle "$fileshare2">>
+    <<option "$A1 connects to the Wi-Fi network without hesitation, assuming it's safe to do so." 1>>
+    <<option "$A1 investigates the legitimacy of the Wi-Fi network by checking with Main Bar's staff or looking for official signage." 2>>
+    <<option "$A1 ignores the notification and continues using their mobile data for internet access." 3>>
+<</cycle>>
+<br><br>
+$A1: Just a sec, gotta [[check my emails|FilesharingChoice2]].
+
+:: FilesharingChoice2 [nobr]
+
+404!

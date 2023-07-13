@@ -142,9 +142,11 @@ a[disabled]{
 /*--------------------*/
 /*      PASSAGE       */
 /*--------------------*/
+
 #story {
-  margin: 0 !important; /* override margin in ui-bar.css (built-in) */
-  width: 100%;
+  /* margin: 0 !important; override margin in ui-bar.css (built-in) */
+  /* width: 100%; */
+  /* above was commented out because if left in, caused the sidebar to overlap with the passages. presumably, this was not the intended design. */
   height: 100%;
 
   /* Center children (i.e. #passages) */
@@ -155,6 +157,7 @@ a[disabled]{
   top: -3em; /* position slightly higher than centre */
 }
 
+
 #passages {
   /* use nvl textbox as default for passages */
   max-width: none; /* this is important */
@@ -164,6 +167,7 @@ a[disabled]{
   padding: 2em;
   background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
+  position: relative;
 }
 
 /* responsive for smaller laptop or mobile screens*/
@@ -325,8 +329,4 @@ But you're sure it's there.
   color: #BF76BE;
   color: #BF9B76;
 }
-
-
-
-
 
