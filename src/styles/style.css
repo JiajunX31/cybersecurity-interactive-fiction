@@ -15,26 +15,28 @@ body {
 /*--------------------*/
 /*       UI-BAR       */
 /*--------------------*/
-#ui-bar {
-  background-color: #007dc5;
+#ui-bar { /* the actual sidebar */
+  background-color: #00539b;
 }
 
 #ui-dialog-title {
   margin-left: 10%;
   padding: .5em 3.5em .2em 0em;
-  font-size: 1.5em;
+  font-size: 1.7em;
   text-align: center;
   text-transform: uppercase;
 }
 
-#ui-dialog-body {
-  background-color: #d6d6d6;
-  font-family: 'EB Garamond', 'Newsreader', 'Crimson Text', serif;
+#ui-dialog-body { /* dialog popup menu (e.g. saves, restart) */
+  background-color: #dedede;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  color: #202024;
   font-size: 1.2em;
 }
 
 #ui-dialog-titlebar {
-  font-family: 'Vollkorn SC', 'Crimson Text', serif;  
+  background-color: #00539b;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   padding: .2em 3.5em .2em 7em;
 }
 
@@ -42,6 +44,8 @@ body {
   color: #d6d6d6;
   margin: 0 !important;
 }
+
+/* story */
 
 ul {
   list-style: none;
@@ -66,7 +70,7 @@ h1#story-title {
 
 .special_subtitle {
  font-family: 'TYPEWRITER', serif; 
- font-size: 100%
+ font-size: 100%;
 }
 
 #story-caption {
@@ -84,7 +88,6 @@ h1#story-title {
 /*        menu        */
 /*--------------------*/
 
-/*
 a.link-internal{
   color: #007dc5;
 }
@@ -107,8 +110,33 @@ a.link-internal:hover{
 
 #menu #menu-core {
   margin-top: 1em;
+  display: none; /* remove default menu items */
+}
+
+/*
+not sure why this doesn't work
+
+#menu-story li a:disabled {
+	color: #444;
+	background-color: transparent;
+	border-color: #444;
+}
+
+#menu li a:disabled {
+	color: #444;
+	background-color: transparent;
+	border-color: #444;
 }
 */
+
+/* had to apply deactivated look to all disabled hyperlinks*/
+a:disabled,
+a[disabled]{
+	color: #444 !important;
+	background-color: transparent !important;
+	border-color: #444 !important;
+}
+
 
 
 /*--------------------*/
@@ -155,7 +183,7 @@ a.link-internal:hover{
 }
 
 .passage {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   color: #ffffff;
   line-height: 1.5em;
@@ -272,3 +300,33 @@ But you're sure it's there.
   }
 }
 */
+
+/* could have different colours for text type */
+.textinfo {
+  color: #509e9f;
+}
+
+.textgood {
+  color: #76bf77;
+}
+
+.textbad {
+  color: #db3f42;
+}
+
+.textimportant {
+  color: #c44986;
+}
+
+/* alternatively could have different colours depending on who is speaking */
+.speakers {
+  color: #76BF77;
+  color: #769ABF;
+  color: #BF76BE;
+  color: #BF9B76;
+}
+
+
+
+
+

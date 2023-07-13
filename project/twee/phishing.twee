@@ -4,30 +4,44 @@ Splitting up topics like this can make it easier for organisation.*/
 ::  PhishingIntroduction [nobr]
 $A1, $A2, and $A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
-Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something [[suspicious|PhishingTooltip1]] about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
-Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a [[bulk-phishing scam|PhishingTooltip2]]:
+Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something 
+<<link"suspicious">><<script>>
+Dialog.setup("What is Phishing?", "PhishingTooltip1");
+Dialog.wiki(Story.get("PhishingTooltip1").processText());
+Dialog.open();
+<</script>><</link>>
+about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
+<br>
+<br>
+Which character do you think would be most at risk? As you contemplate your response, you recall the different characters within the group and their online habits. It is crucial to identify who might be most vulnerable to such phishing attempts. Please identify the character who is most likely to be caught by a
+<<link"bulk-phishing scam">><<script>>
+Dialog.setup("What is Phishing?", "PhishingTooltip2");
+Dialog.wiki(Story.get("PhishingTooltip2").processText());
+Dialog.open();
+<</script>><</link>>
+:
+<br>
 <br>
 <<cycle "$Bulk">>
     <<option "$A1" A1>>
-    <<option "$A2" A1>>
-    <<option "$A3" A1>>
+    <<option "$A2" A2>>
+    <<option "$A3" A3>>
 <</cycle>>
+<br>
+<br>
+If you're having a little trouble, maybe you should review their <<link"character summaries">><<script>>UIBar.unstow();Dialog.setup("Character Summaries");Dialog.wiki(Story.get("MenuCharacters").processText());Dialog.open();<</script>><</link>>?
+<br>
 <br>
 Once you've made your choice, let's [[turn the page|BulkPhishingChoice]]...
 
 :: PhishingTooltip1
 Phishing is a way of sending fraudulent e-mails, which contain malicious or no-purpose junk links for fun or to conduct crimes. It can also be done by calling a particular person. It can trick people into giving their personal details like credit card information, and passwords to another individual.
 
-<<return "GO BACK!">>
-
 :: PhishingTooltip2
 Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the 'prize'.
 
-<<return "GO BACK!">>
-
 :: BulkPhishingChoice [nobr]
-
 <<if $Bulk == "A1">>
     You chose wrong!
 <<elseif $Bulk == "A2">>
@@ -36,19 +50,25 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
     You chose wrong!
 <</if>>
 <br>
+<br>
 [Insert brilliant text here, explaining that A2 is the most vulnerable and why.]
+<br>
 <br>
 $A2: ...hey! I'm not sure that I can really deny it, but do you have to call me out like that?!
 <br>
+<br>
 $A1: Yeah, yeah. Anyways. I've got to go and check my [[emails|SpearPhishingIntroduction]], matriculation is really complicated and I don't want to mess anything up. 
 
-:: SpearPhishingIntroduction [nobr]
 
+:: SpearPhishingIntroduction [nobr]
 While $A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password [[promptly|SpearTooltip1]]. What [[red flags|SpearTooltip2]] can you spot in this situation?
+<br>
 <br>
 <<include "SpearCycle">>
 <br>
+<br>
 $A1: Oh wow, all of these emails look really suspicious for some reason. Better not actually give them my password! 
+<br>
 <br>
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
@@ -84,15 +104,17 @@ Finally, the third email's suspicious because...
 <<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
 Luckily, $A1 has much better instincts than you.
 <br>
+<br>
 $A1: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
 <<else>>
 $A1: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
 <</if>>
 <br>
+<br>
 $A3: Eh? Who are you talking to? Why're you turned to the side like you're a TV game show host?
+<br>
 <br>
 $A1: The audience. Duh. Now, for a smooth [[transition|AirdropIntroduction]]...
 
 :: AirdropIntroduction [nobr]
-
 [oops! 404!]

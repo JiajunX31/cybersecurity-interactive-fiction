@@ -7,6 +7,42 @@ Cybersecurity and You!
 <<set $A2 to "Haoran">>
 <<set $A3 to "Noah">>
 <<set $A4 to "Robin">>
+<<set $isUnlockCharacterSummaries to false>>
+
+
+:: StoryMenu
+<<link"Character Summaries">><<script>>
+Dialog.setup("Character Summaries");
+Dialog.wiki(Story.get("MenuCharacters").processText());
+Dialog.open();
+<</script>><</link>>
+
+<<link"Saves">><<script>>
+UI.saves()
+<</script>><</link>>
+
+<<link"Restart">><<script>>
+UI.restart()
+<</script>><</link>>
+
+
+:: MenuCharacters [nobr]
+/* when clicking on one of the character pages,
+the 'go back' needs to point to a non-menu character page.
+A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
+/* close the dialog and collapse the sidebar*/
+<<link[[$A1.toUpperCase()|A1]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - an international first year student studying anthropology.
+<br>
+<br>
+<<link[[$A2.toUpperCase()|A2]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - an international third year student studying psychology.
+<br>
+<br>
+<<link[[$A3.toUpperCase()|A3]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a domestic second year student studying computer science.
+<br>
+<br>
+<<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
+
 
 :: Start
 Let's [[start|StudentIntroductions]]!
+
