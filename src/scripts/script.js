@@ -14,6 +14,7 @@ $(document).on(":passagerender", function (event) {
 
 Config.ui.stowBarInitially = true;
 
+// prevents infinite 'go back' when using character summaries sidebar
 /* see https://www.motoslave.net/sugarcube/2/docs/#guide-tips-arbitrarily-long-return
    use $return to go back to a non-noreturn passage
 e.g. <<link "GO BACK" $return>><</link>> */
@@ -23,6 +24,7 @@ $(document).on(':passagestart', function (ev) {
 	}
 });
 
+// identifies menu button to lock, and locks it until isUnlockCharacterSummaries == true
 // https://stackoverflow.com/questions/2847561/add-a-different-id-to-each-li-element-by-jquery
 // Execute the handler function each time the event triggers.
 $(document).on(':passageend', function (ev) { // this has to be done after the special passage 'StoryMenu' runs
