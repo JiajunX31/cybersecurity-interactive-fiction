@@ -3,25 +3,25 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <br>
 <br>
 <<if $studentIntroduction.includes("A1")>>
-    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>They're excited to be here!<br>
+    <span class='speakerA1b'><<link $A1.toUpperCase() "A1">><</link>></span> - an international first year student studying anthropology.<br>They're excited to be here!<br>
 <<else>>
-    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.
+    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A2")>>
-    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
+    <span class='speakerA2b'><<link $A2.toUpperCase() "A2">><</link>></span> - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
 <<else>>
-    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.
+    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A3")>>
-    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
+    <span class='speakerA3b'><<link $A3.toUpperCase() "A3">><</link>></span> - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
 <<else>>
-    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.
+    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A4")>>
-    [[$A4.toUpperCase()|A4]] - a x year student studying xxx.<br>And that's all you're going to know. What are you, a cop?
+    <span class='speakerA4b'><<link $A4.toUpperCase() "A4">><</link>></span> - a x year student studying xxx.<br>And that's all you're going to know. What are you, a cop?
 <<else>>
     [[$A4.toUpperCase()|A4]] - a x year student studying xxx.
 <</if>>

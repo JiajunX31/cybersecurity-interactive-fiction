@@ -272,6 +272,13 @@ a[disabled]{
   height: 75%; /* ideally I would like max(75%, auto) but it doesn't work... */
   padding: 2em;
   background-color: rgba(0, 0, 0, 0.8);
+  /*
+  alternative to 'overflow:auto' is clearfix:
+  (scrollbar on html body instead of passage)
+  content: "";
+  clear: both;
+  display: table;
+  */
   overflow: auto;
 }
 
@@ -329,21 +336,73 @@ i {
   color: #d6d6d6;
 }
 
+.dinkus {
+  font-size: 2em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 1em;
+}
+
+/*------------------------------*/
+/*      IN-TEXT CLICKABLES      */
+/*------------------------------*/
+
+/* cycle option macro */
+
+.macro-cycle {
+  color: #80b8d9
+}
+
+.macro-cycle:hover {
+  text-decoration: none;
+  color: #98cbeb
+}
+
+.macro-cycle::before {
+	content: "\e826\00a0";
+	font-family: tme-fa-icons;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	speak: none;
+}
+
+
+/* internal links */
+
 .passage a.link-internal {
-  color: #007dc5;
-  font-weight: none;
+  color: #ffd351;
+  font-weight: bold;
 }
 
 .passage a.link-internal:hover {
   color: #c60c46;
+  font-weight: bold;
   text-decoration: none;
 }
 
 
+/* dialog tooltips */
 
-/*--------------------*/
-/*      TOOLTIPS      */
-/*--------------------*/
+.passage a.macro-link {
+  color: #2388d1;
+  /* color: #6688dd; */
+  font-weight: bold;
+}
+
+.passage a.macro-link:hover {
+  color: #c60c46;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* other tooltips */
 
 /* Tooltip container */
 .tooltip {
@@ -372,16 +431,73 @@ i {
   visibility: visible;
 }
 
-.macro-cycle::before {
-	content: "\e826\00a0";
-	font-family: tme-fa-icons;
-	font-style: normal;
-	font-weight: 400;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	speak: none;
+
+
+/*-----------------------------*/
+/*      TEXT HIGHLIGHTING      */
+/*-----------------------------*/
+
+/* different colours for text type */
+.textinfo {
+  color: #509e9f;
 }
+.textgood {
+  color: #76bf77;
+}
+.textbad {
+  color: #db3f42;
+}
+.textimportant {
+  color: #c44986;
+}
+
+/* different colours depending on who is speaking */
+.speakerA1 {
+  color: #c499e0;
+}
+.speakerA2 {
+  color: #e2a08d;
+}
+.speakerA3 {
+  color: #b0e6cc;
+}
+.speakerA4 {
+  color: #ffb0cd;
+}
+.speakerA1b {
+  color: #c36aff;
+  font-weight: bold;
+}
+.speakerA2b {
+  color: #fe9173;
+  font-weight: bold;
+}
+.speakerA3b {
+  color: #95ebc0;
+  font-weight: bold;
+}
+.speakerA4b {
+  color: #ffb0cd;
+  font-weight: bold;
+}
+
+
+/* only used in student introduction */
+.speakerA1b a.macro-link {color: #c36aff;font-weight: bold;}
+.speakerA1b a.macro-link:hover {color: #c60c46;font-weight: bold;}
+
+.speakerA2b a.macro-link {color: #fe9173;font-weight: bold;}
+.speakerA2b a.macro-link:hover {color: #c60c46;font-weight: bold;}
+
+.speakerA3b a.macro-link {color: #95ebc0;font-weight: bold;}
+.speakerA3b a.macro-link:hover {color: #c60c46;font-weight: bold;}
+
+.speakerA4b a.macro-link {color: #ffb0cd;font-weight: bold;}
+.speakerA4b a.macro-link:hover {color: #c60c46;font-weight: bold;}
+
+
+
+
 
 
 
@@ -420,36 +536,4 @@ But you're sure it's there.
   }
 }
 */
-
-/* could have different colours for text type */
-.textinfo {
-  color: #509e9f;
-}
-.textgood {
-  color: #76bf77;
-}
-.textbad {
-  color: #db3f42;
-}
-.textimportant {
-  color: #c44986;
-}
-
-/* alternatively could have different colours depending on who is speaking */
-.speakerA1 {
-  color: #BF76BE;
-  font-weight: bold;
-}
-.speakerA2 {
-  color: #769ABF;
-  font-weight: bold;
-}
-.speakerA3 {
-  color: #76BF77;
-  font-weight: bold;
-}
-.speakerA4 {
-  color: #BF9B76;
-  font-weight: bold;
-}
 

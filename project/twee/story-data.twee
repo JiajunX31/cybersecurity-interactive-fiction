@@ -11,8 +11,9 @@ Cybersecurity and You!
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
+    Use ?A1b to style character A1 bold
     unfortunately ".toUpperCase()" doesn't work on templates, so use <span> instead */
-Template.add(['A1', 'A2', 'A3', 'A4'], function () {
+Template.add(['A1', 'A2', 'A3', 'A4', 'A1b', 'A2b', 'A3b', 'A4b'], function () {
     switch(this.name) {
         case 'A1':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
@@ -24,6 +25,18 @@ Template.add(['A1', 'A2', 'A3', 'A4'], function () {
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A3 + "</span>";
             break;
         case 'A4':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
+            break;
+        case 'A1b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
+            break;
+        case 'A2b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A2 + "</span>";
+            break;
+        case 'A3b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A3 + "</span>";
+            break;
+        case 'A4b':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
             break;
         default:

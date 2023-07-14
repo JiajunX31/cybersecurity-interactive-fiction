@@ -6,14 +6,14 @@ Cybersecurity and You!
 {
 	"ifid": "AFD3B0CA-1649-4127-AF2C-40698CE9EA90",
 	"format": "SugarCube",
-	"format-version": "2.30.0",
+	"format-version": "2.36.1",
 	"start": "Start",
 	"zoom": 1
 }
 
 
 :: Story Stylesheet [stylesheet]
-@import url(https://fonts.googleapis.com/css2?family=PT+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap);@import url(https://fonts.googleapis.com/css2?family=PT+Serif&display=swap);body{background-color:#d6d6d6;height:100dvh;width:100dvw}*{-webkit-box-sizing:border-box;box-sizing:border-box}#ui-bar{background-color:#00539b;border-right:none}#ui-bar-history [id|=history],#ui-bar-toggle{border:none}#ui-bar-history [id|=history]:hover{background-color:#003e74}#ui-bar-history [id|=history]:active{color:#202024;background:#ffb400}#ui-bar-history [id|=history]:disabled{opacity:.3;background-color:transparent!important;color:#fff!important}#ui-bar-toggle:hover{background-color:#003e74}#ui-bar-toggle:active{color:#202024;background:#ffb400}#ui-bar.stowed #ui-bar-toggle{padding-right:.45em}button{border:none}#ui-dialog-title{margin-left:10%;padding:.5em 3.5em .2em 0;font-size:1.7em;text-align:center;text-transform:uppercase}#ui-dialog-body{background-color:#dedede;font-family:'PT Sans',Helvetica,Arial,sans-serif;color:#202024;font-size:1.2em}#ui-dialog-titlebar{background-color:#00539b;font-family:'PT Sans',Helvetica,Arial,sans-serif;padding:.2em 3.5em .2em 7em}#sidebar{color:#d6d6d6;margin:0!important}ul{list-style:none;text-align:center;margin:0!important}h1#story-title{color:#fff;font-family:'PT Sans',Helvetica,Arial,sans-serif;font-weight:700;text-transform:uppercase;text-align:center;margin-top:.5em;font-size:2em}#story-subtitle{color:#d6d6d6;font-family:'Vollkorn SC',serif}.special_subtitle{font-family:TYPEWRITER,serif;font-size:100%}#story-caption{font-family:'Vollkorn SC',serif}#story-author{color:#d6d6d6;font-family:'Vollkorn SC',serif}a.link-internal{color:#007dc5}a.link-internal:hover{color:#c60c46}#dialog,#menu #menu-story{border:0}#menu-story li{margin-bottom:1em;color:#fff;font-size:1em;line-height:1.5}#menu li:not(:first-child){border-top:none}#menu li a{border:none;padding-top:.3em;padding-right:.75em;padding-bottom:.3em;padding-left:.75em;font-weight:700;text-transform:none;font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:1.2em;color:#fff}#menu li a:hover{background-color:#003e74}#menu li a:active{color:#202024;background:#ffb400}#menu #menu-core{margin-top:1em;display:none}a:disabled,a[disabled]{opacity:.3;background-color:transparent!important;color:#fff!important}#story{margin:0;left:17.5em;width:calc(100% - 17.5em);height:100%;-webkit-transition:width .2s ease-in,left .2s ease-in;-o-transition:width .2s ease-in,left .2s ease-in;transition:width .2s ease-in,left .2s ease-in;background-size:cover!important;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative}#ui-bar.stowed~#story{width:calc(100% - 2em);left:2em;margin-left:0}#passages{max-width:none;margin:auto;width:75%;height:75%;padding:2em;background-color:rgba(0,0,0,.8);overflow:auto}.passage{font-size:1.5em;font-family:'PT Sans',Helvetica,Arial,sans-serif;color:#fff;line-height:1.5em}@media screen and (min-width:1921px){.passage{font-size:2em}}@media screen and (max-width:1366px){#passages{height:auto;max-height:none}.passage{font-size:1.2em}}@media screen and (max-width:768px){#passages{width:100%}.passage{font-size:1.2em}#story{left:2em;width:calc(100% - 2em)}h1#story-title{font-size:1.5em}#menu li a{font-size:.95em}}@media screen and (max-width:425px){.passage{font-size:1em}}@media screen and (max-height:600px){.passage{font-size:1em}}h1{font-size:1.2em;font-weight:200}h2{font-size:1.1em;font-weight:200}b,strong{font-weight:400;font-style:italic}i{font-style:italic;color:#d6d6d6}.passage a.link-internal{color:#007dc5;font-weight:none}.passage a.link-internal:hover{color:#c60c46;text-decoration:none}.tooltip{position:relative;display:inline-block;border-bottom:1px dotted #000}.tooltip .tooltiptext{visibility:hidden;width:120px;background-color:#000;color:#fff;text-align:center;padding:5px 0;border-radius:6px;position:absolute;z-index:1}.tooltip:hover .tooltiptext{visibility:visible}.macro-cycle::before{content:"\e826\00a0";font-family:tme-fa-icons;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;speak:none}.textinfo{color:#509e9f}.textgood{color:#76bf77}.textbad{color:#db3f42}.textimportant{color:#c44986}.speakerA1{color:#bf76be;font-weight:700}.speakerA2{color:#769abf;font-weight:700}.speakerA3{color:#76bf77;font-weight:700}.speakerA4{color:#bf9b76;font-weight:700}
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans&display=swap);@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap);@import url(https://fonts.googleapis.com/css2?family=PT+Serif&display=swap);body{background-color:#d6d6d6;height:100dvh;width:100dvw}*{-webkit-box-sizing:border-box;box-sizing:border-box}#ui-bar{background-color:#00539b;border-right:none}#ui-bar-history [id|=history],#ui-bar-toggle{border:none}#ui-bar-history [id|=history]:hover{background-color:#003e74}#ui-bar-history [id|=history]:active{color:#202024;background:#ffb400}#ui-bar-history [id|=history]:disabled{opacity:.3;background-color:transparent!important;color:#fff!important}#ui-bar-toggle:hover{background-color:#003e74}#ui-bar-toggle:active{color:#202024;background:#ffb400}#ui-bar.stowed #ui-bar-toggle{padding-right:.45em}button{border:none}#ui-dialog-title{margin-left:10%;padding:.5em 3.5em .2em 0;font-size:1.7em;text-align:center;text-transform:uppercase}#ui-dialog-body{background-color:#dedede;font-family:'PT Sans',Helvetica,Arial,sans-serif;color:#202024;font-size:1.2em}#ui-dialog-titlebar{background-color:#00539b;font-family:'PT Sans',Helvetica,Arial,sans-serif;padding:.2em 3.5em .2em 7em}#sidebar{color:#d6d6d6;margin:0!important}ul{list-style:none;text-align:center;margin:0!important}h1#story-title{color:#fff;font-family:'PT Sans',Helvetica,Arial,sans-serif;font-weight:700;text-transform:uppercase;text-align:center;margin-top:.5em;font-size:2em}#story-subtitle{color:#d6d6d6;font-family:'Vollkorn SC',serif}.special_subtitle{font-family:TYPEWRITER,serif;font-size:100%}#story-caption{font-family:'Vollkorn SC',serif}#story-author{color:#d6d6d6;font-family:'Vollkorn SC',serif}a.link-internal{color:#007dc5}a.link-internal:hover{color:#c60c46}#dialog,#menu #menu-story{border:0}#menu-story li{margin-bottom:1em;color:#fff;font-size:1em;line-height:1.5}#menu li:not(:first-child){border-top:none}#menu li a{border:none;padding-top:.3em;padding-right:.75em;padding-bottom:.3em;padding-left:.75em;font-weight:700;text-transform:none;font-family:'PT Sans',Helvetica,Arial,sans-serif;font-size:1.2em;color:#fff}#menu li a:hover{background-color:#003e74}#menu li a:active{color:#202024;background:#ffb400}#menu #menu-core{margin-top:1em;display:none}a:disabled,a[disabled]{opacity:.3;background-color:transparent!important;color:#fff!important}#story{margin:0;left:17.5em;width:calc(100% - 17.5em);height:100%;-webkit-transition:width .2s ease-in,left .2s ease-in;-o-transition:width .2s ease-in,left .2s ease-in;transition:width .2s ease-in,left .2s ease-in;background-size:cover!important;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative}#ui-bar.stowed~#story{width:calc(100% - 2em);left:2em;margin-left:0}#passages{max-width:none;margin:auto;width:75%;height:75%;padding:2em;background-color:rgba(0,0,0,.8);overflow:auto}.passage{font-size:1.5em;font-family:'PT Sans',Helvetica,Arial,sans-serif;color:#fff;line-height:1.5em}@media screen and (min-width:1921px){.passage{font-size:2em}}@media screen and (max-width:1366px){#passages{height:auto;max-height:none}.passage{font-size:1.2em}}@media screen and (max-width:768px){#passages{width:100%}.passage{font-size:1.2em}#story{left:2em;width:calc(100% - 2em)}h1#story-title{font-size:1.5em}#menu li a{font-size:.95em}}@media screen and (max-width:425px){.passage{font-size:1em}}@media screen and (max-height:600px){.passage{font-size:1em}}h1{font-size:1.2em;font-weight:200}h2{font-size:1.1em;font-weight:200}b,strong{font-weight:400;font-style:italic}i{font-style:italic;color:#d6d6d6}.passage a.link-internal{color:#007dc5;font-weight:none}.passage a.link-internal:hover{color:#c60c46;text-decoration:none}.tooltip{position:relative;display:inline-block;border-bottom:1px dotted #000}.tooltip .tooltiptext{visibility:hidden;width:120px;background-color:#000;color:#fff;text-align:center;padding:5px 0;border-radius:6px;position:absolute;z-index:1}.tooltip:hover .tooltiptext{visibility:visible}.macro-cycle::before{content:"\e826\00a0";font-family:tme-fa-icons;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;speak:none}.textinfo{color:#509e9f}.textgood{color:#76bf77}.textbad{color:#db3f42}.textimportant{color:#c44986}.speakerA1{color:#bf76be}.speakerA2{color:#bf7776}.speakerA3{color:#76bf77}.speakerA4{color:#bf9b76}.speakerA1b{color:#bf76be;font-weight:700}.speakerA2b{color:#bf7776;font-weight:700}.speakerA3b{color:#76bf77;font-weight:700}.speakerA4b{color:#bf9b76;font-weight:700}.macro-cycle{color:#80b8d9}.macro-cycle:hover{text-decoration:none;color:#98cbeb}.dinkus{text-align:center;font-size:3em;font-weight:500}
 
 
 :: Story JavaScript [script]
@@ -142,13 +142,13 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 ?A2 would be the most vulnerable to a bulk-phishing attack on social media because they have a large online following, making them more exposed, with plenty of data to use in an attack. They're more likely to befriend strangers and be exposed to compromised accounts. Their popularity and busy schedule may lead to a lack of focus on cybersecurity, making them more susceptible. If large amounts of personal data are available, spear-phishing attacks could also be effective.
 <br>
 <br>
-?A3: Just so you guys know, there is a compromised account on the Messenger group posting a dodgy link—don't click it.
+?A3b: Just so you guys know, there is a compromised account on the Messenger group posting a dodgy link—don't click it.
 <br>
 <br>
-?A2: Yeah, I was caught out by one of those before—what a nightmare. The one I clicked on said “it looks like someone you know was in this crash”. I just clicked it out of curiosity and panic. It took me to a new login screen, and I put in all my details—next thing you know, the account is compromised and all my friends are being sent the same message.
+?A2b: Yeah, I was caught out by one of those before—what a nightmare. The one I clicked on said “it looks like someone you know was in this crash”. I just clicked it out of curiosity and panic. It took me to a new login screen, and I put in all my details—next thing you know, the account is compromised and all my friends are being sent the same message.
 <br>
 <br>
-?A1: Oh wow, I almost clicked on that! Also be right back, I have [[matriculation emails|SpearPhishingIntroduction]] to attend to!
+?A1b: Oh wow, I almost clicked on that! Also be right back, I have [[matriculation emails|SpearPhishingIntroduction]] to attend to!
 
 
 :: SpearPhishingIntroduction [nobr] {"position":"100,225","size":"100,100"}
@@ -158,7 +158,7 @@ While ?A1 is going through their emails, they notice a message from the universi
 <<include "SpearCycle">>
 <br>
 <br>
-?A1: Oh wow, all of these emails look really suspicious for some reason. Better not actually give them my password! 
+?A1b: Oh wow, all of these emails look really suspicious for some reason. Better not actually give them my password! 
 <br>
 <br>
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
@@ -206,16 +206,16 @@ Look out for the following: quality of company logo, presence of unique informat
 ?A1 has much better instincts than you.
 <br>
 <br>
-?A1: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
+?A1b: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
 <<else>>
-?A1: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
+?A1b: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
 <</if>>
 <br>
 <br>
-?A3: Eh? Who are you talking to? Why're you turned to the side like you're a TV game show host?
+?A3b: Eh? Who are you talking to? Why're you turned to the side like you're a TV game show host?
 <br>
 <br>
-?A1: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
+?A1b: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
 
 
 :: FilesharingIntroduction [nobr] {"position":"725,225","size":"100,100"}
@@ -242,22 +242,22 @@ VPN (Virtual Private Network): A technology that creates a secure and encrypted 
 <<if $fileshare1 eq 2>>
 No consequences! ?A3 has successfully escaped the gauntlet and only needs to face the smug attitude of their mother, who has once again, been proven to be entirely correct.
 <<else>>
-<<if $fileshare1 eq 1>>Dire consequences! Alas, ?A3 has run the risk of exposing their banking details to all and sundry!<<elseif $fileshare1 eq 2>>Medium consequences!<</if>>
+<<if $fileshare1 eq 1>>Dire consequences! Alas, ?A3t has run the risk of exposing their banking details to all and sundry!<<elseif $fileshare1 eq 2>>Medium consequences!<</if>>
 <br><br>
 They should've probably used a VPN, which provides a secure and encrypted connection over a public Wi-Fi network. Using an unencrypted public Wi-Fi network to access financial data carries huge risk. Namely, malicious actors can easily and silently intercept the connection and see the data you are providing. A VPN puts a private server between you and the destination, meaning all the data gets filtered through the private server and encrypted. That means, data you enter over the public Wi-Fi network will now be indecipherable.
 <</if>>
 <br><br><center>...</center><br><br>
 ?A3 realises that the society meeting was actually two hours ago. Oops! <<if $fileshare1 eq 2>>They might have remembered to use a VPN, but that isn't really worth much if they're missing entire meetings!<</if>> In a great stroke of luck, they see ?A1 and ?A2 passing by and wave them over. 
 <br><br>
-?A3: Hey guys, society meeting got cancelled… 
+?A3b: Hey guys, society meeting got cancelled… 
 <br><br>
-?A1: Oh, why?
+?A1b: Oh, why?
 <br><br>
-?A3, lying: Dunno. I think something to do with the speaker double-booking with another uni…
+?A3b, lying: Dunno. I think something to do with the speaker double-booking with another uni…
 <br><br>
-?A2: That's no good, they should've told you in advance! How long were you even waiting? You should email a complaint.
+?A2b: That's no good, they should've told you in advance! How long were you even waiting? You should email a complaint.
 <br><br>
-?A3: Let's just forget it. I didn't wait too long anyway. Look, just sit down, alright? Tell me about your Fresher's week so far.
+?A3b: Let's just forget it. I didn't wait too long anyway. Look, just sit down, alright? Tell me about your Fresher's week so far.
 <br><br>
 Just then, ?A1 receives a pop-up notification on their device saying, "Wi-Fi connection available. Connect now!". Please select the option that is the best action for ?A1 to take.
 <br><br>
@@ -267,7 +267,7 @@ Just then, ?A1 receives a pop-up notification on their device saying, "Wi-Fi con
     <<option "?A1 ignores the notification and continues using their mobile data for internet access." 3>>
 <</cycle>>
 <br><br>
-?A1: Just a sec, gotta [[get online|FilesharingChoice2]].
+?A1b: Just a sec, gotta [[get online|FilesharingChoice2]].
 
 
 :: FilesharingChoice2 [nobr] {"position":"1225,225","size":"100,100"}
@@ -280,7 +280,7 @@ Correct!
 <</if>>
 Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip3");Dialog.wiki(Story.get("FilesharingTooltip3").processText());Dialog.open();<</script>><</link>> means avoiding the risks of joining public Wi-Fi altogether, so you're better off using mobile data when you can. 
 <br><br>
-...
+<span class='dinkus'>* * *</span>
 <br><br>
 ?A2 and ?A3 are talking about buying coursework books from local retailers, they both complain that it is expensive, so they start looking online. ?A2 wants to access an online shopping website while connected to the Union's public Wi-Fi network. Please select the best option.
 <br><br>
@@ -290,7 +290,7 @@ Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingToo
     <<option "?A2 decides to switch from public Wi-Fi to using mobile data to buy the textbook." 3>>
 <</cycle>>
 <br><br>
-?A2: Gotta get it quick before the first lecture! ...[[Buying it now|FilesharingChoice3]]!
+?A2b: Gotta get it quick before the first lecture! ...[[Buying it now|FilesharingChoice3]]!
 
 
 :: FilesharingTooltip3 {"position":"100,350","size":"100,100"}
@@ -335,8 +335,9 @@ Congratulations! You've finished <span class='textimportant'>Chapter One: Phishi
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
+    Use ?A1b to style character A1 bold
     unfortunately ".toUpperCase()" doesn't work on templates, so use <span> instead */
-Template.add(['A1', 'A2', 'A3', 'A4'], function () {
+Template.add(['A1', 'A2', 'A3', 'A4', 'A1b', 'A2b', 'A3b', 'A4b'], function () {
     switch(this.name) {
         case 'A1':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
@@ -348,6 +349,18 @@ Template.add(['A1', 'A2', 'A3', 'A4'], function () {
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A3 + "</span>";
             break;
         case 'A4':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
+            break;
+        case 'A1b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
+            break;
+        case 'A2b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A2 + "</span>";
+            break;
+        case 'A3b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A3 + "</span>";
+            break;
+        case 'A4b':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
             break;
         default:
