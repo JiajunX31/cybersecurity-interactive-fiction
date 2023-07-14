@@ -3,7 +3,7 @@ Cybersecurity and You!
 
 :: StoryInit
 <<set $studentIntroduction = []>>
-<<set $A1 to "Hana">>
+<<set $A1 to "Hana">> /* temporarily added names back */
 <<set $A2 to "Haoran">>
 <<set $A3 to "Noah">>
 <<set $A4 to "Robin">>
@@ -11,8 +11,7 @@ Cybersecurity and You!
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
-    unfortunately ".toUpperCase()" doesn't work on templates, so use <span> instead
-*/
+    unfortunately ".toUpperCase()" doesn't work on templates, so use <span> instead */
 Template.add(['A1', 'A2', 'A3', 'A4'], function () {
     switch(this.name) {
         case 'A1':
@@ -72,8 +71,6 @@ Let's [[start|StudentIntroductions]]!
 
 /* http://twinery.org/questions/4666/how-to-embed-background-image-via-the-base64-stuff */
 /* for inline: <img class="customclass" data-passage="test"> */
-
-
 <style>
 #story {
     background: [img[test]] no-repeat center center fixed;

@@ -237,10 +237,12 @@ a[disabled]{
 /*--------------------*/
 
 #story {
-  margin: 0 !important; /* override margin in ui-bar.css (built-in) */
-  width: calc(100% - 2em); /* take sidebar into account */
+  /* margin: 0 !important; override margin in ui-bar.css (built-in) */
+  margin: 0;
+  left: 17.5em;
+  width: calc(100% - 17.5em); /* take sidebar into account */
   height: 100%;
-  left: 2em;
+  transition: width 200ms ease-in, left 200ms ease-in;
 
   /* background will fill without stretching */
   /* -webkit-background-size: cover !important;
@@ -256,6 +258,11 @@ a[disabled]{
   /* top: -3em; position slightly higher than centre (conflicts with background) */
 }
 
+#ui-bar.stowed ~ #story {
+  width: calc(100% - 2em);
+  left: 2em;
+	margin-left: 0;
+}
 
 #passages {
   /* use nvl textbox as default for passages */
@@ -285,9 +292,16 @@ a[disabled]{
   #passages {height: auto;max-height: none;}
   .passage {font-size: 1.2em;}
 }
+/* tablet */
+@media screen and (max-width: 768px) {
+  #passages {width: 100%;}
+  .passage {font-size: 1.2em;}
+  #story {left: 2em;width: calc(100% - 2em);}
+  h1#story-title {font-size: 1.5em;}
+  #menu li a {font-size: 0.95em;} 
+}
 /* mobile */
 @media screen and (max-width: 425px) {
-  #passages {height: auto;max-height: none;width: 100%;}
   .passage {font-size: 1em;}
 }
  /* when screen height too small */
