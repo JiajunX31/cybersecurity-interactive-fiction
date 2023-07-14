@@ -235,6 +235,7 @@ a[disabled]{
 /*--------------------*/
 /*      PASSAGE       */
 /*--------------------*/
+
 #story {
   margin: 0 !important; /* override margin in ui-bar.css (built-in) */
   width: calc(100% - 2em); /* take sidebar into account */
@@ -254,6 +255,7 @@ a[disabled]{
   position: relative;
   /* top: -3em; position slightly higher than centre (conflicts with background) */
 }
+
 
 #passages {
   /* use nvl textbox as default for passages */
@@ -436,8 +438,4 @@ But you're sure it's there.
   color: #BF9B76;
   font-weight: bold;
 }
-
-
-
-
 
