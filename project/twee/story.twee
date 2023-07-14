@@ -1,5 +1,5 @@
 :: StudentIntroductions [nobr]
-The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves <span class=textinfo>four hapless students, soon to be flatmates</span>, moving into their new home away from home for the school year...
+The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 <br>
 <br>
 <<if $studentIntroduction.includes("A1")>>
@@ -31,25 +31,25 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
     <<set $isUnlockCharacterSummaries to true>>
     Now that introductions are done, shall we get on with the [[story|PhishingIntroduction]]?
 <<else>>
-    To move on with the story, maybe you should <span class=textimportant>get to know all of our main characters</span>?
+    To move on with the story, maybe you should get to know all of our main characters?
 <</if>>
 
 :: A1 [nobr noreturn]
 <<set $studentIntroduction.pushUnique("A1")>>
-<<print $A1.toUpperCase()>>
+<span class='speakerA1'><<print $A1.toUpperCase()>></span>
 <br>
 <br>
-This is their first time away from home in a completely new country, but they're super excited to start studying once the semester starts! Although <span class=textinfo>they're quite active online</span> and have already organised a group chat for the incoming anthropology students, 'cybersecurity' is just a 13 letter word to them. In their own words: <span class=textbad>"I'm just no good with computers..."</span>
+This is their first time away from home in a completely new country, but they're super excited to start studying once the semester starts! Although they're quite active online and have already organised a group chat for the incoming anthropology students, 'cybersecurity' is just a 13 letter word to them. In their own words: "I'm just no good with computers..."
 <br>
 <br>
-But university is a time and place for <span class=textgood>pushing new boundaries and opening up new horizons</span>! Will they be able to prove that self-defeating, horribly limiting, characterisation wrong? Find out, next time in <span class=textimportant>'CYBERSECURITY AND YOU'</span>!
+But university is a time and place for pushing new boundaries and opening up new horizons! Will they be able to prove that self-defeating, horribly limiting, characterisation wrong? Find out, next time in 'CYBERSECURITY AND YOU'!
 <br>
 <br>
 <<link "GO BACK" $return>><</link>>
 
 :: A2 [nobr noreturn]
 <<set $studentIntroduction.pushUnique("A2")>>
-<<print $A2.toUpperCase()>>
+<span class='speakerA2'><<print $A2.toUpperCase()>></span>
 <br>
 <br>
 This is their third year at the University of St Andrews and everything's now pretty much routine. A high-flyer, both inside and outside of the classroom, cybersecurity just isn't really that much of an issue. They have much more important stuff to focus on, like applying for internships, emailing staff, attending all the freshers events, and keeping their thousands of followers up-to-date! Having that many friends is hard work after all!
@@ -62,7 +62,7 @@ But all of that routine may come crashing down at any moment, especially if they
 
 :: A3 [nobr noreturn]
 <<set $studentIntroduction.pushUnique("A3")>>
-<<print $A3.toUpperCase()>>
+<span class='speakerA3'><<print $A3.toUpperCase()>></span>
 <br>
 <br>
 As a CS student who's in their second year at university, 'cybersecurity' is a 13 letter word that's gotten really, really old. It's part of their lectures, it's part of their coursework, and at this rate it's going to be a part of their dreams. Lay off already--they already know how to keep themselves safe online. In any case, they're hoping to score a part-time job this year now that they've sort of gotten into the groove of university life--bills are hard to pay, you know!
@@ -75,7 +75,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 
 :: A4 [nobr noreturn]
 <<set $studentIntroduction.pushUnique("A4")>>
-<<print $A4.toUpperCase()>>
+<span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>
 <br>
 Attending remotely this year for personal reasons.

@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 body {
   background-color: #d6d6d6;
   height: 100dvh; /* dvh and dvw for mobile compatibility */
   width: 100dvw;
+  /*
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==')
+  */
 }
 
 * {
@@ -17,8 +22,43 @@ body {
 /*--------------------*/
 #ui-bar { /* the actual sidebar */
   background-color: #00539b;
+  /* background: #0071b3; */
+  border-right: none;
 }
 
+/* history buttons */
+#ui-bar-history [id|=history], #ui-bar-toggle {
+  border: none;
+}
+
+#ui-bar-history [id|=history]:hover {
+  background-color: #003e74;
+}
+
+#ui-bar-history [id|=history]:active {
+  color: #202024;
+  background: #FFB400;
+}
+
+/* sidebar button */
+#ui-bar-toggle:hover {
+  background-color: #003e74;
+}
+
+#ui-bar-toggle:active {
+  color: #202024;
+  background: #FFB400;
+}
+
+#ui-bar.stowed #ui-bar-toggle {
+  padding-right: 0.45em;
+}
+
+button {
+  border: none;
+}
+
+/* dialog */
 #ui-dialog-title {
   margin-left: 10%;
   padding: .5em 3.5em .2em 0em;
@@ -45,7 +85,7 @@ body {
   margin: 0 !important;
 }
 
-/* story */
+/* story title */
 
 ul {
   list-style: none;
@@ -54,13 +94,19 @@ ul {
 }
 
 h1#story-title {
-  color: #d6d6d6;
-  font-family: serif;
+  color: #ffffff;
+  /* font-family: 'PT Serif', georgia, serif; */
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 2em;
   /* letter-spacing: 2px;
   font-size: 300%;
   line-height: 80%;
-  padding-top: 10%; */
+  padding-top: 10%;
+  font-weight: 200;*/
 }
 
 #story-subtitle {
@@ -101,12 +147,48 @@ a.link-internal:hover{
 }
 
 #menu-story li {
-  border-top: 1px solid #444;
   margin-bottom: 1em;
+  /*
+  border-top: 1px solid #444;
   border-bottom: 1px solid #444;
   border-left: 1px solid #444;
   border-right: 1px solid #444;
+  */
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.5;
+  /* background-color: #0071b3; */
+  /* background-color: #00539b; */
 }
+
+#menu li:not(:first-child) {
+  border-top: none;
+}
+
+#menu li a {
+  border:none;
+  padding-top: 0.3em;
+  padding-right: 0.75em;
+  padding-bottom: 0.3em;
+  padding-left: 0.75em;
+  font-weight: bold;
+  text-transform: none;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+#menu li a:hover {
+  /* background-color: #005586; */
+  background-color: #003e74;
+}
+
+#menu li a:active {
+  color: #202024;
+  background: #FFB400;
+}
+
+
 
 #menu #menu-core {
   margin-top: 1em;
@@ -319,11 +401,21 @@ But you're sure it's there.
 }
 
 /* alternatively could have different colours depending on who is speaking */
-.speakers {
-  color: #76BF77;
-  color: #769ABF;
+.speakerA1 {
   color: #BF76BE;
+  font-weight: bold;
+}
+.speakerA2 {
+  color: #769ABF;
+  font-weight: bold;
+}
+.speakerA3 {
+  color: #76BF77;
+  font-weight: bold;
+}
+.speakerA4 {
   color: #BF9B76;
+  font-weight: bold;
 }
 
 
