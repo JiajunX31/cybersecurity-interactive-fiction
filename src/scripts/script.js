@@ -12,7 +12,7 @@ $(document).on(":passagerender", function (event) {
 	}
 });
 
-Config.ui.stowBarInitially = true;
+/* Config.ui.stowBarInitially = true; */
 
 // prevents infinite 'go back' when using character summaries sidebar
 /* see https://www.motoslave.net/sugarcube/2/docs/#guide-tips-arbitrarily-long-return

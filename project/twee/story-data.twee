@@ -69,6 +69,13 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 
 :: Start
 Let's [[start|StudentIntroductions]]!
-<html>
-    <img src="../src/img/Layer.png">
-</html>
+
+/* http://twinery.org/questions/4666/how-to-embed-background-image-via-the-base64-stuff */
+/* for inline: <img class="customclass" data-passage="test"> */
+
+
+<style>
+#story {
+    background: [img[test]] no-repeat center center fixed;
+}
+</style>

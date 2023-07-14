@@ -40,6 +40,13 @@ body {
   background: #FFB400;
 }
 
+#ui-bar-history [id|=history]:disabled {
+  opacity: 0.3;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+
 /* sidebar button */
 #ui-bar-toggle:hover {
   background-color: #003e74;
@@ -211,12 +218,16 @@ not sure why this doesn't work
 }
 */
 
-/* had to apply deactivated look to all disabled hyperlinks*/
+/* apply deactivated look to all disabled hyperlinks*/
 a:disabled,
 a[disabled]{
+  opacity: 0.3;
+  background-color: transparent !important;
+  color: #fff !important;
+  /*
 	color: #444 !important;
-	background-color: transparent !important;
 	border-color: #444 !important;
+  */
 }
 
 
@@ -226,15 +237,22 @@ a[disabled]{
 /*--------------------*/
 #story {
   margin: 0 !important; /* override margin in ui-bar.css (built-in) */
-  width: 100%;
+  width: calc(100% - 2em); /* take sidebar into account */
   height: 100%;
+  left: 2em;
+
+  /* background will fill without stretching */
+  /* -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important; */
+  background-size: cover !important;
 
   /* Center children (i.e. #passages) */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -3em; /* position slightly higher than centre */
+  /* top: -3em; position slightly higher than centre (conflicts with background) */
 }
 
 #passages {
@@ -248,27 +266,31 @@ a[disabled]{
   overflow: auto;
 }
 
-/* responsive for smaller laptop or mobile screens*/
-@media screen and (max-width: 1600px) {
-  #story {
-    top: 0;
-  }
-  #passages {
-    height: auto;
-    max-height: none;
-  }
-}
-@media screen and (max-height: 600px) {
-  #story {
-    top: 0;
-  }
-}
-
 .passage {
   font-size: 1.5em;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
   color: #ffffff;
   line-height: 1.5em;
+}
+
+/* responsive for smaller laptop or mobile screens*/
+/* >1080p */
+@media screen and (min-width: 1921px) {
+  .passage {font-size: 2em;}
+}
+/* small laptop (1366 × 768) - desktop (1920 x 1080) */
+@media screen and (max-width: 1366px) {
+  #passages {height: auto;max-height: none;}
+  .passage {font-size: 1.2em;}
+}
+/* mobile */
+@media screen and (max-width: 425px) {
+  #passages {height: auto;max-height: none;width: 100%;}
+  .passage {font-size: 1em;}
+}
+ /* when screen height too small */
+@media screen and (max-height: 600px) {
+  .passage {font-size: 1em;}
 }
 
 h1 {
@@ -387,15 +409,12 @@ But you're sure it's there.
 .textinfo {
   color: #509e9f;
 }
-
 .textgood {
   color: #76bf77;
 }
-
 .textbad {
   color: #db3f42;
 }
-
 .textimportant {
   color: #c44986;
 }
