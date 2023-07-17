@@ -26,6 +26,10 @@ body {
   border-right: none;
 }
 
+#ui-bar-body {
+  padding: 0 2em;
+}
+
 /* history buttons */
 #ui-bar-history [id|=history], #ui-bar-toggle {
   border: none;
@@ -173,7 +177,7 @@ a.link-internal:hover{
 }
 
 #menu li a {
-  border:none;
+  border: 1px solid #fff;
   padding-top: 0.3em;
   padding-right: 0.75em;
   padding-bottom: 0.3em;
@@ -289,31 +293,11 @@ a[disabled]{
   line-height: 1.5em;
 }
 
-/* responsive for smaller laptop or mobile screens*/
-/* >1080p */
-@media screen and (min-width: 1921px) {
-  .passage {font-size: 2em;}
-}
-/* small laptop (1366 × 768) - desktop (1920 x 1080) */
-@media screen and (max-width: 1366px) {
-  #passages {height: auto;max-height: none;}
-  .passage {font-size: 1.2em;}
-}
-/* tablet */
-@media screen and (max-width: 768px) {
-  #passages {width: 100%;}
-  .passage {font-size: 1.2em;}
-  #story {left: 2em;width: calc(100% - 2em);}
-  h1#story-title {font-size: 1.5em;}
-  #menu li a {font-size: 0.95em;} 
-}
-/* mobile */
-@media screen and (max-width: 425px) {
-  .passage {font-size: 1em;}
-}
- /* when screen height too small */
-@media screen and (max-height: 600px) {
-  .passage {font-size: 1em;}
+.passage ol, .passage ul {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 0.9em;
+  text-align: left;
 }
 
 h1 {
@@ -345,6 +329,75 @@ i {
   position: relative;
   margin-top: 1em;
 }
+
+
+
+/*-----------------------------*/
+/*      CLICK & DRAG LIST      */
+/*-----------------------------*/
+
+/*
+:root {  
+ --border-color: #e3e5e4;  
+ --background-color: #c3c7ca;  
+ --text-color: #34444f;  
+} 
+*/
+
+.draggable-list {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
+ }
+ .draggable-list li {
+  background-color: #000;
+  display: flex;
+  flex: 1;
+ }
+ .draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+ }
+ .draggable-list .number {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  width: 2em;
+ }
+ .draggable-list li.over .draggable {  
+  background-color: #a0a0a0;
+ }
+ .draggable-list .item-name {  
+  margin: 0 20px 0 0;
+ }
+ .draggable-list li.right .item-name {  
+  color: #3ae374;
+ }
+ .draggable-list li.wrong .item-name {  
+  color: #ff3838;
+ }
+ .draggable {  
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  flex: 1;
+ }
+ .check-btn {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--text-color);
+  font-size: 1em;
+  padding: .5em 1em;
+  cursor: pointer;
+ }
+ .check-btn:active {
+  transform: scale(0.98);
+ }
+
+
 
 /*------------------------------*/
 /*      IN-TEXT CLICKABLES      */
@@ -433,6 +486,45 @@ i {
 
 
 
+/*-------------------------------*/
+/*      RESPONSIVE ELEMENTS      */
+/*-------------------------------*/
+
+/* responsive for smaller laptop or mobile screens*/
+/* >1080p */
+@media screen and (min-width: 1921px) {
+  .passage {font-size: 2em;}
+  .passage ol, .passage ul {font-size: 1.5em;}
+}
+/* small laptop (1366 × 768) - desktop (1920 x 1080) */
+@media screen and (max-width: 1366px) {
+  #passages {height: auto;max-height: none;}
+  .passage {font-size: 1.2em;}
+  .passage ol, .passage ul {font-size: 0.8em;}
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+  #passages {width: 100%;}
+  .passage {font-size: 1.2em;}
+  .draggable {justify-content: center;}
+  .draggable p {text-align: center;}
+  #story {left: 2em;width: calc(100% - 2em);}
+  h1#story-title {font-size: 1.5em;}
+  #menu li a {font-size: 0.95em;} 
+}
+/* mobile */
+@media screen and (max-width: 425px) {
+  .passage {font-size: 1em;}
+  .passage ol, .passage ul {font-size: 0.7em}
+}
+ /* when screen height too small */
+@media screen and (max-height: 600px) {
+  .passage {font-size: 1em;}
+  .passage ol, .passage ul {font-size: 0.7em;}
+}
+
+
+
 /*-----------------------------*/
 /*      TEXT HIGHLIGHTING      */
 /*-----------------------------*/
@@ -464,6 +556,9 @@ i {
 .speakerA4 {
   color: #ffb0cd;
 }
+.speakerA5 {
+  color: #c64d58;
+}
 .speakerA1b {
   color: #c36aff;
   font-weight: bold;
@@ -478,6 +573,10 @@ i {
 }
 .speakerA4b {
   color: #ffb0cd;
+  font-weight: bold;
+}
+.speakerA5b {
+  color: #ff342b;
   font-weight: bold;
 }
 
@@ -536,4 +635,3 @@ But you're sure it's there.
   }
 }
 */
-

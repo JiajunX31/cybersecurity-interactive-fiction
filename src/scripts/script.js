@@ -31,31 +31,113 @@ $(document).on(':passageend', function (ev) { // this has to be done after the s
 	if (State.variables.isUnlockCharacterSummaries == true) {
 		// do nothing; will automatically unlock
 	} else {
-		$('#menu-story li a').attr('id', function(i) {
-			return 'menubutton'+(i+1);
+		$('#menu-story li a').attr('id', function (i) {
+			return 'menubutton' + (i + 1);
 		});
-		document.getElementById("menubutton1").setAttribute("aria-disabled",true);
-		document.getElementById("menubutton1").setAttribute("disabled","");
-		document.getElementById("menubutton1").setAttribute("type","button");
+		document.getElementById("menubutton1").setAttribute("aria-disabled", true);
+		document.getElementById("menubutton1").setAttribute("disabled", "");
+		document.getElementById("menubutton1").setAttribute("type", "button");
 	}
 });
 
-// js library for reorderable drag-and-drop lists
-// https://github.com/SortableJS/Sortable
-// need to run 'npm install sortablejs --save'
-import Sortable from 'sortablejs/modular/sortable.complete.esm.js';
 
 
-
-/*
-document.addEventListener('turbolinks:load', () => {
-	console.log("Sortable: ", Sortable);
-})
-*/
-
-/*
+// draggable list with order checker
+// adapted from https://www.codewithrandom.com/2022/12/31/sortable-list-drag-drop-drag-drop-using-html-css-javascript-codewithrandom/
+// for some reason there were problems importing external plugins (error: 'require not defined'), so I had to use something which would work with pure js
+// not very ideal since list is in .js rather than .twee, also doesn't work on mobile
+// ideally, import plugin like https://shopify.github.io/draggable/ or https://github.com/SortableJS/Sortable
 $(document).on(':passageend', function (ev) {
-	var el = document.getElementById('items');
-	var sortable = Sortable.create(el);
+	if (ev.passage.tags.includes('interactiveList')) {
+		const draggable_list = document.getElementById("draggable-list");
+		const check = document.getElementById("check");
+		const listToOrder = [ // can use twine/html directly inside the strings below
+			"Don't panic! Verify the Email's authenticity",
+			"Don't use links in the email address - navigate directly to the site.",
+			"Change your password",
+			"Enable two-factor authentication",
+			"Review and reinforce your security practices",
+		];
+		// Store listitems
+		const listItems = [];
+		let dragStartIndex;
+		createList();
+		// Insert list items into DOM
+		function createList() {
+			[...listToOrder]
+				.map((a) => ({ value: a, sort: Math.random() }))
+				.sort((a, b) => a.sort - b.sort)
+				.map((a) => a.value)
+				.forEach((x, index) => {
+					const listItem = document.createElement("li");
+					listItem.setAttribute("data-index", index);
+					listItem.innerHTML = `
+				<span class="number">${index + 1}</span>
+				<div class="draggable" draggable="true">
+				<p class="item-name">${x}</p>
+				</div>
+				`;
+					listItems.push(listItem);
+					draggable_list.appendChild(listItem);
+				});
+			addEventListeners();
+		}
+		function dragStart() {
+			// console.log('Event: ', 'dragstart');
+			dragStartIndex = +this.closest("li").getAttribute("data-index");
+		}
+		function dragEnter() {
+			// console.log('Event: ', 'dragenter');
+			this.classList.add("over");
+		}
+		function dragLeave() {
+			// console.log('Event: ', 'dragleave');
+			this.classList.remove("over");
+		}
+		function dragOver(e) {
+			// console.log('Event: ', 'dragover');
+			e.preventDefault();
+		}
+		function dragDrop() {
+			// console.log('Event: ', 'drop');
+			const dragEndIndex = +this.getAttribute("data-index");
+			swapItems(dragStartIndex, dragEndIndex);
+			this.classList.remove("over");
+		}
+
+		// Swap list items that are drag and drop
+		function swapItems(fromIndex, toIndex) {
+			const itemOne = listItems[fromIndex].querySelector(".draggable");
+			const itemTwo = listItems[toIndex].querySelector(".draggable");
+			listItems[fromIndex].appendChild(itemTwo);
+			listItems[toIndex].appendChild(itemOne);
+		}
+
+		// Check the order of list items
+		function checkOrder() {
+			listItems.forEach((listItem, index) => {
+				const itemName = listItem.querySelector(".draggable").innerText.trim();
+				if (itemName !== listToOrder[index]) {
+					listItem.classList.add("wrong");
+				} else {
+					listItem.classList.remove("wrong");
+					listItem.classList.add("right");
+				}
+			});
+		}
+		function addEventListeners() {
+			const draggables = document.querySelectorAll(".draggable");
+			const dragListItems = document.querySelectorAll(".draggable-list li");
+			draggables.forEach((draggable) => {
+				draggable.addEventListener("dragstart", dragStart);
+			});
+			dragListItems.forEach((item) => {
+				item.addEventListener("dragover", dragOver);
+				item.addEventListener("drop", dragDrop);
+				item.addEventListener("dragenter", dragEnter);
+				item.addEventListener("dragleave", dragLeave);
+			});
+		}
+		check.addEventListener("click", checkOrder);
+	}
 });
-*/

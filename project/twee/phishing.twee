@@ -75,7 +75,7 @@ While ?A1 is going through their emails, they notice a message from the universi
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
 :: SpearCycle [nobr]
-The first email's suspicious because...
+The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email1Answer">>
     <<option "it's got a weird logo." 1>>
     <<option "it's trying to pressure me!" 2>>
@@ -84,7 +84,7 @@ The first email's suspicious because...
     <<option "it's generic." 5>>
 <</cycle>>
 <br>
-And the second email's weird because...
+And the <<link"second email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
 <<cycle "$email2Answer">>
     <<option "it's got a silly logo." 1>>
     <<option "it's trying to rush me!" 2>>
@@ -93,7 +93,7 @@ And the second email's weird because...
     <<option "it reads like really bad automail." 5>>
 <</cycle>>
 <br>
-Finally, the third email's suspicious because...
+Finally, the <<link"third email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email3Answer">>
     <<option "it's got a grainy logo." 1>>
     <<option "it's trying to hurry me up!" 2>>
@@ -107,6 +107,17 @@ Spear-phishing attacks are done to target a specific individual. The most common
 
 :: SpearTooltip2
 Look out for the following: quality of company logo, presence of unique information, use of a pressuring/threatening tone, bad or irregular formatting, poor grammar/spelling, if the email address corresponds with the address the sender is claiming to be (check if possible).
+
+:: Email1
+[img[email]]
+
+:: Email2
+[img[email]]
+
+:: Email3
+[img[email]]
+
+
 
 :: SpearPhishingChoice [nobr]
 <<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
@@ -134,6 +145,13 @@ As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society 
 <</cycle>>
 <br><br>
 Then, ?A3 faces the [[consequences of their actions|FilesharingChoice1]]!
+
+<style>
+#story {
+    background: [img[bar]] no-repeat center center fixed;
+}
+</style>
+
 
 :: FilesharingTooltip1
 Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).

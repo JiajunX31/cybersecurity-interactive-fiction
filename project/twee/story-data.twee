@@ -65,8 +65,18 @@ Dialog.open();
 UI.saves()
 <</script>><</link>>
 
+<<link"Settings">><<script>>
+UI.settings()
+<</script>><</link>>
+
 <<link"Restart">><<script>>
 UI.restart()
+<</script>><</link>>
+
+<<link"Debug">><<script>>
+Dialog.setup("Debug Screen");
+Dialog.wiki(Story.get("Debug").processText());
+Dialog.open();
 <</script>><</link>>
 
 
@@ -87,6 +97,17 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
 
 
+:: Debug
+Jump to...
+[[Phishing Introduction|PhishingIntroduction]]
+[[Filesharing Introduction|FilesharingIntroduction]]
+[[Accomodation Scams Introduction|AccomodationScamsIntroduction]]
+[[Online Job Introduction|OnlineJobIntroduction]]
+[[Passwords Introduction|PasswordsA5Introduction]]
+[[Passwords 2FA Question|Passwords2FAQuestion ]]
+[[Passwords Management Question|PasswordsManagementQuestion]]
+
+
 :: Start
 Let's [[start|StudentIntroductions]]!
 
@@ -94,8 +115,7 @@ Let's [[start|StudentIntroductions]]!
 /* for inline: <img class="customclass" data-passage="test"> */
 <style>
 #story {
-    background: [img[test]] no-repeat center center fixed;
+    background: [img[quad]] no-repeat center center fixed;
 }
 </style>
 
-Go to Interactive [[list|PSSPasswordRecoveryQuestion]]
