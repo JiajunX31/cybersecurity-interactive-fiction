@@ -86,7 +86,7 @@ The platform Indeed is a legitimate and helpful job-hunting website; however, it
 :: OnlineJobChoice1
 <<if $onlinejob1 eq 2>>
 Although it's a bit of a compromise what with the in-person requirement, and there might be a slight issue with school-work-life balance in the future, this is still a safe choice! You successfully avoided getting scammed!<br><br>
-<<else if $onlinejob1 eq 3>>
+<<elseif $onlinejob1 eq 3>>
 While this job is seemingly legitimate, with any type of freelance contract work make sure to verify the individual or group that is posting the job. There have been many instances where a freelance worker will accept and complete a job without receiving any type of payment for it in the end. Be cautious and careful of this and make sure to quickly run a background check on the job offering individual or company. In any case, at least you cleared the low bar of not choosing the obvious scam!<br><br>
 <<else>>
 Oops!<br><br>
