@@ -11,6 +11,7 @@ Cybersecurity and You!
 <<set $isUnlockCharacterSummaries to false>>
 <<set $isUnlockA4 to false>>
 <<set $isUnlockA5 to false>>
+<<set $currentChapter to "start">>
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
@@ -80,6 +81,25 @@ Dialog.wiki(Story.get("Debug").processText());
 Dialog.open();
 <</script>><</link>>
 
+:: StorySubtitle
+<<switch $currentChapter>>
+<<case "start">>
+	<style>#story-subtitle {display: none;}</style>
+<<case "students">>
+	<style>#story-subtitle {display: inherit;}</style>
+    Chapter Zero:<br>Meet The Students
+<<case "phishing">>
+    <style>#story-subtitle {display: inherit;}</style>
+    Chapter One:<br>Phishing
+<<case "finance">>
+    <style>#story-subtitle {display: inherit;}</style>
+    Chapter Two:<br>Financial Scams
+<<case "passwords">>
+    <style>#story-subtitle {display: inherit;}</style>
+    Chapter Three:<br>Passwords
+<</switch>>
+
+
 
 :: MenuCharacters [nobr]
 /* when clicking on one of the character pages,
@@ -126,6 +146,7 @@ passwords.twee
 <<set $isUnlockCharacterSummaries to true>>
 <<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
 <</button>>
+
 
 :: Start
 Let's [[start|StudentIntroductions]]!

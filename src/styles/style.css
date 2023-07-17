@@ -121,8 +121,19 @@ h1#story-title {
 }
 
 #story-subtitle {
+  /*
   color: #d6d6d6;
   font-family: 'Vollkorn SC', serif;
+  */
+  color: #ffffff;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#story-subtitle p {
+  margin-top: 0;  
 }
 
 .special_subtitle {
@@ -495,12 +506,14 @@ i {
 @media screen and (min-width: 1921px) {
   .passage {font-size: 2em;}
   .passage ol, .passage ul {font-size: 1.5em;}
+  #story-subtitle {font-size: 1.7em;}
 }
 /* small laptop (1366 × 768) - desktop (1920 x 1080) */
 @media screen and (max-width: 1366px) {
   #passages {height: auto;max-height: none;}
   .passage {font-size: 1.2em;}
   .passage ol, .passage ul {font-size: 0.8em;}
+  #story-subtitle {font-size: 1em;}
 }
 /* tablet */
 @media screen and (max-width: 768px) {
@@ -511,16 +524,19 @@ i {
   #story {left: 2em;width: calc(100% - 2em);}
   h1#story-title {font-size: 1.5em;}
   #menu li a {font-size: 0.95em;} 
+  #story-subtitle {font-size: 1em;}
 }
 /* mobile */
 @media screen and (max-width: 425px) {
   .passage {font-size: 1em;}
   .passage ol, .passage ul {font-size: 0.7em}
+  #story-subtitle {font-size: 0.8em;}
 }
  /* when screen height too small */
 @media screen and (max-height: 600px) {
   .passage {font-size: 1em;}
   .passage ol, .passage ul {font-size: 0.7em;}
+  #story-subtitle {font-size: 0.8em;}
 }
 
 
