@@ -98,23 +98,23 @@ If a landlord's acting strange or suspicious in any way, rather than wasting tim
 :: OnlineJobIntroduction [nobr] {"position":"1100,100","size":"100,100"}
 Alongside searching for next year's accommodation, ?A3 is also trying to find a job that they can do on the side to earn a little extra money during the school year. They reach out to a friend of theirs, ?A4, that is studying remotely to ask if they know of any online job possibilities.
 <br><br>
-?A3: You said you have an online job while you are studying from home, right? I''m trying to earn a little extra money this semester... 
+?A3b: You said you have an online job while you are studying from home, right? I''m trying to earn a little extra money this semester... 
 <br><br>
-?A4: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
+?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
 <br><br>
-?A3: Ah okay. Good thing to keep in mind, thank you for letting me know! 
+?A3b: Ah okay. Good thing to keep in mind, thank you for letting me know! 
 <br><br>
-?A4: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
+?A4b: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
 <br><br>
-?A3: Yeah, I'd really like an easy remote job that'll give me money quickly. Oh hey! This one seems really simple—all I have to do is process [[money transfers|OnlineJobChoice1][$onlinejob1 to 1]]!
+?A3b: Yeah, I'd really like an easy remote job that'll give me money quickly. Oh hey! This one seems really simple—all I have to do is process [[money transfers|OnlineJobChoice1][$onlinejob1 to 1]]!
 <br><br>
-?A4: Eh. Doesn't that seem strange to you? Look at this [[assistant|OnlineJobChoice1][$onlinejob1 to 2]] hybrid job. It's even paying above minimum wage!
+?A4b: Eh. Doesn't that seem strange to you? Look at this [[assistant|OnlineJobChoice1][$onlinejob1 to 2]] hybrid job. It's even paying above minimum wage!
 <br><br>
-?A3: I don't know about that. I don't know how to assist myself, much less other people! Plus, it's making me go in-person. I have anxiety.
+?A3b: I don't know about that. I don't know how to assist myself, much less other people! Plus, it's making me go in-person. I have anxiety.
 <br><br>
-?A4: Oh yeah. Then what about this [[contract proofreading job|OnlineJobChoice1][$onlinejob1 to 3]]? It's only a one-off, but at least you don't have to go in-person!
+?A4b: Oh yeah. Then what about this [[contract proofreading job|OnlineJobChoice1][$onlinejob1 to 3]]? It's only a one-off, but at least you don't have to go in-person!
 <br><br>
-?A3: Cool. They all seem interesting, so I guess I'll apply to any one of them!
+?A3b: Cool. They all seem interesting, so I guess I'll apply to any one of them!
 
 
 :: OnlineJobTooltip1 {"position":"1225,100","size":"100,100"}
@@ -141,15 +141,15 @@ Meanwhile, with [[?A1|GovernmentScamIntro]]...
 :: GovernmentScamIntro [nobr] {"position":"350,225","size":"100,100"}
 Second semester for ?A1 is full of stress due to trying to find housing and a seemingly unending number of assignment deadlines. Amid trying to get their Social Anthropology essay submitted on time, ?A1 receives a message from UK Visas and Immigration (UKVI), saying that there's a problem with their visa. Maybe an 'i' has been dotted wrong, or a 't' hasn't been crossed correctly—whatever it is, if they do nothing, their visa's getting cancelled.
 <br><br>
-?A1: Oh no, oh no. If I don't deal with this right now, I'll get deported, I'll fail out of St Andrews, I'll become an international criminal—and then I'll never get my degree! 
+?A1b: Oh no, oh no. If I don't deal with this right now, I'll get deported, I'll fail out of St Andrews, I'll become an international criminal—and then I'll never get my degree! 
 <br><br>
-?A2: Whoa, calm down a little. Don't panic.
+?A2b: Whoa, calm down a little. Don't panic.
 <br><br>
-?A1: Yeah, okay. All I have to do is [[pay the fine|GovScamChoice1][$govscam1 to 1]] and then everything will get sorted out and I'll never have to worry about this ever again. It's a lot of money, but it's a small price to pay for not being an utter disappointment to my ancestors.
+?A1b: Yeah, okay. All I have to do is [[pay the fine|GovScamChoice1][$govscam1 to 1]] and then everything will get sorted out and I'll never have to worry about this ever again. It's a lot of money, but it's a small price to pay for not being an utter disappointment to my ancestors.
 <br><br>
-?A2: Huh? No! Isn't it weird that they say that paying a fine will solve everything? At least try to [[talk to someone|GovScamChoice1][$govscam1 to 2]], somebody who's in charge, about this so they can fix whatever's gone wrong?
+?A2b: Huh? No! Isn't it weird that they say that paying a fine will solve everything? At least try to [[talk to someone|GovScamChoice1][$govscam1 to 2]], somebody who's in charge, about this so they can fix whatever's gone wrong?
 <br><br>
-?A3: Come on. It's obviously a scam. You're not in any trouble ?A1. Just [[delete it|GovScamChoice1][$govscam1 to 3]] and get on with your essay. Duh. Isn't it due in, like, a couple of hours?
+?A3b: Come on. It's obviously a scam. You're not in any trouble ?A1. Just [[delete it|GovScamChoice1][$govscam1 to 3]] and get on with your essay. Duh. Isn't it due in, like, a couple of hours?
 
 
 :: GovScamChoice1 [nobr] {"position":"475,225","size":"100,100"}
@@ -189,85 +189,93 @@ Drag and drop the items below into their corresponding order:
 Check Order
 </button>
 <br><br>
-[[next|PasswordsRecoveryChoice]]
+All done? First click the 'Check Order' button above. Then let's [[move on|PasswordsRecoveryChoice]]!
 
 
-:: PasswordsRecoveryChoice {"position":"850,225","size":"100,100"}
-If the Order is correct: Congratulations! You are an account recovery expert! 
-If the Order is incorrect: Almost there! Please see the following list of actions: 
+:: PasswordsRecoveryChoice [nobr] {"position":"850,225","size":"100,100"}
+<<if listItem.classList.includes("right")>>
+Congratulations! You are an account recovery expert!
+<br><br>
+<<else>>
+Almost there! This is the correct order:
+<br><br>
+# Do not panic! Verify the authenticity of the email. 
+# Don't use links in the email address - navigate directly to the site. 
+# Change your password. 
+# Enable two-factor authentication. 
+# Review account activity. 
+# Contact the service provider. 
+# Monitor your other accounts. 
+# Scan your devices for malware. 
+# Review and strengthen security practices.
+<</if>>
+<br><br>
+?A5: Nice to know. Now, I gotta get onto the next step. [[Corporate shilling|Passwords2FAQuestion]]!
 
-Do not panic! Verify the authenticity of the email. 
-Don't use links in the email address - navigate directly to the site. 
-Change your password. 
-Enable two-factor authentication. 
-Review account activity. 
-Contact the service provider. 
-Monitor your other accounts. 
-Scan your devices for malware. 
-Review and strengthen security practices.
 
-[[next|Passwords2FAQuestion]]
-
-
-:: Passwords2FAQuestion {"position":"975,225","size":"100,100"}
+:: Passwords2FAQuestion [nobr] {"position":"975,225","size":"100,100"}
 Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>. Read the conversation below and reflect on whether you would consider using Two-Factor Authentication. 
 <p><br></p> /* testing if quotation marks look better on dialogue portions */
-?A5b: "Hey ?A4, you won't believe what happened to me! My TikTok account got hacked. It was such a nightmare!"
-
-?A4b: "Seriously? That's terrible, ?A5. How did that happen?"
-
-?A5b: "Well, I think someone figured out my password, and they got access to my account. It's been a mess trying to regain control. I've had to change some of my security measures though, such as setting up two-factor authentication."
-
-?A4b: "Ugh, that sounds like a nightmare. But you know, I've heard that setting up two-factor authentication is such a pain. Is it really worth it?"
-
-?A5b: "Trust me, ?A4, I used to think the same way. But after this experience, I can't stress enough how crucial it is. Two-factor authentication adds an extra layer of security to your accounts. Passwords just aren't enough anymore."
-
-?A4b: "Yeah, but doesn't it make everything so inconvenient? I mean, who wants to go through that extra step every time they log in?"
-
-?A5b: "I get where you're coming from, but think about it this way. Would you rather spend a few extra seconds ensuring your account is safe, or go through the headache of dealing with a hacked account like I did? Two-factor authentication could have prevented that from happening to me."
-
-?A4b: "I guess you have a point there. But isn't it complicated to set up? I'm not very tech-savvy, you know."
-
-?A5b: "It's not as complicated as it may seem, ?A4. Most platforms have made it user-friendly and provide clear instructions. Once you set it up, it becomes second nature. Plus, it's an effective way to keep your personal information and online presence secure."
-<p><br></p>
-[[next|PasswordsManagementQuestion]]
+?A5b: Hey ?A4, you won't believe what happened to me! My TikTok account got hacked. It was such a nightmare!
+<br><br>
+?A4b: Seriously? That's terrible, ?A5. How did that happen?
+<br><br>
+?A5b: Well, I think someone figured out my password, and they got access to my account. It's been a mess trying to regain control. I've had to change some of my security measures though, such as setting up two-factor authentication.
+<br><br>
+?A4b: Ugh, that sounds like a nightmare. But you know, I've heard that setting up two-factor authentication is such a pain. Is it really worth it?
+<br><br>
+?A5b: Trust me, ?A4, I used to think the same way. But after this experience, I can't stress enough how crucial it is. Two-factor authentication adds an extra layer of security to your accounts. Passwords just aren't enough anymore.
+<br><br>
+?A4b: Yeah, but doesn't it make everything so inconvenient? I mean, who wants to go through that extra step every time they log in?
+<br><br>
+?A5b: I get where you're coming from, but think about it this way. Would you rather spend a few extra seconds ensuring your account is safe, or go through the headache of dealing with a hacked account like I did? Two-factor authentication could have prevented that from happening to me.
+<br><br>
+?A4b: I guess you have a point there. But isn't it complicated to set up? I'm not very tech-savvy, you know.
+<br><br>
+?A5b: It's not as complicated as it may seem, ?A4. Most platforms have made it user-friendly and provide clear instructions. Once you set it up, it becomes second nature. Plus, it's an effective way to keep your personal information and online presence secure.
+<br><br>
+?A4b: Alright then. But what about [[password management|PasswordsManagementQuestion]]? Wasn't that how you got hacked in the first place.
+<br><br>
+?A5b: Uh.
 
 
 :: 2FATooltip {"position":"1100,225","size":"100,100"}
 Two-factor authentication (2FA) is an additional layer of security used to protect online accounts. It requires users to provide two separate forms of identification to verify their identity. Typically, this involves something the user knows (such as a password) and something the user has (such as a unique code sent to their phone). This added layer of protection makes it more difficult for unauthorized individuals to gain access to accounts, even if they manage to obtain the user's password. 2FA significantly enhances account security by providing an extra barrier against unauthorized access.
 
 
-:: PasswordsManagementQuestion {"position":"1225,225","size":"100,100"}
-According to a study conducted by NordPass, the password "password" ranked as the fifth most commonly used password in 2020, with a staggering 20,958,297 individuals worldwide using it. The top four passwords of the year were: "123456," "123456789," "12345," and "qwerty." 
+:: PasswordsManagementQuestion [nobr] {"position":"1225,225","size":"100,100"}
+According to a study conducted by NordPass, the password "password" ranked as the fifth most commonly used password in 2020, with a staggering 20,958,297 individuals worldwide using it. The top four passwords of the year were: "123456," "123456789," "12345," and "qwerty."
+<br><br>
 Alex had to create new passwords to replace the ones that were breached. How can you tell if a password is weak? Here are a few tips:
+<br><br>
 <ul>
     <li>- Words you can find in the dictionary increase weakness.</li>
     <li>- Dictionary words with some letters replaced by numbers.</li>
     <li>- A repeated character or a common series of characters.</li>
     <li>- Personal information.</li>
 </ul>
-
+<br><br>
 There are some recommended exceptions. For example, the UK's National Cybersecurity Centre recommends using the '3 Random Words' approach. They argue that, “By using a password that's made up of three random words, you're creating a password that will be 'strong enough' to keep the criminals out, but easy enough for you to remember”. 
-
+<br><br>
 For every strong password protecting someone's data, there are numerous weak ones. In this spirit, identify the two strong passwords from this list of weak passwords.
+<br><br>
+# ItIsRobyn2005<br><br>
+# ilovecats<br><br>
+# 123456789<br><br>
+# 2h2APP8QnvYaYe7<br><br>
+# SuperheroMoviesareTrash<br><br>
+# drag0nf1y<br><br>
+# P@ssw0rd!<br><br>
+# abcdefg123<br><br>
+# Qwerty123<br><br>
+# SunflowerMountainCoffee
+<br><br>
+All done? Let's [[check|PasswordsManagementChoice]]!
 
-1. ItIsRobyn2005 ​☐​ 
-2. ilovecats ​☐​ 
-3. 123456789 ​☐​ 
-4. 2h2APP8QnvYaYe7 ​☐​ 
-5. SuperheroMoviesareTrash ​☐​ 
-6. drag0nf1y ​☐​ 
-7. P@ssw0rd! ​☐​ 
-8. abcdefg123 ​☐​ 
-9. Qwerty123 ​☐​ 
-10. SunflowerMountainCoffee ​☐​ 
 
-[[next|PasswordsManagementChoice]]
-
-
-:: PasswordsManagementChoice {"position":"100,350","size":"100,100"}
+:: PasswordsManagementChoice [nobr] {"position":"100,350","size":"100,100"}
 The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. The former is a Google-generated password created by the Google Password Manager. These are very strong passwords that you won't need to remember, but their security hinges on your Google account being extra secure. Here are some instructions from Google on how to use the password generator:
-
+<br><br>
 <ol>
     <li>On your computer, open Chrome. Make sure that you're signed in to Chrome.</li>
     <li>Go to a website and sign up for an account.</li>
@@ -275,12 +283,12 @@ The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. T
     <li>To confirm, click 'Use suggested password'.</li>
     <li>Finish signing up for your account. Your generated password is automatically saved to your Google Account.</li>
 </ol>
-
-The latter password is the 3 Random Word method recommended by the UK's NCC. It's more memorable and realistic if you do not use a <<link"Password Manager">><<script>>Dialog.setup("Password Managers", "PasswordManagerTooltip ");Dialog.wiki(Story.get("PasswordManagerTooltip ").processText());Dialog.open();<</script>><</link>>, but it is weaker than a specially generated password from a Password Manager. 
-
-If Incorrect: You didn't identify the two strongest passwords correctly. For more experience, try generating some passwords using websites, or try the 3 Random Words method.
-
-If Correct: Congratulations! You answered correctly.
+<br><br>
+The latter password is the 3 Random Word method recommended by the UK's NCC. It's more memorable and realistic if you do not use a <<link"password manager">><<script>>Dialog.setup("Password Managers", "PasswordManagerTooltip");Dialog.wiki(Story.get("PasswordManagerTooltip").processText());Dialog.open();<</script>><</link>>, but it is weaker than a specially generated password from a Password Manager.
+<p><br><br></p>
+Congratulations! You've finished <span class='textimportant'>Chapter Three: Passwords</span>!
+<p><br></p>
+<center>[[continue to the end?|Ending]]</center>
 
 
 :: PasswordManagerTooltip {"position":"225,350","size":"100,100"}
@@ -661,7 +669,14 @@ Let's [[start|StudentIntroductions]]!
 </style>
 
 
-:: StudentIntroductions [nobr] {"position":"1100,600","size":"100,100"}
+:: Ending {"position":"1100,600","size":"100,100"}
+Congratulations! You've finished <span class='textimportant'>'CYBERSECURITY AND YOU!'</span>!
+<center>...
+The End
+</center>
+
+
+:: StudentIntroductions [nobr] {"position":"1225,600","size":"100,100"}
 The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves three hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 <br>
 <br>
@@ -698,7 +713,7 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <</if>>
 
 
-:: A1 [nobr noreturn] {"position":"1225,600","size":"100,100"}
+:: A1 [nobr noreturn] {"position":"100,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A1")>>
 <span class='speakerA1'><<print $A1.toUpperCase()>></span>
 <br>
@@ -712,7 +727,7 @@ But university is a time and place for pushing new boundaries and opening up new
 <<link "GO BACK" $return>><</link>>
 
 
-:: A2 [nobr noreturn] {"position":"100,725","size":"100,100"}
+:: A2 [nobr noreturn] {"position":"225,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A2")>>
 <span class='speakerA2'><<print $A2.toUpperCase()>></span>
 <br>
@@ -726,7 +741,7 @@ But all of that routine may come crashing down at any moment, especially if they
 <<link "GO BACK" $return>><</link>>
 
 
-:: A3 [nobr noreturn] {"position":"225,725","size":"100,100"}
+:: A3 [nobr noreturn] {"position":"350,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A3")>>
 <span class='speakerA3'><<print $A3.toUpperCase()>></span>
 <br>
@@ -740,7 +755,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <<link "GO BACK" $return>><</link>>
 
 
-:: A4 [nobr noreturn] {"position":"350,725","size":"100,100"}
+:: A4 [nobr noreturn] {"position":"475,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A4")>>
 <span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>
@@ -751,7 +766,7 @@ Attending remotely this year for personal reasons.
 <<link "GO BACK" $return>><</link>>
 
 
-:: A5 [nobr noreturn] {"position":"475,725","size":"100,100"}
+:: A5 [nobr noreturn] {"position":"600,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A5")>>
 <span class='speakerA5'><<print $A5.toUpperCase()>></span>
 <br>
