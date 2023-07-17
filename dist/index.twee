@@ -17,7 +17,7 @@ Cybersecurity and You!
 
 
 :: Story JavaScript [script]
-"use strict";Config.cleanupWikifierOutput=!0,$(document).on(":passagerender",(function(t){var e=$(t.content).find(".macro-cycle");e.length&&(e.attr("aria-label",(function(t){return"(click to change) "+$(this).text()})),e.on("click",(function(t){$(this).find("p").contents().unwrap(),$(this).attr("aria-label","(click to change) "+$(this).text())})))})),$(document).on(":passagestart",(function(t){t.passage.tags.includes("noreturn")||(State.variables.return=t.passage.title)})),$(document).on(":passageend",(function(t){1==State.variables.isUnlockCharacterSummaries||($("#menu-story li a").attr("id",(function(t){return"menubutton"+(t+1)})),document.getElementById("menubutton1").setAttribute("aria-disabled",!0),document.getElementById("menubutton1").setAttribute("disabled",""),document.getElementById("menubutton1").setAttribute("type","button"))})),$(document).on(":passageend",(function(t){if(t.passage.tags.includes("interactiveList")){var e,n=function(){e=+this.closest("li").getAttribute("data-index")},a=function(){this.classList.add("over")},r=function(){this.classList.remove("over")},i=function(t){t.preventDefault()},s=function(){var t=+this.getAttribute("data-index");c(e,t),this.classList.remove("over")},c=function(t,e){var n=g[t].querySelector(".draggable"),a=g[e].querySelector(".draggable");g[t].appendChild(a),g[e].appendChild(n)},o=function(){var t=document.querySelectorAll(".draggable"),e=document.querySelectorAll(".draggable-list li");t.forEach((function(t){t.addEventListener("dragstart",n)})),e.forEach((function(t){t.addEventListener("dragover",i),t.addEventListener("drop",s),t.addEventListener("dragenter",a),t.addEventListener("dragleave",r)}))},u=document.getElementById("draggable-list"),d=document.getElementById("check"),l=["Don't panic! Verify the Email's authenticity","Don't use links in the email address - navigate directly to the site.","Change your password","Enable two-factor authentication","Review and reinforce your security practices"],g=[];[].concat(l).map((function(t){return{value:t,sort:Math.random()}})).sort((function(t,e){return t.sort-e.sort})).map((function(t){return t.value})).forEach((function(t,e){var n=document.createElement("li");n.setAttribute("data-index",e),n.innerHTML='\n\t\t\t\t<span class="number">'.concat(e+1,'</span>\n\t\t\t\t<div class="draggable" draggable="true">\n\t\t\t\t<p class="item-name">').concat(t,"</p>\n\t\t\t\t</div>\n\t\t\t\t"),g.push(n),u.appendChild(n)})),o(),d.addEventListener("click",(function(){g.forEach((function(t,e){t.querySelector(".draggable").innerText.trim()!==l[e]?t.classList.add("wrong"):(t.classList.remove("wrong"),t.classList.add("right"))}))}))}}));
+"use strict";Config.cleanupWikifierOutput=!0,$(document).on(":passagerender",(function(t){var e=$(t.content).find(".macro-cycle");e.length&&(e.attr("aria-label",(function(t){return"(click to change) "+$(this).text()})),e.on("click",(function(t){$(this).find("p").contents().unwrap(),$(this).attr("aria-label","(click to change) "+$(this).text())})))})),$(document).on(":passagestart",(function(t){t.passage.tags.includes("noreturn")||(State.variables.return=t.passage.title)})),$(document).on(":passageend",(function(t){1==State.variables.isUnlockCharacterSummaries||($("#menu-story li a").attr("id",(function(t){return"menubutton"+(t+1)})),document.getElementById("menubutton1").setAttribute("aria-disabled",!0),document.getElementById("menubutton1").setAttribute("disabled",""),document.getElementById("menubutton1").setAttribute("type","button"))})),$(document).on(":passageend",(function(t){if(t.passage.tags.includes("interactiveList")){var e,n=function(){e=+this.closest("li").getAttribute("data-index")},a=function(){this.classList.add("over")},r=function(){this.classList.remove("over")},i=function(t){t.preventDefault()},s=function(){var t=+this.getAttribute("data-index");c(e,t),this.classList.remove("over")},c=function(t,e){var n=g[t].querySelector(".draggable"),a=g[e].querySelector(".draggable");g[t].appendChild(a),g[e].appendChild(n)},o=function(){var t=document.querySelectorAll(".draggable"),e=document.querySelectorAll(".draggable-list li");t.forEach((function(t){t.addEventListener("dragstart",n)})),e.forEach((function(t){t.addEventListener("dragover",i),t.addEventListener("drop",s),t.addEventListener("dragenter",a),t.addEventListener("dragleave",r)}))},u=document.getElementById("draggable-list"),d=document.getElementById("check"),l=["Don't panic! Verify the Email's authenticity","Don't use links in the email address - navigate directly to the site.","Change your password","Enable two-factor authentication","Review and reinforce your security practices"],g=[];[].concat(l).map((function(t){return{value:t,sort:Math.random()}})).sort((function(t,e){return t.sort-e.sort})).map((function(t){return t.value})).forEach((function(t,e){var n=document.createElement("li");n.setAttribute("data-index",e),n.innerHTML='\n\t\t\t\t<span class="number">'.concat(e+1,'</span>\n\t\t\t\t<div class="draggable" draggable="true">\n\t\t\t\t<p class="item-name">').concat(t,"</p>\n\t\t\t\t</div>\n\t\t\t\t"),g.push(n),u.appendChild(n)})),o(),d.addEventListener("click",(function(){g.forEach((function(t,e){t.querySelector(".draggable").innerText.trim()!==l[e]?(t.classList.add("wrong"),State.variables.isAllCorrect=!1):(t.classList.remove("wrong"),t.classList.add("right"),State.variables.isAllCorrect=!0)}))}))}}));
 
 
 :: bar [Twine.image] {"position":"100,100","size":"100,100"}
@@ -70,13 +70,9 @@ With the demand for accommodation being so high, many scammers attempt to take a
 There are a variety of factors to look out for when searching for accommodation: 
 
 # Most landlords don't advertise on Facebook chats or other forms of social media so stay extra cautious if you come upon these types of adverts. 
-
 # If a landlord refuses to provide proof of identity and landlord registration information, they are most likely not genuine. 
-
 # There is no excuse for a landlord's name to not be registered on the Scottish Landlord Register. If a landlord's name is not listed, they are not legitimate.  
-
 # In-person viewings not being available typically points to fraudulent landlords. Many times, they will say that they are out of town or too busy to provide an in-person viewing, but do not fall for this. 
-
 # Never give a landlord a deposit prior to having received a tenancy agreement.
 
 
@@ -92,7 +88,7 @@ If a landlord's acting strange or suspicious in any way, rather than wasting tim
 <br><br>
 ...
 <br><br>
-?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntro]].
+?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntroduction]].
 
 
 :: OnlineJobIntroduction [nobr] {"position":"1100,100","size":"100,100"}
@@ -108,7 +104,19 @@ One day, ?A5 wakes up to discover that he has been sent an email from Youtube st
 /* if his followers were sent content, then shouldn't changing the password be the most important thing? the account is confirmed compromised already without checking the authenticity of the email */
 
 
-:: PasswordsRecoveryQuestion [nobr interactiveList] {"position":"100,225","size":"100,100"}
+:: A5 [nobr noreturn] {"position":"100,225","size":"100,100"}
+<<set $studentIntroduction.pushUnique("A5")>>
+<span class='speakerA5'><<print $A5.toUpperCase()>></span>
+<br>
+<br>
+A charismatic high school student who has gained fame on TikTok with his entertaining and creative videos. His popularity is on the rise, and he's excited about the opportunities his online presence brings.
+<br>
+<br>
+<<link "GO BACK" $return>><</link>>
+
+
+:: PasswordsRecoveryQuestion [nobr interactiveList] {"position":"225,225","size":"100,100"}
+<<set $isAllCorrect to false>>
 ?A5 won't be able to recover his account without a plan. What steps should ?A5 take? Read the following options and click and drag the options into the order which you would recommend to ?A5.
 <br><br>
 Drag and drop the items below into their corresponding order:
@@ -122,26 +130,44 @@ Check Order
 [[next|PasswordsRecoveryChoice]]
 
 
-:: PasswordsRecoveryChoice {"position":"225,225","size":"100,100"}
-If the Order is correct: Congratulations! You are an account recovery expert! 
-If the Order is incorrect: Almost there! Please see the following list of actions: 
+:: PasswordsRecoveryChoice {"position":"350,225","size":"100,100"}
+<<if $isAllCorrect is true>>
+    Congratulations! You are an account recovery expert! Here is a list of possible actions you can take:
+<<else>>
+    Almost there! Please see the following list of actions: 
+<</if>>
 
-Do not panic! Verify the authenticity of the email. 
-Don't use links in the email address - navigate directly to the site. 
-Change your password. 
-Enable two-factor authentication. 
-Review account activity. 
-Contact the service provider. 
-Monitor your other accounts. 
-Scan your devices for malware. 
-Review and strengthen security practices.
+# Do not panic! Verify the authenticity of the email. 
+# Don't use links in the email address - navigate directly to the site. 
+# Change your password. 
+# Enable two-factor authentication. 
+# Review account activity. 
+# Contact the service provider. 
+# Monitor your other accounts. 
+# Scan your devices for malware. 
+# Review and strengthen security practices.
+
+<<link"See more">><<script>>Dialog.setup("Password Recovery", "PasswordRecoveryTooltip");Dialog.wiki(Story.get("PasswordRecoveryTooltip").processText());Dialog.open();<</script>><</link>>
+
 
 [[next|Passwords2FAQuestion]]
 
 
-:: Passwords2FAQuestion {"position":"350,225","size":"100,100"}
-Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>. Read the conversation below and reflect on whether you would consider using Two-Factor Authentication. 
-<p><br></p> /* testing if quotation marks look better on dialogue portions */
+:: PasswordRecoveryTooltip {"position":"475,225","size":"100,100"}
+# Don't panic! Verify the Email's authenticity to ensure the email is legitimate and not a phishing attempt. Look for suspicious elements.
+# Don't use links in the email address. Access your account directly by navigating to the website and checking for login activity.
+# If login activity is suspicious, change your password to something stronger and more unique. 
+# Enable two-factor authentication. This makes your account extra secure by adding another layer of security; usually by sending a code to your phone.
+# Look for unauthorized changes to your account information such as disabled security settings.
+# Contact the service provider to report the incident. Supply details about the suspicious login and follow instructions they provide.
+# Keep a close eye on your other accounts as the breach could extend beyond a single account.
+# Run an antivirus scan through your devices to ensure there are no further suspicious programs running.
+# Take this opportunity to review and reinforce your security practices. For example, consider using a password manager to keep track of complicated passwords.
+
+
+:: Passwords2FAQuestion {"position":"600,225","size":"100,100"}
+Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>.
+/* testing if quotation marks look better on dialogue portions */
 ?A5b: "Hey ?A4, you won't believe what happened to me! My TikTok account got hacked. It was such a nightmare!"
 
 ?A4b: "Seriously? That's terrible, ?A5. How did that happen?"
@@ -163,41 +189,48 @@ Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 
 [[next|PasswordsManagementQuestion]]
 
 
-:: 2FATooltip {"position":"475,225","size":"100,100"}
+:: 2FATooltip {"position":"725,225","size":"100,100"}
 Two-factor authentication (2FA) is an additional layer of security used to protect online accounts. It requires users to provide two separate forms of identification to verify their identity. Typically, this involves something the user knows (such as a password) and something the user has (such as a unique code sent to their phone). This added layer of protection makes it more difficult for unauthorized individuals to gain access to accounts, even if they manage to obtain the user's password. 2FA significantly enhances account security by providing an extra barrier against unauthorized access.
 
 
-:: PasswordsManagementQuestion {"position":"600,225","size":"100,100"}
+:: PasswordsManagementQuestion {"position":"850,225","size":"100,100"}
+/* nobr tag breaks the unordered lists */
 According to a study conducted by NordPass, the password "password" ranked as the fifth most commonly used password in 2020, with a staggering 20,958,297 individuals worldwide using it. The top four passwords of the year were: "123456," "123456789," "12345," and "qwerty." 
-Alex had to create new passwords to replace the ones that were breached. How can you tell if a password is weak? Here are a few tips:
-<ul>
-    <li>- Words you can find in the dictionary increase weakness.</li>
-    <li>- Dictionary words with some letters replaced by numbers.</li>
-    <li>- A repeated character or a common series of characters.</li>
-    <li>- Personal information.</li>
-</ul>
+?A5 had to create new passwords to replace the ones that were breached. How can you tell if a password is weak? Here are a few indicators:
+
+* - It includes words you can find in the dictionary
+* - Dictionary words with some letters replaced by numbers
+* - A repeated character or a common series of characters
+* - Personal information
 
 There are some recommended exceptions. For example, the UK's National Cybersecurity Centre recommends using the '3 Random Words' approach. They argue that, “By using a password that's made up of three random words, you're creating a password that will be 'strong enough' to keep the criminals out, but easy enough for you to remember”. 
 
 For every strong password protecting someone's data, there are numerous weak ones. In this spirit, identify the two strong passwords from this list of weak passwords.
 
-1. ItIsRobyn2005 ​☐​ 
-2. ilovecats ​☐​ 
-3. 123456789 ​☐​ 
-4. 2h2APP8QnvYaYe7 ​☐​ 
-5. SuperheroMoviesareTrash ​☐​ 
-6. drag0nf1y ​☐​ 
-7. P@ssw0rd! ​☐​ 
-8. abcdefg123 ​☐​ 
-9. Qwerty123 ​☐​ 
-10. SunflowerMountainCoffee ​☐​ 
+* <label><<checkbox "$p1" false true autocheck>> ItIsRobyn2005</label>
+* <label><<checkbox "$p2" false true autocheck>> ilovecats</label>
+* <label><<checkbox "$p3" false true autocheck>> 123456789</label>
+* <label><<checkbox "$p4" false true autocheck>> 2h2APP8QnvYaYe7</label>
+* <label><<checkbox "$p5" false true autocheck>> SuperheroMoviesareTrash</label>
+* <label><<checkbox "$p6" false true autocheck>> drag0nf1y</label>
+* <label><<checkbox "$p7" false true autocheck>> P@ssw0rd!</label>
+* <label><<checkbox "$p8" false true autocheck>> abcdefg123</label>
+* <label><<checkbox "$p9" false true autocheck>> Qwerty123</label>
+* <label><<checkbox "$p10" false true autocheck>> SunflowerMountainCoffee</label>
 
 [[next|PasswordsManagementChoice]]
 
 
-:: PasswordsManagementChoice {"position":"725,225","size":"100,100"}
-The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. The former is a Google-generated password created by the Google Password Manager. These are very strong passwords that you won't need to remember, but their security hinges on your Google account being extra secure. Here are some instructions from Google on how to use the password generator:
-
+:: PasswordsManagementChoice [nobr] {"position":"975,225","size":"100,100"}
+<<if $p4 and $p10 and !$p1 and !$p2 and !$p3 and !$p5 and !$p6 and !$p7 and !$p8 and !$p9>>
+    <<set $isPassChoiceCorrect to true>>
+    Congratulations! You answered correctly.
+<<else>>
+    <<set $isPassChoiceCorrect to false>>
+<</if>>
+<br><br>
+The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. The former is a Google-generated password created by the Google Password Manager. These are very strong passwords that you won't need to remember, but their security hinges on your Google account being extra secure. Here are some instructions from Google on how to use their password generator:
+<br>
 <ol>
     <li>On your computer, open Chrome. Make sure that you're signed in to Chrome.</li>
     <li>Go to a website and sign up for an account.</li>
@@ -205,19 +238,19 @@ The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. T
     <li>To confirm, click 'Use suggested password'.</li>
     <li>Finish signing up for your account. Your generated password is automatically saved to your Google Account.</li>
 </ol>
+<br>
+The latter password is the 3 Random Word method recommended by the UK's NCC. It's more memorable and realistic if you don't use a <<link"Password Manager">><<script>>Dialog.setup("Password Managers", "PasswordManagerTooltip");Dialog.wiki(Story.get("PasswordManagerTooltip").processText());Dialog.open();<</script>><</link>>, but it's weaker than a specially generated password from a Password Manager. 
+<br><br>
+<<if $isPassChoiceCorrect is false>>
+    You didn't identify the two strongest passwords correctly. For more experience, try generating some passwords using websites, or try the 3 Random Words method.
+<</if>>
 
-The latter password is the 3 Random Word method recommended by the UK's NCC. It's more memorable and realistic if you do not use a <<link"Password Manager">><<script>>Dialog.setup("Password Managers", "PasswordManagerTooltip ");Dialog.wiki(Story.get("PasswordManagerTooltip ").processText());Dialog.open();<</script>><</link>>, but it is weaker than a specially generated password from a Password Manager. 
 
-If Incorrect: You didn't identify the two strongest passwords correctly. For more experience, try generating some passwords using websites, or try the 3 Random Words method.
-
-If Correct: Congratulations! You answered correctly.
-
-
-:: PasswordManagerTooltip {"position":"850,225","size":"100,100"}
+:: PasswordManagerTooltip {"position":"1100,225","size":"100,100"}
 A password manager is a secure digital tool that helps users store, organize, and generate strong and unique passwords for their various online accounts. It typically operates through a master password, which grants access to an encrypted database containing all the user's passwords. Password managers eliminate the need to remember multiple complex passwords and enhance online security by promoting the use of strong, randomized passwords.
 
 
-:: PhishingIntroduction [nobr] {"position":"975,225","size":"100,100"}
+:: PhishingIntroduction [nobr] {"position":"1225,225","size":"100,100"}
 ?A1, ?A2, and ?A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
 <br>
@@ -251,15 +284,15 @@ If you're having a little trouble, maybe you should review their <<link"characte
 Once you've made your choice, let's [[turn the page|BulkPhishingChoice]]...
 
 
-:: PhishingTooltip1 {"position":"1100,225","size":"100,100"}
+:: PhishingTooltip1 {"position":"100,350","size":"100,100"}
 Phishing is a way of sending fraudulent e-mails, which contain malicious or no-purpose junk links for fun or to conduct crimes. It can also be done by calling a particular person. It can trick people into giving their personal details like credit card information, and passwords to another individual.
 
 
-:: PhishingTooltip2 {"position":"1225,225","size":"100,100"}
+:: PhishingTooltip2 {"position":"225,350","size":"100,100"}
 Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the 'prize'.
 
 
-:: BulkPhishingChoice [nobr] {"position":"100,350","size":"100,100"}
+:: BulkPhishingChoice [nobr] {"position":"350,350","size":"100,100"}
 <<if $Bulk == "A1">>
     Not quite!
 <<elseif $Bulk == "A2">>
@@ -281,7 +314,7 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 ?A1b: Oh wow, I almost clicked on that! Also be right back, I have [[matriculation emails|SpearPhishingIntroduction]] to attend to!
 
 
-:: SpearPhishingIntroduction [nobr] {"position":"225,350","size":"100,100"}
+:: SpearPhishingIntroduction [nobr] {"position":"475,350","size":"100,100"}
 While ?A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password <<link"promptly">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip1");Dialog.wiki(Story.get("SpearTooltip1").processText());Dialog.open();<</script>><</link>>. What <<link"red flags">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip2");Dialog.wiki(Story.get("SpearTooltip2").processText());Dialog.open();<</script>><</link>> can you spot in this situation?
 <br>
 <br>
@@ -294,7 +327,7 @@ While ?A1 is going through their emails, they notice a message from the universi
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
 
-:: SpearCycle [nobr] {"position":"350,350","size":"100,100"}
+:: SpearCycle [nobr] {"position":"600,350","size":"100,100"}
 The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email1Answer">>
     <<option "it's got a weird logo." 1>>
@@ -323,27 +356,27 @@ Finally, the <<link"third email">><<script>>Dialog.setup("First Email", "Email1"
 <</cycle>>
 
 
-:: SpearTooltip1 {"position":"475,350","size":"100,100"}
+:: SpearTooltip1 {"position":"725,350","size":"100,100"}
 Spear-phishing attacks are done to target a specific individual. The most common attacks ask for a one-time-password mostly from senior citizens or teenagers, giving strangers access to their accounts.
 
 
-:: SpearTooltip2 {"position":"600,350","size":"100,100"}
+:: SpearTooltip2 {"position":"850,350","size":"100,100"}
 Look out for the following: quality of company logo, presence of unique information, use of a pressuring/threatening tone, bad or irregular formatting, poor grammar/spelling, if the email address corresponds with the address the sender is claiming to be (check if possible).
 
 
-:: Email1 {"position":"725,350","size":"100,100"}
+:: Email1 {"position":"975,350","size":"100,100"}
 [img[email]]
 
 
-:: Email2 {"position":"850,350","size":"100,100"}
+:: Email2 {"position":"1100,350","size":"100,100"}
 [img[email]]
 
 
-:: Email3 {"position":"975,350","size":"100,100"}
+:: Email3 {"position":"1225,350","size":"100,100"}
 [img[email]]
 
 
-:: SpearPhishingChoice [nobr] {"position":"1100,350","size":"100,100"}
+:: SpearPhishingChoice [nobr] {"position":"100,475","size":"100,100"}
 <<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
 ?A1 has much better instincts than you.
 <br>
@@ -360,7 +393,7 @@ Look out for the following: quality of company logo, presence of unique informat
 ?A1b: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
 
 
-:: FilesharingIntroduction [nobr] {"position":"1225,350","size":"100,100"}
+:: FilesharingIntroduction [nobr] {"position":"225,475","size":"100,100"}
 As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
 <br><br>
 <<cycle "$fileshare1">>
@@ -378,15 +411,15 @@ Then, ?A3 faces the [[consequences of their actions|FilesharingChoice1]]!
 </style>
 
 
-:: FilesharingTooltip1 {"position":"100,475","size":"100,100"}
+:: FilesharingTooltip1 {"position":"350,475","size":"100,100"}
 Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
 
 
-:: FilesharingTooltip2 {"position":"225,475","size":"100,100"}
+:: FilesharingTooltip2 {"position":"475,475","size":"100,100"}
 VPN (Virtual Private Network): A technology that creates a secure and encrypted connection over a public network, such as the internet, providing anonymity for users, usually comes at an extra financial cost.
 
 
-:: FilesharingChoice1 [nobr] {"position":"350,475","size":"100,100"}
+:: FilesharingChoice1 [nobr] {"position":"600,475","size":"100,100"}
 <<if $fileshare1 eq 2>>
 No consequences! ?A3 has successfully escaped the gauntlet and only needs to face the smug attitude of their mother, who has once again, been proven to be entirely correct.
 <<else>>
@@ -419,7 +452,7 @@ Just then, ?A1 receives a pop-up notification on their device saying, "Wi-Fi con
 ?A1b: Just a sec, gotta [[get online|FilesharingChoice2]].
 
 
-:: FilesharingChoice2 [nobr] {"position":"475,475","size":"100,100"}
+:: FilesharingChoice2 [nobr] {"position":"725,475","size":"100,100"}
 <<if $fileshare2 eq 1>>
 Not quite! Fake Wi-Fi notifications can be generated by cybercriminals in an attempt to deceive users and steal their personal information. These fraudulent notifications may mimic legitimate networks to trick users into connecting to them. Once connected, hackers can intercept sensitive data or launch various attacks. If you don't investigate or use a VPN, you can never be sure if the Wi-Fi network is fake.<br><br>
 <<elseif $fileshare eq 2>>
@@ -442,21 +475,21 @@ Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingToo
 ?A2b: Gotta get it quick before the first lecture! ...[[Buying it now|FilesharingChoice3]]!
 
 
-:: FilesharingTooltip3 {"position":"600,475","size":"100,100"}
+:: FilesharingTooltip3 {"position":"850,475","size":"100,100"}
 Mobile data: The internet connectivity service provided by mobile network operators, allowing users to access the internet using their mobile devices.
 
 
-:: FilesharingTooltip4 {"position":"725,475","size":"100,100"}
+:: FilesharingTooltip4 {"position":"975,475","size":"100,100"}
 HTTPS (Hypertext Transfer Protocol Secure): A secure version of the HTTP protocol that encrypts data exchanged between a web browser and a website, ensuring secure communication and protecting against eavesdropping and tampering.  
 
 HTTP (Hypertext Transfer Protocol): The protocol used for transmitting data over the internet, allowing the retrieval and display of webpages and other resources.
 
 
-:: FilesharingTooltip5 {"position":"850,475","size":"100,100"}
+:: FilesharingTooltip5 {"position":"1100,475","size":"100,100"}
 Encryption: The process of encoding data or information in a way that makes it unreadable to unauthorised parties, ensuring privacy and security.
 
 
-:: FilesharingChoice3 [nobr] {"position":"975,475","size":"100,100"}
+:: FilesharingChoice3 [nobr] {"position":"1225,475","size":"100,100"}
 <<if $fileshare3 eq 1>>
 Not quite! If the website isn't encrypted, then the imputed sensitive information could be stolen. It would be better to at least make sure the website displays a padlock symbol next to the web address bar and that the web address begins with HTTPS. Better yet, wait until you can use mobile data to transfer sensitive data to websites.
 <<elseif $fileshare3 eq 2>>
@@ -470,7 +503,7 @@ Congratulations! You've finished <span class='textimportant'>Chapter One: Phishi
 <center>[[continue to the next chapter?|AccomodationScamsIntroduction]]</center>
 
 
-:: StoryInit {"position":"1100,475","size":"100,100"}
+:: StoryInit {"position":"100,600","size":"100,100"}
 <<set $studentIntroduction = []>>
 <<set $A1 to "Hana">> /* temporarily added names back */
 <<set $A2 to "Haoran">>
@@ -523,7 +556,7 @@ Template.add(['A1', 'A2', 'A3', 'A4', 'A5', 'A1b', 'A2b', 'A3b', 'A4b', 'A5b'], 
 <</script>>
 
 
-:: StoryMenu {"position":"1225,475","size":"100,100"}
+:: StoryMenu {"position":"225,600","size":"100,100"}
 <<link"Character Summaries">><<script>>
 Dialog.setup("Character Summaries");
 Dialog.wiki(Story.get("MenuCharacters").processText());
@@ -549,7 +582,7 @@ Dialog.open();
 <</script>><</link>>
 
 
-:: MenuCharacters [nobr] {"position":"100,600","size":"100,100"}
+:: MenuCharacters [nobr] {"position":"350,600","size":"100,100"}
 /* when clicking on one of the character pages,
 the 'go back' needs to point to a non-menu character page.
 A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
@@ -564,9 +597,14 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <br>
 <br>
 <<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
+<<if $isUnlockA5 is true>>
+<br>
+<br>
+<<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a promising high-school TikTok infulencer.
+<</if>>
 
 
-:: Debug {"position":"225,600","size":"100,100"}
+:: Debug {"position":"475,600","size":"100,100"}
 Jump to...
 [[Phishing Introduction|PhishingIntroduction]]
 [[Filesharing Introduction|FilesharingIntroduction]]
@@ -575,9 +613,13 @@ Jump to...
 [[Passwords Introduction|PasswordsA5Introduction]]
 [[Passwords 2FA Question|Passwords2FAQuestion ]]
 [[Passwords Management Question|PasswordsManagementQuestion]]
+<<button "Unlock Character Summaries">>
+<<set $isUnlockCharacterSummaries to true>>
+<<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
+<</button>>
 
 
-:: Start {"position":"350,600","size":"100,100"}
+:: Start {"position":"600,600","size":"100,100"}
 Let's [[start|StudentIntroductions]]!
 
 /* http://twinery.org/questions/4666/how-to-embed-background-image-via-the-base64-stuff */
@@ -589,7 +631,7 @@ Let's [[start|StudentIntroductions]]!
 </style>
 
 
-:: StudentIntroductions [nobr] {"position":"475,600","size":"100,100"}
+:: StudentIntroductions [nobr] {"position":"725,600","size":"100,100"}
 The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 <br>
 <br>
@@ -626,7 +668,7 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <</if>>
 
 
-:: A1 [nobr noreturn] {"position":"600,600","size":"100,100"}
+:: A1 [nobr noreturn] {"position":"850,600","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A1")>>
 <span class='speakerA1'><<print $A1.toUpperCase()>></span>
 <br>
@@ -640,7 +682,7 @@ But university is a time and place for pushing new boundaries and opening up new
 <<link "GO BACK" $return>><</link>>
 
 
-:: A2 [nobr noreturn] {"position":"725,600","size":"100,100"}
+:: A2 [nobr noreturn] {"position":"975,600","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A2")>>
 <span class='speakerA2'><<print $A2.toUpperCase()>></span>
 <br>
@@ -654,7 +696,7 @@ But all of that routine may come crashing down at any moment, especially if they
 <<link "GO BACK" $return>><</link>>
 
 
-:: A3 [nobr noreturn] {"position":"850,600","size":"100,100"}
+:: A3 [nobr noreturn] {"position":"1100,600","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A3")>>
 <span class='speakerA3'><<print $A3.toUpperCase()>></span>
 <br>
@@ -668,7 +710,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <<link "GO BACK" $return>><</link>>
 
 
-:: A4 [nobr noreturn] {"position":"975,600","size":"100,100"}
+:: A4 [nobr noreturn] {"position":"1225,600","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A4")>>
 <span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>

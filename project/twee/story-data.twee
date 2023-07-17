@@ -95,6 +95,11 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <br>
 <br>
 <<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
+<<if $isUnlockA5 is true>>
+<br>
+<br>
+<<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a promising high-school TikTok infulencer.
+<</if>>
 
 
 :: Debug
@@ -106,7 +111,10 @@ Jump to...
 [[Passwords Introduction|PasswordsA5Introduction]]
 [[Passwords 2FA Question|Passwords2FAQuestion ]]
 [[Passwords Management Question|PasswordsManagementQuestion]]
-
+<<button "Unlock Character Summaries">>
+<<set $isUnlockCharacterSummaries to true>>
+<<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
+<</button>>
 
 :: Start
 Let's [[start|StudentIntroductions]]!

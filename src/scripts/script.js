@@ -119,9 +119,11 @@ $(document).on(':passageend', function (ev) {
 				const itemName = listItem.querySelector(".draggable").innerText.trim();
 				if (itemName !== listToOrder[index]) {
 					listItem.classList.add("wrong");
+					State.variables.isAllCorrect = false;
 				} else {
 					listItem.classList.remove("wrong");
 					listItem.classList.add("right");
+					State.variables.isAllCorrect = true;
 				}
 			});
 		}
