@@ -39,3 +39,23 @@ $(document).on(':passageend', function (ev) { // this has to be done after the s
 		document.getElementById("menubutton1").setAttribute("type","button");
 	}
 });
+
+// js library for reorderable drag-and-drop lists
+// https://github.com/SortableJS/Sortable
+// need to run 'npm install sortablejs --save'
+import Sortable from 'sortablejs/modular/sortable.complete.esm.js';
+
+
+
+/*
+document.addEventListener('turbolinks:load', () => {
+	console.log("Sortable: ", Sortable);
+})
+*/
+
+/*
+$(document).on(':passageend', function (ev) {
+	var el = document.getElementById('items');
+	var sortable = Sortable.create(el);
+});
+*/

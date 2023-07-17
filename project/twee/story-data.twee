@@ -7,13 +7,15 @@ Cybersecurity and You!
 <<set $A2 to "Haoran">>
 <<set $A3 to "Noah">>
 <<set $A4 to "Robin">>
+<<set $A5 to "Alex">>
 <<set $isUnlockCharacterSummaries to false>>
+<<set $isUnlockA5 to false>>
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
     Use ?A1b to style character A1 bold
     unfortunately ".toUpperCase()" doesn't work on templates, so use <span> instead */
-Template.add(['A1', 'A2', 'A3', 'A4', 'A1b', 'A2b', 'A3b', 'A4b'], function () {
+Template.add(['A1', 'A2', 'A3', 'A4', 'A5', 'A1b', 'A2b', 'A3b', 'A4b', 'A5b'], function () {
     switch(this.name) {
         case 'A1':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
@@ -27,6 +29,9 @@ Template.add(['A1', 'A2', 'A3', 'A4', 'A1b', 'A2b', 'A3b', 'A4b'], function () {
         case 'A4':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
             break;
+        case 'A5':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A5 + "</span>";
+            break;
         case 'A1b':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A1 + "</span>";
             break;
@@ -38,6 +43,9 @@ Template.add(['A1', 'A2', 'A3', 'A4', 'A1b', 'A2b', 'A3b', 'A4b'], function () {
             break;
         case 'A4b':
             return "<span class=" + "speaker" + this.name + ">" + State.variables.A4 + "</span>";
+            break;
+        case 'A5b':
+            return "<span class=" + "speaker" + this.name + ">" + State.variables.A5 + "</span>";
             break;
         default:
             break;
@@ -89,3 +97,5 @@ Let's [[start|StudentIntroductions]]!
     background: [img[test]] no-repeat center center fixed;
 }
 </style>
+
+Go to Interactive [[list|PSSPasswordRecoveryQuestion]]
