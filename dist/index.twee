@@ -664,14 +664,14 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <br>
 <<link[[$A3.toUpperCase()|A3]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a domestic second year student studying computer science.
 <<if $isUnlockA4 is true>>
-<br>
-<br>
-<<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
-<<if $isUnlockA5 is true>>
+    <br>
+    <br>
+    <<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
 <</if>>
-<br>
-<br>
-<<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a promising high-school TikTok infulencer.
+<<if $isUnlockA5 is true>>
+    <br>
+    <br>
+    <<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a promising high-school TikTok infulencer.
 <</if>>
 
 
