@@ -6,7 +6,7 @@ Cybersecurity and You!
 {
 	"ifid": "AFD3B0CA-1649-4127-AF2C-40698CE9EA90",
 	"format": "SugarCube",
-	"format-version": "2.35.0",
+	"format-version": "2.30.0",
 	"start": "Start",
 	"zoom": 1
 }
@@ -54,11 +54,11 @@ After weeks of searching, ?A1 finally comes across an advertisement for a flat r
 They reach out to the landlord and receive a response stating that a deposit needs to be made immediately before being able to see the property in person due to high demand.
 <br><br>
 ?A1b: We should [[just pay it|AccommodationChoice1][$accommodation1 to 1]]. What if we lose it?
-<br>
+<br><br>
 ?A3b: No, no we should just email back and [[insist|AccommodationChoice1][$accommodation1 to 2]] that we be allowed to view it.
-<br>
+<br><br>
 ?A1b: But what if they get annoyed?
-<br>
+<br><br>
 ?A3b: Look, the University probably has a way to help us, right? Why don't we [[ask the uni|AccommodationChoice1][$accommodation1 to 3]]?
 
 
@@ -92,14 +92,84 @@ If a landlord's acting strange or suspicious in any way, rather than wasting tim
 <br><br>
 ...
 <br><br>
-?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntro]].
+?A3b: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntro]].
 
 
 :: OnlineJobIntroduction [nobr] {"position":"1100,100","size":"100,100"}
-404!
+Alongside searching for next year's accommodation, ?A3 is also trying to find a job that they can do on the side to earn a little extra money during the school year. They reach out to a friend of theirs, ?A4, that is studying remotely to ask if they know of any online job possibilities.
+<br><br>
+?A3: You said you have an online job while you are studying from home, right? I''m trying to earn a little extra money this semester... 
+<br><br>
+?A4: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
+<br><br>
+?A3: Ah okay. Good thing to keep in mind, thank you for letting me know! 
+<br><br>
+?A4: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
+<br><br>
+?A3: Yeah, I'd really like an easy remote job that'll give me money quickly. Oh hey! This one seems really simple—all I have to do is process [[money transfers|OnlineJobChoice1][$onlinejob1 to 1]]!
+<br><br>
+?A4: Eh. Doesn't that seem strange to you? Look at this [[assistant|OnlineJobChoice1][$onlinejob1 to 2]] hybrid job. It's even paying above minimum wage!
+<br><br>
+?A3: I don't know about that. I don't know how to assist myself, much less other people! Plus, it's making me go in-person. I have anxiety.
+<br><br>
+?A4: Oh yeah. Then what about this [[contract proofreading job|OnlineJobChoice1][$onlinejob1 to 3]]? It's only a one-off, but at least you don't have to go in-person!
+<br><br>
+?A3: Cool. They all seem interesting, so I guess I'll apply to any one of them!
 
 
-:: PasswordsA5Introduction [nobr] {"position":"1225,100","size":"100,100"}
+:: OnlineJobTooltip1 {"position":"1225,100","size":"100,100"}
+Companies that ask you to pay any type of money in order to get hired are most likely not legitimate. If a company asks for some type of enrollment or registration payment, make sure to run a quick background check on it; this can include merely googling the name of the company or job title. Similarly, if a company asks you to send them money to pay for some type of remote work equipment (headphones, software, keyboard, etc.) with the promise that it will be reimbursed in your first paycheck, once again, verify the legitimacy of the company and job offering.
+
+
+:: OnlineJobTooltip2 {"position":"100,225","size":"100,100"}
+The platform Indeed is a legitimate and helpful job-hunting website; however, it is still possible to encounter scam jobs on it and any other platform like it. Most job-hunting websites will allow for you to report a job if you believe that it is fraudulent, so even if you have a small suspicion, report the job to save others from the possibility of a scam.
+
+
+:: OnlineJobChoice1 {"position":"225,225","size":"100,100"}
+<<if $onlinejob1 eq 2>>
+Although it's a bit of a compromise what with the in-person requirement, and there might be a slight issue with school-work-life balance in the future, this is still a safe choice! You successfully avoided getting scammed!<br><br>
+<<else if $onlinejob1 eq 3>>
+While this job is seemingly legitimate, with any type of freelance contract work make sure to verify the individual or group that is posting the job. There have been many instances where a freelance worker will accept and complete a job without receiving any type of payment for it in the end. Be cautious and careful of this and make sure to quickly run a background check on the job offering individual or company. In any case, at least you cleared the low bar of not choosing the obvious scam!<br><br>
+<<else>>
+Oops!<br><br>
+<</if>>
+If an online job is claiming to be fast and easy earned money, make sure to verify the company or group that it is being posted by. The same is true if you receive a message on social media offering a similar proposition. Online jobs that require you to transfer money from one account to another, while keeping a part of it for yourself, are called money mulling jobs. Acting as a money mule is illegal, even if you are not aware of the fact that you are transferring illegal funds. Stay safe from this by not taking any job that claims to give you unrealistic benefits for the work you are to do, asks you to use your personal bank account for transferring any type of funds, or is offered to you by an individual or group that you don't know and can't find any information about.
+<br><br>...<br><br>
+Meanwhile, with [[?A1|GovernmentScamIntro]]...
+
+
+:: GovernmentScamIntro [nobr] {"position":"350,225","size":"100,100"}
+Second semester for ?A1 is full of stress due to trying to find housing and a seemingly unending number of assignment deadlines. Amid trying to get their Social Anthropology essay submitted on time, ?A1 receives a message from UK Visas and Immigration (UKVI), saying that there's a problem with their visa. Maybe an 'i' has been dotted wrong, or a 't' hasn't been crossed correctly—whatever it is, if they do nothing, their visa's getting cancelled.
+<br><br>
+?A1: Oh no, oh no. If I don't deal with this right now, I'll get deported, I'll fail out of St Andrews, I'll become an international criminal—and then I'll never get my degree! 
+<br><br>
+?A2: Whoa, calm down a little. Don't panic.
+<br><br>
+?A1: Yeah, okay. All I have to do is [[pay the fine|GovScamChoice1][$govscam1 to 1]] and then everything will get sorted out and I'll never have to worry about this ever again. It's a lot of money, but it's a small price to pay for not being an utter disappointment to my ancestors.
+<br><br>
+?A2: Huh? No! Isn't it weird that they say that paying a fine will solve everything? At least try to [[talk to someone|GovScamChoice1][$govscam1 to 2]], somebody who's in charge, about this so they can fix whatever's gone wrong?
+<br><br>
+?A3: Come on. It's obviously a scam. You're not in any trouble ?A1. Just [[delete it|GovScamChoice1][$govscam1 to 3]] and get on with your essay. Duh. Isn't it due in, like, a couple of hours?
+
+
+:: GovScamChoice1 [nobr] {"position":"475,225","size":"100,100"}
+<<if $govscam1 eq 3>>
+Not quite right! Although it is a common scam, when the scammers are impersonating an entity like the UKVI, it's better to report the scam to <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040 so the relevant authorities know about it and can be better informed about it. This way, you're not only saving yourself, but potentially countless others from being scammed!<br><br>
+<<else>>
+    <<if $govscam1 eq 1>>
+    Uh oh! Looks like you chose wrong!<br><br>
+    <<else if $govscam1 eq 2>>
+    You chose correctly!<br><br>
+    <</if>>
+Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
+<</if>>
+<p><br><br><br></p>
+Congratulations! You've finished <span class='textimportant'>Chapter Two: Financial Scams</span>!
+<p><br></p>
+<center>[[continue to the next chapter?|PasswordsA5Introduction]]</center>
+
+
+:: PasswordsA5Introduction [nobr] {"position":"600,225","size":"100,100"}
 <<set $isUnlockA5 to true>>
 
 Introducing ?A5b, a charismatic high school student who has gained fame on TikTok with his entertaining and creative videos. His popularity is on the rise, and he's excited about the opportunities his online presence brings. However, with fame comes risks, and ?A5 soon finds himself in the midst of a cybersecurity crisis.
@@ -108,7 +178,7 @@ One day, ?A5 wakes up to discover that he has been sent an email from Youtube st
 /* if his followers were sent content, then shouldn't changing the password be the most important thing? the account is confirmed compromised already without checking the authenticity of the email */
 
 
-:: PasswordsRecoveryQuestion [nobr interactiveList] {"position":"100,225","size":"100,100"}
+:: PasswordsRecoveryQuestion [nobr interactiveList] {"position":"725,225","size":"100,100"}
 ?A5 won't be able to recover his account without a plan. What steps should ?A5 take? Read the following options and click and drag the options into the order which you would recommend to ?A5.
 <br><br>
 Drag and drop the items below into their corresponding order:
@@ -122,7 +192,7 @@ Check Order
 [[next|PasswordsRecoveryChoice]]
 
 
-:: PasswordsRecoveryChoice {"position":"225,225","size":"100,100"}
+:: PasswordsRecoveryChoice {"position":"850,225","size":"100,100"}
 If the Order is correct: Congratulations! You are an account recovery expert! 
 If the Order is incorrect: Almost there! Please see the following list of actions: 
 
@@ -139,7 +209,7 @@ Review and strengthen security practices.
 [[next|Passwords2FAQuestion]]
 
 
-:: Passwords2FAQuestion {"position":"350,225","size":"100,100"}
+:: Passwords2FAQuestion {"position":"975,225","size":"100,100"}
 Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>. Read the conversation below and reflect on whether you would consider using Two-Factor Authentication. 
 <p><br></p> /* testing if quotation marks look better on dialogue portions */
 ?A5b: "Hey ?A4, you won't believe what happened to me! My TikTok account got hacked. It was such a nightmare!"
@@ -163,11 +233,11 @@ Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 
 [[next|PasswordsManagementQuestion]]
 
 
-:: 2FATooltip {"position":"475,225","size":"100,100"}
+:: 2FATooltip {"position":"1100,225","size":"100,100"}
 Two-factor authentication (2FA) is an additional layer of security used to protect online accounts. It requires users to provide two separate forms of identification to verify their identity. Typically, this involves something the user knows (such as a password) and something the user has (such as a unique code sent to their phone). This added layer of protection makes it more difficult for unauthorized individuals to gain access to accounts, even if they manage to obtain the user's password. 2FA significantly enhances account security by providing an extra barrier against unauthorized access.
 
 
-:: PasswordsManagementQuestion {"position":"600,225","size":"100,100"}
+:: PasswordsManagementQuestion {"position":"1225,225","size":"100,100"}
 According to a study conducted by NordPass, the password "password" ranked as the fifth most commonly used password in 2020, with a staggering 20,958,297 individuals worldwide using it. The top four passwords of the year were: "123456," "123456789," "12345," and "qwerty." 
 Alex had to create new passwords to replace the ones that were breached. How can you tell if a password is weak? Here are a few tips:
 <ul>
@@ -195,7 +265,7 @@ For every strong password protecting someone's data, there are numerous weak one
 [[next|PasswordsManagementChoice]]
 
 
-:: PasswordsManagementChoice {"position":"725,225","size":"100,100"}
+:: PasswordsManagementChoice {"position":"100,350","size":"100,100"}
 The strongest passwords were: '2h2APP8QnvYaYe7' and 'SunflowerMountainCoffee'. The former is a Google-generated password created by the Google Password Manager. These are very strong passwords that you won't need to remember, but their security hinges on your Google account being extra secure. Here are some instructions from Google on how to use the password generator:
 
 <ol>
@@ -213,11 +283,11 @@ If Incorrect: You didn't identify the two strongest passwords correctly. For mor
 If Correct: Congratulations! You answered correctly.
 
 
-:: PasswordManagerTooltip {"position":"850,225","size":"100,100"}
+:: PasswordManagerTooltip {"position":"225,350","size":"100,100"}
 A password manager is a secure digital tool that helps users store, organize, and generate strong and unique passwords for their various online accounts. It typically operates through a master password, which grants access to an encrypted database containing all the user's passwords. Password managers eliminate the need to remember multiple complex passwords and enhance online security by promoting the use of strong, randomized passwords.
 
 
-:: PhishingIntroduction [nobr] {"position":"975,225","size":"100,100"}
+:: PhishingIntroduction [nobr] {"position":"350,350","size":"100,100"}
 ?A1, ?A2, and ?A3 are all part of a freshers Messenger group, and suddenly, they receive a video link from an account in the group. The message says, "Is that you in this video?". 
 <br>
 <br>
@@ -251,15 +321,15 @@ If you're having a little trouble, maybe you should review their <<link"characte
 Once you've made your choice, let's [[turn the page|BulkPhishingChoice]]...
 
 
-:: PhishingTooltip1 {"position":"1100,225","size":"100,100"}
+:: PhishingTooltip1 {"position":"475,350","size":"100,100"}
 Phishing is a way of sending fraudulent e-mails, which contain malicious or no-purpose junk links for fun or to conduct crimes. It can also be done by calling a particular person. It can trick people into giving their personal details like credit card information, and passwords to another individual.
 
 
-:: PhishingTooltip2 {"position":"1225,225","size":"100,100"}
+:: PhishingTooltip2 {"position":"600,350","size":"100,100"}
 Millions of bulk phishing e-mail and messaging scams happen every day. They usually say something about the recipient having won money, a discount or a voucher. These claims turn out to be false meanwhile the recipient has given the scammer sensitive information to receive the 'prize'.
 
 
-:: BulkPhishingChoice [nobr] {"position":"100,350","size":"100,100"}
+:: BulkPhishingChoice [nobr] {"position":"725,350","size":"100,100"}
 <<if $Bulk == "A1">>
     Not quite!
 <<elseif $Bulk == "A2">>
@@ -281,7 +351,7 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 ?A1b: Oh wow, I almost clicked on that! Also be right back, I have [[matriculation emails|SpearPhishingIntroduction]] to attend to!
 
 
-:: SpearPhishingIntroduction [nobr] {"position":"225,350","size":"100,100"}
+:: SpearPhishingIntroduction [nobr] {"position":"850,350","size":"100,100"}
 While ?A1 is going through their emails, they notice a message from the university Registry Office. The email states that there is an issue with their matriculation and asks them to confirm their login details by sending their password <<link"promptly">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip1");Dialog.wiki(Story.get("SpearTooltip1").processText());Dialog.open();<</script>><</link>>. What <<link"red flags">><<script>>Dialog.setup("What is Spear Phishing?", "SpearTooltip2");Dialog.wiki(Story.get("SpearTooltip2").processText());Dialog.open();<</script>><</link>> can you spot in this situation?
 <br>
 <br>
@@ -294,7 +364,7 @@ While ?A1 is going through their emails, they notice a message from the universi
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
 
-:: SpearCycle [nobr] {"position":"350,350","size":"100,100"}
+:: SpearCycle [nobr] {"position":"975,350","size":"100,100"}
 The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email1Answer">>
     <<option "it's got a weird logo." 1>>
@@ -323,27 +393,27 @@ Finally, the <<link"third email">><<script>>Dialog.setup("First Email", "Email1"
 <</cycle>>
 
 
-:: SpearTooltip1 {"position":"475,350","size":"100,100"}
+:: SpearTooltip1 {"position":"1100,350","size":"100,100"}
 Spear-phishing attacks are done to target a specific individual. The most common attacks ask for a one-time-password mostly from senior citizens or teenagers, giving strangers access to their accounts.
 
 
-:: SpearTooltip2 {"position":"600,350","size":"100,100"}
+:: SpearTooltip2 {"position":"1225,350","size":"100,100"}
 Look out for the following: quality of company logo, presence of unique information, use of a pressuring/threatening tone, bad or irregular formatting, poor grammar/spelling, if the email address corresponds with the address the sender is claiming to be (check if possible).
 
 
-:: Email1 {"position":"725,350","size":"100,100"}
+:: Email1 {"position":"100,475","size":"100,100"}
 [img[email]]
 
 
-:: Email2 {"position":"850,350","size":"100,100"}
+:: Email2 {"position":"225,475","size":"100,100"}
 [img[email]]
 
 
-:: Email3 {"position":"975,350","size":"100,100"}
+:: Email3 {"position":"350,475","size":"100,100"}
 [img[email]]
 
 
-:: SpearPhishingChoice [nobr] {"position":"1100,350","size":"100,100"}
+:: SpearPhishingChoice [nobr] {"position":"475,475","size":"100,100"}
 <<if $email1Answer neq 3 or $email2Answer neq 1 or $email3Answer neq 4>>
 ?A1 has much better instincts than you.
 <br>
@@ -360,7 +430,7 @@ Look out for the following: quality of company logo, presence of unique informat
 ?A1b: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
 
 
-:: FilesharingIntroduction [nobr] {"position":"1225,350","size":"100,100"}
+:: FilesharingIntroduction [nobr] {"position":"600,475","size":"100,100"}
 As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
 <br><br>
 <<cycle "$fileshare1">>
@@ -378,15 +448,15 @@ Then, ?A3 faces the [[consequences of their actions|FilesharingChoice1]]!
 </style>
 
 
-:: FilesharingTooltip1 {"position":"100,475","size":"100,100"}
+:: FilesharingTooltip1 {"position":"725,475","size":"100,100"}
 Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
 
 
-:: FilesharingTooltip2 {"position":"225,475","size":"100,100"}
+:: FilesharingTooltip2 {"position":"850,475","size":"100,100"}
 VPN (Virtual Private Network): A technology that creates a secure and encrypted connection over a public network, such as the internet, providing anonymity for users, usually comes at an extra financial cost.
 
 
-:: FilesharingChoice1 [nobr] {"position":"350,475","size":"100,100"}
+:: FilesharingChoice1 [nobr] {"position":"975,475","size":"100,100"}
 <<if $fileshare1 eq 2>>
 No consequences! ?A3 has successfully escaped the gauntlet and only needs to face the smug attitude of their mother, who has once again, been proven to be entirely correct.
 <<else>>
@@ -419,7 +489,7 @@ Just then, ?A1 receives a pop-up notification on their device saying, "Wi-Fi con
 ?A1b: Just a sec, gotta [[get online|FilesharingChoice2]].
 
 
-:: FilesharingChoice2 [nobr] {"position":"475,475","size":"100,100"}
+:: FilesharingChoice2 [nobr] {"position":"1100,475","size":"100,100"}
 <<if $fileshare2 eq 1>>
 Not quite! Fake Wi-Fi notifications can be generated by cybercriminals in an attempt to deceive users and steal their personal information. These fraudulent notifications may mimic legitimate networks to trick users into connecting to them. Once connected, hackers can intercept sensitive data or launch various attacks. If you don't investigate or use a VPN, you can never be sure if the Wi-Fi network is fake.<br><br>
 <<elseif $fileshare eq 2>>
@@ -442,21 +512,21 @@ Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingToo
 ?A2b: Gotta get it quick before the first lecture! ...[[Buying it now|FilesharingChoice3]]!
 
 
-:: FilesharingTooltip3 {"position":"600,475","size":"100,100"}
+:: FilesharingTooltip3 {"position":"1225,475","size":"100,100"}
 Mobile data: The internet connectivity service provided by mobile network operators, allowing users to access the internet using their mobile devices.
 
 
-:: FilesharingTooltip4 {"position":"725,475","size":"100,100"}
+:: FilesharingTooltip4 {"position":"100,600","size":"100,100"}
 HTTPS (Hypertext Transfer Protocol Secure): A secure version of the HTTP protocol that encrypts data exchanged between a web browser and a website, ensuring secure communication and protecting against eavesdropping and tampering.  
 
 HTTP (Hypertext Transfer Protocol): The protocol used for transmitting data over the internet, allowing the retrieval and display of webpages and other resources.
 
 
-:: FilesharingTooltip5 {"position":"850,475","size":"100,100"}
+:: FilesharingTooltip5 {"position":"225,600","size":"100,100"}
 Encryption: The process of encoding data or information in a way that makes it unreadable to unauthorised parties, ensuring privacy and security.
 
 
-:: FilesharingChoice3 [nobr] {"position":"975,475","size":"100,100"}
+:: FilesharingChoice3 [nobr] {"position":"350,600","size":"100,100"}
 <<if $fileshare3 eq 1>>
 Not quite! If the website isn't encrypted, then the imputed sensitive information could be stolen. It would be better to at least make sure the website displays a padlock symbol next to the web address bar and that the web address begins with HTTPS. Better yet, wait until you can use mobile data to transfer sensitive data to websites.
 <<elseif $fileshare3 eq 2>>
@@ -470,7 +540,7 @@ Congratulations! You've finished <span class='textimportant'>Chapter One: Phishi
 <center>[[continue to the next chapter?|AccomodationScamsIntroduction]]</center>
 
 
-:: StoryInit {"position":"1100,475","size":"100,100"}
+:: StoryInit {"position":"475,600","size":"100,100"}
 <<set $studentIntroduction = []>>
 <<set $A1 to "Hana">> /* temporarily added names back */
 <<set $A2 to "Haoran">>
@@ -523,7 +593,7 @@ Template.add(['A1', 'A2', 'A3', 'A4', 'A5', 'A1b', 'A2b', 'A3b', 'A4b', 'A5b'], 
 <</script>>
 
 
-:: StoryMenu {"position":"1225,475","size":"100,100"}
+:: StoryMenu {"position":"600,600","size":"100,100"}
 <<link"Character Summaries">><<script>>
 Dialog.setup("Character Summaries");
 Dialog.wiki(Story.get("MenuCharacters").processText());
@@ -549,7 +619,7 @@ Dialog.open();
 <</script>><</link>>
 
 
-:: MenuCharacters [nobr] {"position":"100,600","size":"100,100"}
+:: MenuCharacters [nobr] {"position":"725,600","size":"100,100"}
 /* when clicking on one of the character pages,
 the 'go back' needs to point to a non-menu character page.
 A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
@@ -563,10 +633,12 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <<link[[$A3.toUpperCase()|A3]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a domestic second year student studying computer science.
 <br>
 <br>
-<<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
+<<if $studentIntroduction.includes("A5")>>
+<<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a highschooler.
+<</if>>
 
 
-:: Debug {"position":"225,600","size":"100,100"}
+:: Debug {"position":"850,600","size":"100,100"}
 Jump to...
 [[Phishing Introduction|PhishingIntroduction]]
 [[Filesharing Introduction|FilesharingIntroduction]]
@@ -577,7 +649,7 @@ Jump to...
 [[Passwords Management Question|PasswordsManagementQuestion]]
 
 
-:: Start {"position":"350,600","size":"100,100"}
+:: Start {"position":"975,600","size":"100,100"}
 Let's [[start|StudentIntroductions]]!
 
 /* http://twinery.org/questions/4666/how-to-embed-background-image-via-the-base64-stuff */
@@ -589,36 +661,36 @@ Let's [[start|StudentIntroductions]]!
 </style>
 
 
-:: StudentIntroductions [nobr] {"position":"475,600","size":"100,100"}
-The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away from home for the school year...
+:: StudentIntroductions [nobr] {"position":"1100,600","size":"100,100"}
+The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves three hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 <br>
 <br>
 <<if $studentIntroduction.includes("A1")>>
-    <span class='speakerA1b'><<link $A1.toUpperCase() "A1">><</link>></span> - an international first year student studying anthropology.<br>They're excited to be here!<br>
+    <span class='speakerA1b'><<link $A1 "A1">><</link>></span> - an international first year student studying anthropology.<br>They're excited to be here!<br>
 <<else>>
-    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>
+    [[$A1|A1]] - an international first year student studying anthropology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A2")>>
-    <span class='speakerA2b'><<link $A2.toUpperCase() "A2">><</link>></span> - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
+    <span class='speakerA2b'><<link $A2 "A2">><</link>></span> - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
 <<else>>
-    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>
+    [[$A2|A2]] - an international third year student studying psychology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A3")>>
-    <span class='speakerA3b'><<link $A3.toUpperCase() "A3">><</link>></span> - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
+    <span class='speakerA3b'><<link $A3 "A3">><</link>></span> - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
 <<else>>
-    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>
+    [[$A3|A3]] - a domestic second year student studying computer science.<br>
 <</if>>
-<br>
+/* <br>
 <<if $studentIntroduction.includes("A4")>>
     <span class='speakerA4b'><<link $A4.toUpperCase() "A4">><</link>></span> - a x year student studying xxx.<br>And that's all you're going to know. What are you, a cop?
 <<else>>
     [[$A4.toUpperCase()|A4]] - a x year student studying xxx.
-<</if>>
+<</if>> */
 <br>
 <br>
-<<if $studentIntroduction.length == 4>>
+<<if $studentIntroduction.length == 3>>
     <<set $isUnlockCharacterSummaries to true>>
     Now that introductions are done, shall we get on with the [[story|PhishingIntroduction]]?
 <<else>>
@@ -626,7 +698,7 @@ The sun is shining, the birds are singing, and it is Monday of Fresher's Week! N
 <</if>>
 
 
-:: A1 [nobr noreturn] {"position":"600,600","size":"100,100"}
+:: A1 [nobr noreturn] {"position":"1225,600","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A1")>>
 <span class='speakerA1'><<print $A1.toUpperCase()>></span>
 <br>
@@ -640,7 +712,7 @@ But university is a time and place for pushing new boundaries and opening up new
 <<link "GO BACK" $return>><</link>>
 
 
-:: A2 [nobr noreturn] {"position":"725,600","size":"100,100"}
+:: A2 [nobr noreturn] {"position":"100,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A2")>>
 <span class='speakerA2'><<print $A2.toUpperCase()>></span>
 <br>
@@ -654,7 +726,7 @@ But all of that routine may come crashing down at any moment, especially if they
 <<link "GO BACK" $return>><</link>>
 
 
-:: A3 [nobr noreturn] {"position":"850,600","size":"100,100"}
+:: A3 [nobr noreturn] {"position":"225,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A3")>>
 <span class='speakerA3'><<print $A3.toUpperCase()>></span>
 <br>
@@ -668,12 +740,25 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <<link "GO BACK" $return>><</link>>
 
 
-:: A4 [nobr noreturn] {"position":"975,600","size":"100,100"}
+:: A4 [nobr noreturn] {"position":"350,725","size":"100,100"}
 <<set $studentIntroduction.pushUnique("A4")>>
 <span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>
 <br>
 Attending remotely this year for personal reasons.
+<br>
+<br>
+<<link "GO BACK" $return>><</link>>
+
+
+:: A5 [nobr noreturn] {"position":"475,725","size":"100,100"}
+<<set $studentIntroduction.pushUnique("A5")>>
+<span class='speakerA5'><<print $A5.toUpperCase()>></span>
+<br>
+<br>
+A highschooler who got his ticket to semi-stardom via TikTok. It's just a passing fancy, but he really likes seeing all the comments on his videos and seeing his follower count rise. 
+<br>
+However, one day, disaster strikes! Will he ever go back to those halcyon days where the only thing he needed to worry about was pop quizzes?
 <br>
 <br>
 <<link "GO BACK" $return>><</link>>
