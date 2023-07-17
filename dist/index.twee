@@ -227,7 +227,8 @@ All done? First click the 'Check Order' button above. Then let's [[move on|Passw
 
 
 :: Passwords2FAQuestion [nobr] {"position":"1100,225","size":"100,100"}
-Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>. Read the conversation below and reflect on whether you would consider using Two-Factor Authentication.
+Having recovered and secured his accounts, ?A5 now wants to help his friend ?A4 with <<link"Two-Factor Authentication">><<script>>Dialog.setup("Two-Factor Authentication", "2FATooltip");Dialog.wiki(Story.get("2FATooltip").processText());Dialog.open();<</script>><</link>>.
+<br><br>
 ?A5b: Hey ?A4, you won't believe what happened to me! My TikTok account got hacked. It was such a nightmare!
 <br><br>
 ?A4b: Seriously? That's terrible, ?A5. How did that happen?
