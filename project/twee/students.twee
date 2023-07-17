@@ -1,33 +1,33 @@
 :: StudentIntroductions [nobr]
-The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves four hapless students, soon to be flatmates, moving into their new home away from home for the school year...
+The sun is shining, the birds are singing, and it is Monday of Fresher's Week! Now, our tale involves three hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 <br>
 <br>
 <<if $studentIntroduction.includes("A1")>>
-    <span class='speakerA1b'><<link $A1.toUpperCase() "A1">><</link>></span> - an international first year student studying anthropology.<br>They're excited to be here!<br>
+    <span class='speakerA1b'><<link $A1 "A1">><</link>></span> - an international first year student studying anthropology.<br>They're excited to be here!<br>
 <<else>>
-    [[$A1.toUpperCase()|A1]] - an international first year student studying anthropology.<br>
+    [[$A1|A1]] - an international first year student studying anthropology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A2")>>
-    <span class='speakerA2b'><<link $A2.toUpperCase() "A2">><</link>></span> - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
+    <span class='speakerA2b'><<link $A2 "A2">><</link>></span> - an international third year student studying psychology.<br>Voted most likely to be your boss after uni twice in a row.<br>
 <<else>>
-    [[$A2.toUpperCase()|A2]] - an international third year student studying psychology.<br>
+    [[$A2|A2]] - an international third year student studying psychology.<br>
 <</if>>
 <br>
 <<if $studentIntroduction.includes("A3")>>
-    <span class='speakerA3b'><<link $A3.toUpperCase() "A3">><</link>></span> - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
+    <span class='speakerA3b'><<link $A3 "A3">><</link>></span> - a domestic second year student studying computer science.<br>Did you know that they've been coding since they were three, in a cave with a box of scraps?<br>
 <<else>>
-    [[$A3.toUpperCase()|A3]] - a domestic second year student studying computer science.<br>
+    [[$A3|A3]] - a domestic second year student studying computer science.<br>
 <</if>>
-<br>
+/* <br>
 <<if $studentIntroduction.includes("A4")>>
     <span class='speakerA4b'><<link $A4.toUpperCase() "A4">><</link>></span> - a x year student studying xxx.<br>And that's all you're going to know. What are you, a cop?
 <<else>>
     [[$A4.toUpperCase()|A4]] - a x year student studying xxx.
-<</if>>
+<</if>> */
 <br>
 <br>
-<<if $studentIntroduction.length == 4>>
+<<if $studentIntroduction.length == 3>>
     <<set $isUnlockCharacterSummaries to true>>
     Now that introductions are done, shall we get on with the [[story|PhishingIntroduction]]?
 <<else>>
@@ -79,6 +79,18 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <br>
 <br>
 Attending remotely this year for personal reasons.
+<br>
+<br>
+<<link "GO BACK" $return>><</link>>
+
+:: A5 [nobr noreturn]
+<<set $studentIntroduction.pushUnique("A5")>>
+<span class='speakerA5'><<print $A5.toUpperCase()>></span>
+<br>
+<br>
+A highschooler who got his ticket to semi-stardom via TikTok. It's just a passing fancy, but he really likes seeing all the comments on his videos and seeing his follower count rise. 
+<br>
+However, one day, disaster strikes! Will he ever go back to those halcyon days where the only thing he needed to worry about was pop quizzes?
 <br>
 <br>
 <<link "GO BACK" $return>><</link>>

@@ -52,7 +52,7 @@ $(document).on(':passageend', function (ev) {
 		const draggable_list = document.getElementById("draggable-list");
 		const check = document.getElementById("check");
 		const listToOrder = [ // can use twine/html directly inside the strings below
-			"Don't panic! Verify the Email's authenticity",
+			"Don't panic! Verify the email's authenticity",
 			"Don't use links in the email address - navigate directly to the site.",
 			"Change your password",
 			"Enable two-factor authentication",
