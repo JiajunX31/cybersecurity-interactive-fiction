@@ -135,6 +135,7 @@ Look out for the following: quality of company logo, presence of unique informat
 <br>
 ?A1b: The audience. Duh. Now, for a smooth [[transition|FilesharingIntroduction]]...
 
+
 :: FilesharingIntroduction [nobr]
 As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
 <br><br>

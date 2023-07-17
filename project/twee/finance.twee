@@ -19,11 +19,11 @@ After weeks of searching, ?A1 finally comes across an advertisement for a flat r
 They reach out to the landlord and receive a response stating that a deposit needs to be made immediately before being able to see the property in person due to high demand.
 <br><br>
 ?A1b: We should [[just pay it|AccommodationChoice1][$accommodation1 to 1]]. What if we lose it?
-<br><br>
+<br>
 ?A3b: No, no we should just email back and [[insist|AccommodationChoice1][$accommodation1 to 2]] that we be allowed to view it.
-<br><br>
+<br>
 ?A1b: But what if they get annoyed?
-<br><br>
+<br>
 ?A3b: Look, the University probably has a way to help us, right? Why don't we [[ask the uni|AccommodationChoice1][$accommodation1 to 3]]?
 
 :: AccommodationTooltip1
@@ -33,13 +33,9 @@ With the demand for accommodation being so high, many scammers attempt to take a
 There are a variety of factors to look out for when searching for accommodation: 
 
 # Most landlords don't advertise on Facebook chats or other forms of social media so stay extra cautious if you come upon these types of adverts. 
-
 # If a landlord refuses to provide proof of identity and landlord registration information, they are most likely not genuine. 
-
 # There is no excuse for a landlord's name to not be registered on the Scottish Landlord Register. If a landlord's name is not listed, they are not legitimate.  
-
 # In-person viewings not being available typically points to fraudulent landlords. Many times, they will say that they are out of town or too busy to provide an in-person viewing, but do not fall for this. 
-
 # Never give a landlord a deposit prior to having received a tenancy agreement.  
 
 :: AccommodationChoice1 [nobr]
@@ -54,12 +50,14 @@ If a landlord's acting strange or suspicious in any way, rather than wasting tim
 <br><br>
 ...
 <br><br>
-?A3b: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntro]].
+?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntroduction]].
+
 
 :: OnlineJobIntroduction [nobr]
-Alongside searching for next year's accommodation, ?A3 is also trying to find a job that they can do on the side to earn a little extra money during the school year. They reach out to a friend of theirs, ?A4, that is studying remotely to ask if they know of any online job possibilities.
+<<set $isUnlockA4 to true>>
+Alongside searching for next year's accommodation, ?A3 is also trying to find a job that they can do on the side to earn a little extra money during the school year. They reach out to a friend of theirs, <span class='speakerA4b'><<link $A4 "A4">><</link>></span>, that is studying remotely to ask if they know of any online job possibilities.
 <br><br>
-?A3b: You said you have an online job while you are studying from home, right? I''m trying to earn a little extra money this semester... 
+?A3b: You said you have an online job while you are studying from home, right? I'm trying to earn a little extra money this semester...
 <br><br>
 ?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
 <br><br>
@@ -81,7 +79,7 @@ Alongside searching for next year's accommodation, ?A3 is also trying to find a 
 Companies that ask you to pay any type of money in order to get hired are most likely not legitimate. If a company asks for some type of enrollment or registration payment, make sure to run a quick background check on it; this can include merely googling the name of the company or job title. Similarly, if a company asks you to send them money to pay for some type of remote work equipment (headphones, software, keyboard, etc.) with the promise that it will be reimbursed in your first paycheck, once again, verify the legitimacy of the company and job offering.  
 
 :: OnlineJobTooltip2
-The platform Indeed is a legitimate and helpful job-hunting website; however, it is still possible to encounter scam jobs on it and any other platform like it. Most job-hunting websites will allow for you to report a job if you believe that it is fraudulent, so even if you have a small suspicion, report the job to save others from the possibility of a scam.
+The platform 'Indeed' is a legitimate and helpful job-hunting website; however, it is still possible to encounter scam jobs on it and any other platform like it. Most job-hunting websites will allow for you to report a job if you believe that it is fraudulent, so even if you have a small suspicion, report the job to save others from the possibility of a scam.
 
 :: OnlineJobChoice1
 <<if $onlinejob1 eq 2>>
@@ -92,10 +90,12 @@ While this job is seemingly legitimate, with any type of freelance contract work
 Oops!<br><br>
 <</if>>
 If an online job is claiming to be fast and easy earned money, make sure to verify the company or group that it is being posted by. The same is true if you receive a message on social media offering a similar proposition. Online jobs that require you to transfer money from one account to another, while keeping a part of it for yourself, are called money mulling jobs. Acting as a money mule is illegal, even if you are not aware of the fact that you are transferring illegal funds. Stay safe from this by not taking any job that claims to give you unrealistic benefits for the work you are to do, asks you to use your personal bank account for transferring any type of funds, or is offered to you by an individual or group that you don't know and can't find any information about.
-<br><br>...<br><br>
-Meanwhile, with [[?A1|GovernmentScamIntro]]...
+<br><br>
+<span class='dinkus'>* * *</span>
+<br><br>
+[[Meanwhile|GovernmentScamIntroduction]], with ?A1...
 
-:: GovernmentScamIntro [nobr]
+:: GovernmentScamIntroduction [nobr]
 Second semester for ?A1 is full of stress due to trying to find housing and a seemingly unending number of assignment deadlines. Amid trying to get their Social Anthropology essay submitted on time, ?A1 receives a message from UK Visas and Immigration (UKVI), saying that there's a problem with their visa. Maybe an 'i' has been dotted wrong, or a 't' hasn't been crossed correctly—whatever it is, if they do nothing, their visa's getting cancelled.
 <br><br>
 ?A1b: Oh no, oh no. If I don't deal with this right now, I'll get deported, I'll fail out of St Andrews, I'll become an international criminal—and then I'll never get my degree! 
@@ -110,14 +110,14 @@ Second semester for ?A1 is full of stress due to trying to find housing and a se
 
 :: GovScamChoice1 [nobr]
 <<if $govscam1 eq 3>>
-Not quite right! Although it is a common scam, when the scammers are impersonating an entity like the UKVI, it's better to report the scam to <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040 so the relevant authorities know about it and can be better informed about it. This way, you're not only saving yourself, but potentially countless others from being scammed!<br><br>
+    Not quite right! Although it is a common scam, when the scammers are impersonating an entity like the UKVI, it's better to report the scam to <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040 so the relevant authorities know about it and can be better informed about it. This way, you're not only saving yourself, but potentially countless others from being scammed!<br><br>
 <<else>>
     <<if $govscam1 eq 1>>
-    Uh oh! Looks like you chose wrong!<br><br>
+        Uh oh! Looks like you chose wrong!<br><br>
     <<else if $govscam1 eq 2>>
-    You chose correctly!<br><br>
+        You chose correctly!<br><br>
     <</if>>
-Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
+    Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
 <</if>>
 <p><br><br><br></p>
 Congratulations! You've finished <span class='textimportant'>Chapter Two: Financial Scams</span>!

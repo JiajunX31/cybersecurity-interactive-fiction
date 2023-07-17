@@ -115,17 +115,22 @@ $(document).on(':passageend', function (ev) {
 
 		// Check the order of list items
 		function checkOrder() {
+			let countcorrect = 0;
 			listItems.forEach((listItem, index) => {
 				const itemName = listItem.querySelector(".draggable").innerText.trim();
 				if (itemName !== listToOrder[index]) {
 					listItem.classList.add("wrong");
-					State.variables.isAllCorrect = false;
 				} else {
 					listItem.classList.remove("wrong");
 					listItem.classList.add("right");
-					State.variables.isAllCorrect = true;
+					countcorrect++;
 				}
 			});
+			if (countcorrect == 5) {
+				State.variables.isAllCorrect = true;
+			} else {
+				State.variables.isAllCorrect = false;
+			}
 		}
 		function addEventListeners() {
 			const draggables = document.querySelectorAll(".draggable");

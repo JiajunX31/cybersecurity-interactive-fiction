@@ -9,6 +9,7 @@ Cybersecurity and You!
 <<set $A4 to "Robin">>
 <<set $A5 to "Alex">>
 <<set $isUnlockCharacterSummaries to false>>
+<<set $isUnlockA4 to false>>
 <<set $isUnlockA5 to false>>
 
 <<script>>
@@ -92,10 +93,12 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 <br>
 <br>
 <<link[[$A3.toUpperCase()|A3]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a domestic second year student studying computer science.
+<<if $isUnlockA4 is true>>
 <br>
 <br>
 <<link[[$A4.toUpperCase()|A4]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a x year student studying xxx.
 <<if $isUnlockA5 is true>>
+<</if>>
 <br>
 <br>
 <<link[[$A5.toUpperCase()|A5]]>><<script>>Dialog.close();UIBar.stow();<</script>><</link>> - a promising high-school TikTok infulencer.
@@ -104,13 +107,21 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 
 :: Debug
 Jump to...
+
+ phishing.twee
 [[Phishing Introduction|PhishingIntroduction]]
 [[Filesharing Introduction|FilesharingIntroduction]]
+
+finance.twee
 [[Accomodation Scams Introduction|AccomodationScamsIntroduction]]
 [[Online Job Introduction|OnlineJobIntroduction]]
+[[Government Scam Introduction|GovernmentScamIntroduction]]
+
+passwords.twee
 [[Passwords Introduction|PasswordsA5Introduction]]
-[[Passwords 2FA Question|Passwords2FAQuestion ]]
+[[Passwords 2FA Question|Passwords2FAQuestion]]
 [[Passwords Management Question|PasswordsManagementQuestion]]
+
 <<button "Unlock Character Summaries">>
 <<set $isUnlockCharacterSummaries to true>>
 <<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
