@@ -79,7 +79,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>
 <br>
-Attending remotely this year for personal reasons.
+A student of the University of St Andrews. They like many things and dislike a lot more. Their hobbies are private. As for their hopes and dreams... what are you, a cop?
 <br>
 <br>
 <<link "GO BACK" $return>><</link>>

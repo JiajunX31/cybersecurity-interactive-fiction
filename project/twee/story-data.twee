@@ -12,6 +12,11 @@ Cybersecurity and You!
 <<set $isUnlockA4 to false>>
 <<set $isUnlockA5 to false>>
 <<set $currentChapter to "start">>
+<<set $points ={
+    phishing: 0,
+    finance: 0,
+    passwords: 0,
+}>>
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1

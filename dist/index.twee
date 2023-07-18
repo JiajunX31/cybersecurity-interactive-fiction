@@ -6,7 +6,7 @@ Cybersecurity and You!
 {
 	"ifid": "AFD3B0CA-1649-4127-AF2C-40698CE9EA90",
 	"format": "SugarCube",
-	"format-version": "2.35.0",
+	"format-version": "2.30.0",
 	"start": "Start",
 	"zoom": 1
 }
@@ -36,7 +36,7 @@ data:image/jpeg;base64,/9j/4gxYSUNDX1BST0ZJTEUAAQEAAAxITGlubwIQAABtbnRyUkdCIFhZW
 <<set $currentChapter to "finance">>
 When November rolls around, ?A1 begins to do some research into housing for their second year. They had heard from some older students how difficult it can be to find private accommodation, so they want to put a deposit down as early as possible to avoid stress down the road.
 <br><br> 
-?A1 grows frustrated with the lack of available flats on the letting agency websites so they begin to look at flat advertisement sites instead. ?A1 is aware of the <<link"scams">><<script>>Dialog.setup("Financial Security and You", "AccommodationTooltip1");Dialog.wiki(Story.get("AccommodationTooltip1").processText());Dialog.open();<</script>><</link>> that target desperate students on these sites, so they are trying their best to stay <<link"cautious">><<script>>Dialog.setup("Financial Security and You", "AccommodationTooltip2");Dialog.wiki(Story.get("AccommodationTooltip2").processText());Dialog.open();<</script>><</link>> and alert online.
+?A1 grows frustrated with the lack of available flats on the letting agency websites so they begin to look at flat advertisement sites instead. ?A1 is aware of the <<link"scams">><<script>>Dialog.setup("Accommodations: How to Not Get Scammed", "AccommodationTooltip1");Dialog.wiki(Story.get("AccommodationTooltip1").processText());Dialog.open();<</script>><</link>> that target desperate students on these sites, so they are trying their best to stay <<link"cautious">><<script>>Dialog.setup("Accommodations: How to Not Get Scammed", "AccommodationTooltip2");Dialog.wiki(Story.get("AccommodationTooltip2").processText());Dialog.open();<</script>><</link>> and alert online.
 <br><br>
 After weeks of searching, ?A1 finally comes across an advertisement for a flat right off North Street, listed for a reasonably low price but with a note that no immediate property viewings are available. ?A1 [[reaches out|AccomodationScamsDialogue]]   to ?A3 to ask if they could apply to the flat together.
 
@@ -69,7 +69,6 @@ With the demand for accommodation being so high, many scammers attempt to take a
 
 :: AccommodationTooltip2 {"position":"850,100","size":"100,100"}
 There are a variety of factors to look out for when searching for accommodation: 
-
 # Most landlords don't advertise on Facebook chats or other forms of social media so stay extra cautious if you come upon these types of adverts. 
 # If a landlord refuses to provide proof of identity and landlord registration information, they are most likely not genuine. 
 # There is no excuse for a landlord's name to not be registered on the Scottish Landlord Register. If a landlord's name is not listed, they are not legitimate.  
@@ -83,11 +82,12 @@ Whoa, you chose completely wrong! You have to make sure to view a property in pe
 <<elseif $accommodation1 eq 2>>
 Uh, half-right! While it is important to view the property to ensure that it is real, it is also equally as important to have received a contract from your landlord before making a deposit. Most legitimate landlords are happy to show you the property and will be accommodating in doing so. For that reason, if your landlord says they're unavailable for viewings this is most likely because it is a scam. And they're scamming <i>you</i>.<br><br>
 <<else>>
+<<set $points.finance += 1>>
 You're right! 
 <</if>>
 If a landlord's acting strange or suspicious in any way, rather than wasting time trying to figure things out yourself, reach out to the uni instead! You can email <a href="mailto:helphub@st-andrews.ac.uk">helphub@st-andrews.ac.uk</a> anytime and they'll be happy to help you. They'll make sure that your landlord is registered and the property is legitimate.
 <br><br>
-...
+<span class='dinkus'>* * *</span>
 <br><br>
 ?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntroduction]].
 
@@ -99,11 +99,11 @@ Alongside searching for next year's accommodation, ?A3 is also trying to find a 
 <br><br>
 ?A3b: You said you have an online job while you are studying from home, right? I'm trying to earn a little extra money this semester...
 <br><br>
-?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
+?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Working Online", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
 <br><br>
 ?A3b: Ah okay. Good thing to keep in mind, thank you for letting me know! 
 <br><br>
-?A4b: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
+?A4b: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Working Online", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
 <br><br>
 ?A3b: Yeah, I'd really like an easy remote job that'll give me money quickly. Oh hey! This one seems really simple—all I have to do is process [[money transfers|OnlineJobChoice1][$onlinejob1 to 1]]!
 <br><br>
@@ -126,8 +126,10 @@ The platform 'Indeed' is a legitimate and helpful job-hunting website; however, 
 
 :: OnlineJobChoice1 {"position":"225,225","size":"100,100"}
 <<if $onlinejob1 eq 2>>
+<<set $points.finance += 1>>
 Although it's a bit of a compromise what with the in-person requirement, and there might be a slight issue with school-work-life balance in the future, this is still a safe choice! You successfully avoided getting scammed!<br><br>
 <<elseif $onlinejob1 eq 3>>
+<<set $points.finance += 1>>
 While this job is seemingly legitimate, with any type of freelance contract work make sure to verify the individual or group that is posting the job. There have been many instances where a freelance worker will accept and complete a job without receiving any type of payment for it in the end. Be cautious and careful of this and make sure to quickly run a background check on the job offering individual or company. In any case, at least you cleared the low bar of not choosing the obvious scam!<br><br>
 <<else>>
 Oops!<br><br>
@@ -162,11 +164,12 @@ Second semester for ?A1 is full of stress due to trying to find housing and a se
     <<if $govscam1 eq 1>>
         Uh oh! Looks like you chose wrong!<br><br>
     <<else if $govscam1 eq 2>>
+    <<set $points.finance += 1>>
         You chose correctly!<br><br>
     <</if>>
     Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
 <</if>>
-<p><br><br><br></p>
+<br><span class='dinkus'>* * *</span><br>
 Congratulations! You've finished <span class='textimportant'>Chapter Two: Financial Scams</span>!
 <p><br></p>
 <center>[[continue to the next chapter?|PasswordsA5Introduction]]</center>
@@ -198,6 +201,7 @@ All done? First click the 'Check Order' button above. Then let's [[move on|Passw
 
 :: PasswordsRecoveryChoice {"position":"850,225","size":"100,100"}
 <<if $isAllCorrect is true>>
+<<set $points.passwords += 1>>
     Congratulations! You are an account recovery expert! Here is a list of possible actions you can take:
 <<else>>
     Almost there! Please see the following list of actions: 
@@ -294,6 +298,7 @@ All done? Let's [[check|PasswordsManagementChoice]]!
 <<set $currentChapter to "passwords">>
 <<if $p4 and $p10 and !$p1 and !$p2 and !$p3 and !$p5 and !$p6 and !$p7 and !$p8 and !$p9>>
     <<set $isPassChoiceCorrect to true>>
+    <<set $points.passwords += 1>>
     Congratulations! You answered correctly.
 <<else>>
     <<set $isPassChoiceCorrect to false>>
@@ -331,11 +336,7 @@ A password manager is a secure digital tool that helps users store, organize, an
 <br>
 <br>
 Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something 
-<<link"suspicious">><<script>>
-Dialog.setup("What is Phishing?", "PhishingTooltip1");
-Dialog.wiki(Story.get("PhishingTooltip1").processText());
-Dialog.open();
-<</script>><</link>>
+<<link"suspicious">><<script>>Dialog.setup("What is Phishing?", "PhishingTooltip1");Dialog.wiki(Story.get("PhishingTooltip1").processText());Dialog.open();<</script>><</link>>
 about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
 <br>
@@ -373,6 +374,7 @@ Millions of bulk phishing e-mail and messaging scams happen every day. They usua
 <<if $Bulk == "A1">>
     Not quite!
 <<elseif $Bulk == "A2">>
+    <<set $points.phishing += 1>>
     You chose correctly!
 <<elseif $Bulk == "A3">>
     Not quite!
@@ -406,7 +408,7 @@ Once you've finished figuring out what exactly makes these emails so untrustwort
 
 
 :: SpearCycle [nobr] {"position":"1100,350","size":"100,100"}
-The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
+The <<link"first email">><<script>>Dialog.setup("The Suspicious Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email1Answer">>
     <<option "it's got a weird logo." 1>>
     <<option "it's trying to pressure me!" 2>>
@@ -415,7 +417,7 @@ The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.
     <<option "it's generic." 5>>
 <</cycle>>
 <br>
-And the <<link"second email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
+And the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
 <<cycle "$email2Answer">>
     <<option "it's got a silly logo." 1>>
     <<option "it's trying to rush me!" 2>>
@@ -424,7 +426,7 @@ And the <<link"second email">><<script>>Dialog.setup("First Email", "Email1");Di
     <<option "it reads like really bad automail." 5>>
 <</cycle>>
 <br>
-Finally, the <<link"third email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
+Finally, the <<link"third email">><<script>>Dialog.setup("The Strange Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s strange because...
 <<cycle "$email3Answer">>
     <<option "it's got a grainy logo." 1>>
     <<option "it's trying to hurry me up!" 2>>
@@ -461,6 +463,7 @@ Look out for the following: quality of company logo, presence of unique informat
 <br>
 ?A1b: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
 <<else>>
+<<set $points.phishing += 1>>
 ?A1b: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
 <</if>>
 <br>
@@ -473,7 +476,7 @@ Look out for the following: quality of company logo, presence of unique informat
 
 :: FilesharingIntroduction [nobr] {"position":"725,475","size":"100,100"}
 <<set $currentChapter to "phishing">>
-As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
+As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
 <br><br>
 <<cycle "$fileshare1">>
     <<option "Before memes, ?A3 decides to double-check that their drink purchase made it through and they haven't accidentally defrauded The Union. So, they open up their banking app." 1>>
@@ -491,7 +494,7 @@ Then, ?A3 faces the [[consequences of their actions|FilesharingChoice1]]!
 
 
 :: FilesharingTooltip1 {"position":"850,475","size":"100,100"}
-Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
+Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
 
 
 :: FilesharingTooltip2 {"position":"975,475","size":"100,100"}
@@ -500,6 +503,7 @@ VPN (Virtual Private Network): A technology that creates a secure and encrypted 
 
 :: FilesharingChoice1 [nobr] {"position":"1100,475","size":"100,100"}
 <<if $fileshare1 eq 2>>
+<<set $points.phishing += 1>>
 No consequences! ?A3 has successfully escaped the gauntlet and only needs to face the smug attitude of their mother, who has once again, been proven to be entirely correct.
 <<else>>
 <<if $fileshare1 eq 1>>Dire consequences! Alas, ?A3 has run the risk of exposing their banking details to all and sundry!<<elseif $fileshare1 eq 2>>Medium consequences!<</if>>
@@ -537,9 +541,10 @@ Not quite! Fake Wi-Fi notifications can be generated by cybercriminals in an att
 <<elseif $fileshare eq 2>>
 Almost there! You have the right idea. Hackers can generate fake Wi-Fi notifications to mimic legitimate networks, which they can use to steal data and launch attacks. By investigating and asking staff, they could give you clues as to whether the Wi-Fi network is fake or not; however, this isn't foolproof.<br><br>
 <<else>>
+<<set $points.phishing += 1>>
 Correct! 
 <</if>>
-Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip3");Dialog.wiki(Story.get("FilesharingTooltip3").processText());Dialog.open();<</script>><</link>> means avoiding the risks of joining public Wi-Fi altogether, so you're better off using mobile data when you can. 
+Using <<link"mobile data">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip3");Dialog.wiki(Story.get("FilesharingTooltip3").processText());Dialog.open();<</script>><</link>> means avoiding the risks of joining public Wi-Fi altogether, so you're better off using mobile data when you can. 
 <br><br>
 <span class='dinkus'>* * *</span>
 <br><br>
@@ -547,7 +552,7 @@ Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingToo
 <br><br>
 <<cycle "$fileshare3">>
     <<option "?A2 finds the textbook at a great price on a second-hand website. Score! They snatch it up quickly and proceed with the transaction, before anyone else can get it." 1>>
-    <<option "?A2 ensures that the website they're visiting has a padlock sign on the web address bar and says <<link'HTTPS'>><<script>>Dialog.setup('Filesharing', 'FilesharingTooltip4');Dialog.wiki(Story.get('FilesharingTooltip4').processText());Dialog.open();<</script>><</link>>, verifying the site's security and <<link'encryption'>><<script>>Dialog.setup('Filesharing', 'FilesharingTooltip5');Dialog.wiki(Story.get('FilesharingTooltip5').processText());Dialog.open();<</script>><</link>> before making any purchases." 2>>
+    <<option "?A2 ensures that the website they're visiting has a padlock sign on the web address bar and says <<link'HTTPS'>><<script>>Dialog.setup('Wi-Fi and Other Connections', 'FilesharingTooltip4');Dialog.wiki(Story.get('FilesharingTooltip4').processText());Dialog.open();<</script>><</link>>, verifying the site's security and <<link'encryption'>><<script>>Dialog.setup('Wi-Fi and Other Connections', 'FilesharingTooltip5');Dialog.wiki(Story.get('FilesharingTooltip5').processText());Dialog.open();<</script>><</link>> before making any purchases." 2>>
     <<option "?A2 decides to switch from public Wi-Fi to using mobile data to buy the textbook." 3>>
 <</cycle>>
 <br><br>
@@ -575,9 +580,10 @@ Not quite! If the website isn't encrypted, then the imputed sensitive informatio
 <<elseif $fileshare3 eq 2>>
 Almost there! While HTTPS adds a level of security, it doesn't guarantee complete connection security or protection against all potential threats. It primarily ensures that the communication between your device and the website is encrypted and secure. However, it doesn't necessarily guarantee the security of the entire website or protect against other vulnerabilities, such as malware or phishing attacks. As such, the safest option would be to use mobile data, which is normally encrypted and is not as exposed as Public Wi-Fi.
 <<else>>
+<<set $points.phishing += 1>>
 You got it! But you still have to make sure that the website itself isn't insecure or a vector of attack in of itself.
 <</if>>
-<p><br><br><br></p>
+<br><span class='dinkus'>* * *</span><br>
 Congratulations! You've finished <span class='textimportant'>Chapter One: Phishing</span>!
 <p><br></p>
 <center>[[continue to the next chapter?|AccomodationScamsIntroduction]]</center>
@@ -594,6 +600,11 @@ Congratulations! You've finished <span class='textimportant'>Chapter One: Phishi
 <<set $isUnlockA4 to false>>
 <<set $isUnlockA5 to false>>
 <<set $currentChapter to "start">>
+<<set $points ={
+    phishing: 0,
+    finance: 0,
+    passwords: 0,
+}>>
 
 <<script>>
 /* Auto style character names based on style.css. Use ?A1 to style character A1
@@ -742,11 +753,51 @@ Let's [[start|StudentIntroductions]]!
 </style>
 
 
-:: Ending {"position":"100,725","size":"100,100"}
+:: Ending [nobr] {"position":"100,725","size":"100,100"}
 Congratulations! You've finished <span class='textimportant'>'CYBERSECURITY AND YOU!'</span>!
-<center>...
-The End
-</center>
+<br><span class='dinkus'>* * *</span><br>
+You got $points.phishing/5 questions correct for <span class='textimportant'>Phishing</span>, $points.finance/3 questions correct for <span class='textimportant'>Financial Scams</span> and $points.passwords/2 questions correct for <span class='textimportant'>Passwords</span>!
+<<if $points.phishing eq 5 and $points.finance eq 3 and $points.passwords eq 2>>
+<br><br>
+?A1: Wow! You're really good at this! Wish I could learn from you!
+<br><br>
+?A3: Bah, this stuff is <i>easy</i>. What's there to be impressed about?
+<br><br>
+?A2: Hey, be nice. They must have tried really hard to get all the questions right.
+<br><br>
+?A4: Mn.
+<br><br>
+?A5: Whatever! See ya!
+<center><span class='textinfo'>The End</span></center>
+<<elseif $points.phishing eq 0 and $points.finance eq 0 and $points.passwords eq 0>>
+<br><br>
+?A3: Wow. You suck at this!
+<br><br>
+?A5: 'S not like you could do any better.
+<br><br>
+?A2: Ack! No fighting the highschooler!
+<br><br>
+?A4: Mn.
+<br><br>
+?A1: Uh. Looks like we're busy. Come back after the brea—!
+<center><span class='textbad'>ERROR! LOST CONNECTION!</span></center>
+<<else>>
+<br><br>
+?A3: Hmm. Could be better. Could be worse.
+<br><br>
+?A2: You could say it more diplomatically you know.
+<br><br>
+?A5: Yeah! It's not their fault that they got a question or two wrong!
+<br><br>
+?A4: Mn.
+<br><br>
+?A3: I—it's literally their fault. What are you even talking about?
+<br><br>
+?A1: Okay! Better luck next time. See-you-then!
+<br><br>
+?A3: Wha—?!
+<center><span class='textinfo'>The End</span></center>
+<</if>>
 
 
 :: StudentIntroductions [nobr] {"position":"225,725","size":"100,100"}
@@ -834,7 +885,7 @@ But in their quest to get some electricity-gas-and-water money, will they find s
 <span class='speakerA4'><<print $A4.toUpperCase()>></span>
 <br>
 <br>
-Attending remotely this year for personal reasons.
+A student of the University of St Andrews. They like many things and dislike a lot more. Their hobbies are private. As for their hopes and dreams... what are you, a cop?
 <br>
 <br>
 <<link "GO BACK" $return>><</link>>

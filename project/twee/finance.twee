@@ -32,7 +32,6 @@ With the demand for accommodation being so high, many scammers attempt to take a
 
 :: AccommodationTooltip2
 There are a variety of factors to look out for when searching for accommodation: 
-
 # Most landlords don't advertise on Facebook chats or other forms of social media so stay extra cautious if you come upon these types of adverts. 
 # If a landlord refuses to provide proof of identity and landlord registration information, they are most likely not genuine. 
 # There is no excuse for a landlord's name to not be registered on the Scottish Landlord Register. If a landlord's name is not listed, they are not legitimate.  
@@ -45,11 +44,12 @@ Whoa, you chose completely wrong! You have to make sure to view a property in pe
 <<elseif $accommodation1 eq 2>>
 Uh, half-right! While it is important to view the property to ensure that it is real, it is also equally as important to have received a contract from your landlord before making a deposit. Most legitimate landlords are happy to show you the property and will be accommodating in doing so. For that reason, if your landlord says they're unavailable for viewings this is most likely because it is a scam. And they're scamming <i>you</i>.<br><br>
 <<else>>
+<<set $points.finance += 1>>
 You're right! 
 <</if>>
 If a landlord's acting strange or suspicious in any way, rather than wasting time trying to figure things out yourself, reach out to the uni instead! You can email <a href="mailto:helphub@st-andrews.ac.uk">helphub@st-andrews.ac.uk</a> anytime and they'll be happy to help you. They'll make sure that your landlord is registered and the property is legitimate.
 <br><br>
-...
+<span class='dinkus'>* * *</span>
 <br><br>
 ?A3: Ugh, what a pain. Living is hard. Flat searching is hard. [[Job searching is hard|OnlineJobIntroduction]].
 
@@ -85,8 +85,10 @@ The platform 'Indeed' is a legitimate and helpful job-hunting website; however, 
 
 :: OnlineJobChoice1
 <<if $onlinejob1 eq 2>>
+<<set $points.finance += 1>>
 Although it's a bit of a compromise what with the in-person requirement, and there might be a slight issue with school-work-life balance in the future, this is still a safe choice! You successfully avoided getting scammed!<br><br>
 <<elseif $onlinejob1 eq 3>>
+<<set $points.finance += 1>>
 While this job is seemingly legitimate, with any type of freelance contract work make sure to verify the individual or group that is posting the job. There have been many instances where a freelance worker will accept and complete a job without receiving any type of payment for it in the end. Be cautious and careful of this and make sure to quickly run a background check on the job offering individual or company. In any case, at least you cleared the low bar of not choosing the obvious scam!<br><br>
 <<else>>
 Oops!<br><br>
@@ -119,11 +121,12 @@ Second semester for ?A1 is full of stress due to trying to find housing and a se
     <<if $govscam1 eq 1>>
         Uh oh! Looks like you chose wrong!<br><br>
     <<else if $govscam1 eq 2>>
+    <<set $points.finance += 1>>
         You chose correctly!<br><br>
     <</if>>
     Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
 <</if>>
-<p><br><br><br></p>
+<br><span class='dinkus'>* * *</span><br>
 Congratulations! You've finished <span class='textimportant'>Chapter Two: Financial Scams</span>!
 <p><br></p>
 <center>[[continue to the next chapter?|PasswordsA5Introduction]]</center>
