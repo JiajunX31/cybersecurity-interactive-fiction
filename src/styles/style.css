@@ -465,6 +465,13 @@ i {
   text-decoration: none;
 }
 
+.tooltip :before {
+  content: "\e80a\00a0";
+	font-family: tme-fa-icons;
+	margin: auto;
+	padding-left: 2px;
+	speak: none;
+}
 
 /* other tooltips */
 
