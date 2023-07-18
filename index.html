@@ -634,46 +634,114 @@ passwords.twee
 &lt;/style&gt;</tw-passagedata><tw-passagedata pid="51" name="Ending" tags="nobr" position="100,725" size="100,100">Congratulations! You&#39;ve finished &lt;span class=&#39;textimportant&#39;&gt;&#39;CYBERSECURITY AND YOU!&#39;&lt;/span&gt;!
 &lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
 You got $points.phishing/5 questions correct for &lt;span class=&#39;textimportant&#39;&gt;Phishing&lt;/span&gt;, $points.finance/3 questions correct for &lt;span class=&#39;textimportant&#39;&gt;Financial Scams&lt;/span&gt; and $points.passwords/2 questions correct for &lt;span class=&#39;textimportant&#39;&gt;Passwords&lt;/span&gt;!
+&lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
 &lt;&lt;if $points.phishing eq 5 and $points.finance eq 3 and $points.passwords eq 2&gt;&gt;
 &lt;br&gt;&lt;br&gt;
-?A1: Wow! You&#39;re really good at this! Wish I could learn from you!
+?A1b: Wow! You&#39;re really good at this! Wish I could learn from you!
 &lt;br&gt;&lt;br&gt;
-?A3: Bah, this stuff is &lt;i&gt;easy&lt;/i&gt;. What&#39;s there to be impressed about?
+?A3b: Bah, this stuff is &lt;i&gt;easy&lt;/i&gt;. What&#39;s there to be impressed about?
 &lt;br&gt;&lt;br&gt;
-?A2: Hey, be nice. They must have tried really hard to get all the questions right.
+?A2b: Hey, be nice. They must have tried really hard to get all the questions right.
 &lt;br&gt;&lt;br&gt;
-?A4: Mn.
+?A4b: Mn.
 &lt;br&gt;&lt;br&gt;
-?A5: Whatever! See ya!
-&lt;center&gt;&lt;span class=&#39;textinfo&#39;&gt;The End&lt;/span&gt;&lt;/center&gt;
+?A5b: Whatever! See ya!
+&lt;center&gt;&lt;span class=&#39;textinfo&#39;&gt;The End&lt;/span&gt;
+&lt;i&gt;Good Ending: The World Turns On&lt;/i&gt;&lt;/center&gt;
 &lt;&lt;elseif $points.phishing eq 0 and $points.finance eq 0 and $points.passwords eq 0&gt;&gt;
 &lt;br&gt;&lt;br&gt;
-?A3: Wow. You suck at this!
+?A3b: Wow. You suck at this!
 &lt;br&gt;&lt;br&gt;
-?A5: &#39;S not like you could do any better.
+?A5b: &#39;S not like you could do any better.
 &lt;br&gt;&lt;br&gt;
-?A2: Ack! No fighting the highschooler!
+?A2b: Ack! No fighting the highschooler!
 &lt;br&gt;&lt;br&gt;
-?A4: Mn.
+?A4b: Mn.
 &lt;br&gt;&lt;br&gt;
-?A1: Uh. Looks like we&#39;re busy. Come back after the brea—!
-&lt;center&gt;&lt;span class=&#39;textbad&#39;&gt;ERROR! LOST CONNECTION!&lt;/span&gt;&lt;/center&gt;
+?A1b: Uh. Looks like we&#39;re busy. But I&#39;m sure that you&#39;ll be able to better next—! Ah! Don&#39;t pick up the chair! Put that down! No!
+&lt;center&gt;&lt;span class=&#39;textbad&#39;&gt;ERROR! LOST CONNECTION!&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;i&gt;Bad Ending: Fight Club&lt;/i&gt;&lt;/center&gt;
+&lt;&lt;elseif $points.passwords eq 0&gt;&gt;
+?A5b: Ha! You&#39;re not very good with passwords, aren&#39;t you?
+&lt;br&gt;&lt;br&gt;
+?A3b: Not like you&#39;re brilliant at it either, Mr. Famous-TikTok-Star.
+&lt;br&gt;&lt;br&gt;
+?A5b: Hey!
+&lt;br&gt;&lt;br&gt; 
+?A2b: Calm down everyone. I&#39;m sure that they learned a lot from this.
+&lt;br&gt;&lt;br&gt;
+?A4b: Mn.
+&lt;br&gt;&lt;br&gt;
+?A1b: Yeah! If we all work together, I&#39;m sure we&#39;ll get a better score next time~!
+&lt;br&gt;&lt;br&gt;
+?A3b: Ha! Do you really think that?
+&lt;br&gt;&lt;br&gt;
+?A1: So long as you believe in yourself, you&#39;ll always improve!
+&lt;br&gt;&lt;br&gt;
+?A5b: And pay attention to me next time, or you&#39;ll get it wrong again.
+&lt;br&gt;&lt;br&gt;
+?A3b: Okay, look here—
+&lt;center&gt;&lt;span class=&#39;textbad&#39;&gt;ERROR! LOST CONNECTION!&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;i&gt;Bad Ending: The Will to Fight&lt;/i&gt;
+&lt;/center&gt;
+&lt;&lt;elseif $points.finance eq 0&gt;&gt;
+?A1b: Oh. Huh. Guess we kinda messed up a lot.
+&lt;br&gt;&lt;br&gt;
+?A3b: Not my fault. I was busy.
+&lt;br&gt;&lt;br&gt;
+?A5b: You were &lt;i&gt;with&lt;/i&gt; them!
+&lt;br&gt;&lt;br&gt;
+?A3b: And? I&#39;m not to blame for this.
+&lt;br&gt;&lt;br&gt;
+?A4b: Mn.
+&lt;br&gt;&lt;br&gt;
+?A3b, ?A5b: See? ?A4 agrees with me! Argh! Stop copying me!
+&lt;br&gt;&lt;br&gt;
+?A2b: Okay, guys. Looks like things are heating up and we&#39;re losing our heads. Why don&#39;t we—
+&lt;center&gt;&lt;span class=&#39;textbad&#39;&gt;ERROR! LOST CONNECTION!&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;i&gt;Bad Ending: Mo&#39; Money, Mo&#39; Problems&lt;/i&gt;
+&lt;/center&gt;
+&lt;&lt;elseif $points.phishing eq 0&gt;&gt;
+?A2b: How did we get them all wrong? That&#39;s impossible!
+&lt;br&gt;&lt;br&gt;
+?A1b: Nothing&#39;s impossible if you put your mind to it!
+&lt;br&gt;&lt;br&gt;
+?A3b: Is that supposed to be encouraging?
+&lt;br&gt;&lt;br&gt;
+?A1b: Yes!
+&lt;br&gt;&lt;br&gt;
+?A5b: I don&#39;t feel very encouraged. Anybody else? Yeah, nobody&#39;s feeling very encouraged right now, sorry ?A1.
+&lt;br&gt;&lt;br&gt;
+?A4b: Mn. Perhaps it would be better to say: &quot;We&#39;ll do better next time!&quot; Or something like that.
+&lt;br&gt;&lt;br&gt;
+?A3b: See! See! I &lt;i&gt;told&lt;/i&gt; you ?A4 could talk! And none of you believed me!
+&lt;br&gt;&lt;br&gt;
+?A4b: Hm.
+&lt;br&gt;&lt;br&gt;
+?A3b: Okay, is it just me, or is that a ringing noise—?
+&lt;center&gt;&lt;span class=&#39;textbad&#39;&gt;ERROR! LOST CONNECTION!&lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;i&gt;Bad Ending: Things That Man Was Not Supposed to Know&lt;/i&gt;&lt;/center&gt;
 &lt;&lt;else&gt;&gt;
 &lt;br&gt;&lt;br&gt;
-?A3: Hmm. Could be better. Could be worse.
+?A3b: Hmm. Could be better. Could be worse.
 &lt;br&gt;&lt;br&gt;
-?A2: You could say it more diplomatically you know.
+?A2b: You could say it more diplomatically you know.
 &lt;br&gt;&lt;br&gt;
-?A5: Yeah! It&#39;s not their fault that they got a question or two wrong!
+?A5b: Yeah! It&#39;s not their fault that they got a question or two wrong!
 &lt;br&gt;&lt;br&gt;
-?A4: Mn.
+?A4b: Mn.
 &lt;br&gt;&lt;br&gt;
-?A3: I—it&#39;s literally their fault. What are you even talking about?
+?A3b: I—it&#39;s literally their fault. What are you even talking about?
 &lt;br&gt;&lt;br&gt;
-?A1: Okay! Better luck next time. See-you-then!
+?A1b: Okay! Better luck next time. See-you-then!
 &lt;br&gt;&lt;br&gt;
-?A3: Wha—?!
-&lt;center&gt;&lt;span class=&#39;textinfo&#39;&gt;The End&lt;/span&gt;&lt;/center&gt;
+?A3b: Wha—?!
+&lt;center&gt;&lt;span class=&#39;textinfo&#39;&gt;The End&lt;/span&gt;
+&lt;i&gt;Medium Ending: Better Luck Next Time~!&lt;/i&gt;&lt;/center&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="StudentIntroductions" tags="nobr" position="225,725" size="100,100">&lt;&lt;set $currentChapter to &quot;students&quot;&gt;&gt;
 The sun is shining, the birds are singing, and it is Monday of Fresher&#39;s Week! Now, our tale involves three hapless students, soon to be flatmates, moving into their new home away from home for the school year...
 &lt;br&gt;
