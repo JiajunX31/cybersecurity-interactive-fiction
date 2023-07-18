@@ -2,7 +2,7 @@
 <<set $currentChapter to "finance">>
 When November rolls around, ?A1 begins to do some research into housing for their second year. They had heard from some older students how difficult it can be to find private accommodation, so they want to put a deposit down as early as possible to avoid stress down the road.
 <br><br> 
-?A1 grows frustrated with the lack of available flats on the letting agency websites so they begin to look at flat advertisement sites instead. ?A1 is aware of the <<link"scams">><<script>>Dialog.setup("Financial Security and You", "AccommodationTooltip1");Dialog.wiki(Story.get("AccommodationTooltip1").processText());Dialog.open();<</script>><</link>> that target desperate students on these sites, so they are trying their best to stay <<link"cautious">><<script>>Dialog.setup("Financial Security and You", "AccommodationTooltip2");Dialog.wiki(Story.get("AccommodationTooltip2").processText());Dialog.open();<</script>><</link>> and alert online.
+?A1 grows frustrated with the lack of available flats on the letting agency websites so they begin to look at flat advertisement sites instead. ?A1 is aware of the <<link"scams">><<script>>Dialog.setup("Accommodations: How to Not Get Scammed", "AccommodationTooltip1");Dialog.wiki(Story.get("AccommodationTooltip1").processText());Dialog.open();<</script>><</link>> that target desperate students on these sites, so they are trying their best to stay <<link"cautious">><<script>>Dialog.setup("Accommodations: How to Not Get Scammed", "AccommodationTooltip2");Dialog.wiki(Story.get("AccommodationTooltip2").processText());Dialog.open();<</script>><</link>> and alert online.
 <br><br>
 After weeks of searching, ?A1 finally comes across an advertisement for a flat right off North Street, listed for a reasonably low price but with a note that no immediate property viewings are available. ?A1 [[reaches out|AccomodationScamsDialogue]]   to ?A3 to ask if they could apply to the flat together.
 
@@ -61,11 +61,11 @@ Alongside searching for next year's accommodation, ?A3 is also trying to find a 
 <br><br>
 ?A3b: You said you have an online job while you are studying from home, right? I'm trying to earn a little extra money this semester...
 <br><br>
-?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
+?A4b: I thought I got one, but they ended up asking me to pay an <<link"enrollment fee">><<script>>Dialog.setup("Working Online", "OnlineJobTooltip1");Dialog.wiki(Story.get("OnlineJobTooltip1").processText());Dialog.open();<</script>><</link>> which seemed like it would be a scam. 
 <br><br>
 ?A3b: Ah okay. Good thing to keep in mind, thank you for letting me know! 
 <br><br>
-?A4b: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Financial Security and You", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
+?A4b: No problem. I know <<link"Indeed">><<script>>Dialog.setup("Working Online", "OnlineJobTooltip2");Dialog.wiki(Story.get("OnlineJobTooltip2").processText());Dialog.open();<</script>><</link>> has many job openings whether it be in-person or online if that helps. 
 <br><br>
 ?A3b: Yeah, I'd really like an easy remote job that'll give me money quickly. Oh hey! This one seems really simple—all I have to do is process [[money transfers|OnlineJobChoice1][$onlinejob1 to 1]]!
 <br><br>

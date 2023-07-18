@@ -7,11 +7,7 @@ Splitting up topics like this can make it easier for organisation.*/
 <br>
 <br>
 Curiosity piques their interests, but they remember the importance of staying cautious online. They all suspect something 
-<<link"suspicious">><<script>>
-Dialog.setup("What is Phishing?", "PhishingTooltip1");
-Dialog.wiki(Story.get("PhishingTooltip1").processText());
-Dialog.open();
-<</script>><</link>>
+<<link"suspicious">><<script>>Dialog.setup("What is Phishing?", "PhishingTooltip1");Dialog.wiki(Story.get("PhishingTooltip1").processText());Dialog.open();<</script>><</link>>
 about this message. They are, to differing degrees, aware that cybercriminals often exploit social media platforms to deceive unsuspecting users. 
 <br>
 <br>
@@ -78,7 +74,7 @@ While ?A1 is going through their emails, they notice a message from the universi
 Once you've finished figuring out what exactly makes these emails so untrustworthy, let's [[double check|SpearPhishingChoice]] your answer!
 
 :: SpearCycle [nobr]
-The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
+The <<link"first email">><<script>>Dialog.setup("The Suspicious Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
 <<cycle "$email1Answer">>
     <<option "it's got a weird logo." 1>>
     <<option "it's trying to pressure me!" 2>>
@@ -87,7 +83,7 @@ The <<link"first email">><<script>>Dialog.setup("First Email", "Email1");Dialog.
     <<option "it's generic." 5>>
 <</cycle>>
 <br>
-And the <<link"second email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
+And the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
 <<cycle "$email2Answer">>
     <<option "it's got a silly logo." 1>>
     <<option "it's trying to rush me!" 2>>
@@ -96,7 +92,7 @@ And the <<link"second email">><<script>>Dialog.setup("First Email", "Email1");Di
     <<option "it reads like really bad automail." 5>>
 <</cycle>>
 <br>
-Finally, the <<link"third email">><<script>>Dialog.setup("First Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s suspicious because...
+Finally, the <<link"third email">><<script>>Dialog.setup("The Strange Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s strange because...
 <<cycle "$email3Answer">>
     <<option "it's got a grainy logo." 1>>
     <<option "it's trying to hurry me up!" 2>>
@@ -141,7 +137,7 @@ Look out for the following: quality of company logo, presence of unique informat
 
 :: FilesharingIntroduction [nobr]
 <<set $currentChapter to "phishing">>
-As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
+As ?A3 sits in the bustling Main Bar, nursing a drink and waiting for a society meeting to begin, they're in the mood for some memes. Just as they're about to go onto their favourite time-skipping-app, they realise that they might as well save some data while they're at it and connect to the <<link"free public Wi-Fi network">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip1");Dialog.wiki(Story.get("FilesharingTooltip1").processText());Dialog.open();<</script>><</link>>. Which of the possible actions ?A3 might take is the most likely to protect their online activity?
 <br><br>
 <<cycle "$fileshare1">>
     <<option "Before memes, ?A3 decides to double-check that their drink purchase made it through and they haven't accidentally defrauded The Union. So, they open up their banking app." 1>>
@@ -159,7 +155,7 @@ Then, ?A3 faces the [[consequences of their actions|FilesharingChoice1]]!
 
 
 :: FilesharingTooltip1
-Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
+Public Wi-Fi: A wireless network accessible to the public, typically (but not always) provided by businesses or institutions, allowing users to connect to the internet, often for free. Can be made more safe with a <<link"VPN">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip2");Dialog.wiki(Story.get("FilesharingTooltip2").processText());Dialog.open();<</script>><</link>> (Virtual Private Network).
 
 :: FilesharingTooltip2
 VPN (Virtual Private Network): A technology that creates a secure and encrypted connection over a public network, such as the internet, providing anonymity for users, usually comes at an extra financial cost. 
@@ -204,7 +200,7 @@ Almost there! You have the right idea. Hackers can generate fake Wi-Fi notificat
 <<else>>
 Correct! 
 <</if>>
-Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingTooltip3");Dialog.wiki(Story.get("FilesharingTooltip3").processText());Dialog.open();<</script>><</link>> means avoiding the risks of joining public Wi-Fi altogether, so you're better off using mobile data when you can. 
+Using <<link"mobile data">><<script>>Dialog.setup("Wi-Fi and Other Connections", "FilesharingTooltip3");Dialog.wiki(Story.get("FilesharingTooltip3").processText());Dialog.open();<</script>><</link>> means avoiding the risks of joining public Wi-Fi altogether, so you're better off using mobile data when you can. 
 <br><br>
 <span class='dinkus'>* * *</span>
 <br><br>
@@ -212,7 +208,7 @@ Using <<link"mobile data">><<script>>Dialog.setup("Filesharing", "FilesharingToo
 <br><br>
 <<cycle "$fileshare3">>
     <<option "?A2 finds the textbook at a great price on a second-hand website. Score! They snatch it up quickly and proceed with the transaction, before anyone else can get it." 1>>
-    <<option "?A2 ensures that the website they're visiting has a padlock sign on the web address bar and says <<link'HTTPS'>><<script>>Dialog.setup('Filesharing', 'FilesharingTooltip4');Dialog.wiki(Story.get('FilesharingTooltip4').processText());Dialog.open();<</script>><</link>>, verifying the site's security and <<link'encryption'>><<script>>Dialog.setup('Filesharing', 'FilesharingTooltip5');Dialog.wiki(Story.get('FilesharingTooltip5').processText());Dialog.open();<</script>><</link>> before making any purchases." 2>>
+    <<option "?A2 ensures that the website they're visiting has a padlock sign on the web address bar and says <<link'HTTPS'>><<script>>Dialog.setup('Wi-Fi and Other Connections', 'FilesharingTooltip4');Dialog.wiki(Story.get('FilesharingTooltip4').processText());Dialog.open();<</script>><</link>>, verifying the site's security and <<link'encryption'>><<script>>Dialog.setup('Wi-Fi and Other Connections', 'FilesharingTooltip5');Dialog.wiki(Story.get('FilesharingTooltip5').processText());Dialog.open();<</script>><</link>> before making any purchases." 2>>
     <<option "?A2 decides to switch from public Wi-Fi to using mobile data to buy the textbook." 3>>
 <</cycle>>
 <br><br>
