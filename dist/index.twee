@@ -757,46 +757,114 @@ Let's [[start|StudentIntroductions]]!
 Congratulations! You've finished <span class='textimportant'>'CYBERSECURITY AND YOU!'</span>!
 <br><span class='dinkus'>* * *</span><br>
 You got $points.phishing/5 questions correct for <span class='textimportant'>Phishing</span>, $points.finance/3 questions correct for <span class='textimportant'>Financial Scams</span> and $points.passwords/2 questions correct for <span class='textimportant'>Passwords</span>!
+<br><span class='dinkus'>* * *</span><br>
 <<if $points.phishing eq 5 and $points.finance eq 3 and $points.passwords eq 2>>
 <br><br>
-?A1: Wow! You're really good at this! Wish I could learn from you!
+?A1b: Wow! You're really good at this! Wish I could learn from you!
 <br><br>
-?A3: Bah, this stuff is <i>easy</i>. What's there to be impressed about?
+?A3b: Bah, this stuff is <i>easy</i>. What's there to be impressed about?
 <br><br>
-?A2: Hey, be nice. They must have tried really hard to get all the questions right.
+?A2b: Hey, be nice. They must have tried really hard to get all the questions right.
 <br><br>
-?A4: Mn.
+?A4b: Mn.
 <br><br>
-?A5: Whatever! See ya!
-<center><span class='textinfo'>The End</span></center>
+?A5b: Whatever! See ya!
+<center><span class='textinfo'>The End</span>
+<i>Good Ending: The World Turns On</i></center>
 <<elseif $points.phishing eq 0 and $points.finance eq 0 and $points.passwords eq 0>>
 <br><br>
-?A3: Wow. You suck at this!
+?A3b: Wow. You suck at this!
 <br><br>
-?A5: 'S not like you could do any better.
+?A5b: 'S not like you could do any better.
 <br><br>
-?A2: Ack! No fighting the highschooler!
+?A2b: Ack! No fighting the highschooler!
 <br><br>
-?A4: Mn.
+?A4b: Mn.
 <br><br>
-?A1: Uh. Looks like we're busy. Come back after the brea—!
-<center><span class='textbad'>ERROR! LOST CONNECTION!</span></center>
+?A1b: Uh. Looks like we're busy. But I'm sure that you'll be able to better next—! Ah! Don't pick up the chair! Put that down! No!
+<center><span class='textbad'>ERROR! LOST CONNECTION!</span>
+<br><br>
+<i>Bad Ending: Fight Club</i></center>
+<<elseif $points.passwords eq 0>>
+?A5b: Ha! You're not very good with passwords, aren't you?
+<br><br>
+?A3b: Not like you're brilliant at it either, Mr. Famous-TikTok-Star.
+<br><br>
+?A5b: Hey!
+<br><br> 
+?A2b: Calm down everyone. I'm sure that they learned a lot from this.
+<br><br>
+?A4b: Mn.
+<br><br>
+?A1b: Yeah! If we all work together, I'm sure we'll get a better score next time~!
+<br><br>
+?A3b: Ha! Do you really think that?
+<br><br>
+?A1: So long as you believe in yourself, you'll always improve!
+<br><br>
+?A5b: And pay attention to me next time, or you'll get it wrong again.
+<br><br>
+?A3b: Okay, look here—
+<center><span class='textbad'>ERROR! LOST CONNECTION!</span>
+<br><br>
+<i>Bad Ending: The Will to Fight</i>
+</center>
+<<elseif $points.finance eq 0>>
+?A1b: Oh. Huh. Guess we kinda messed up a lot.
+<br><br>
+?A3b: Not my fault. I was busy.
+<br><br>
+?A5b: You were <i>with</i> them!
+<br><br>
+?A3b: And? I'm not to blame for this.
+<br><br>
+?A4b: Mn.
+<br><br>
+?A3b, ?A5b: See? ?A4 agrees with me! Argh! Stop copying me!
+<br><br>
+?A2b: Okay, guys. Looks like things are heating up and we're losing our heads. Why don't we—
+<center><span class='textbad'>ERROR! LOST CONNECTION!</span>
+<br><br>
+<i>Bad Ending: Mo' Money, Mo' Problems</i>
+</center>
+<<elseif $points.phishing eq 0>>
+?A2b: How did we get them all wrong? That's impossible!
+<br><br>
+?A1b: Nothing's impossible if you put your mind to it!
+<br><br>
+?A3b: Is that supposed to be encouraging?
+<br><br>
+?A1b: Yes!
+<br><br>
+?A5b: I don't feel very encouraged. Anybody else? Yeah, nobody's feeling very encouraged right now, sorry ?A1.
+<br><br>
+?A4b: Mn. Perhaps it would be better to say: "We'll do better next time!" Or something like that.
+<br><br>
+?A3b: See! See! I <i>told</i> you ?A4 could talk! And none of you believed me!
+<br><br>
+?A4b: Hm.
+<br><br>
+?A3b: Okay, is it just me, or is that a ringing noise—?
+<center><span class='textbad'>ERROR! LOST CONNECTION!</span>
+<br><br>
+<i>Bad Ending: Things That Man Was Not Supposed to Know</i></center>
 <<else>>
 <br><br>
-?A3: Hmm. Could be better. Could be worse.
+?A3b: Hmm. Could be better. Could be worse.
 <br><br>
-?A2: You could say it more diplomatically you know.
+?A2b: You could say it more diplomatically you know.
 <br><br>
-?A5: Yeah! It's not their fault that they got a question or two wrong!
+?A5b: Yeah! It's not their fault that they got a question or two wrong!
 <br><br>
-?A4: Mn.
+?A4b: Mn.
 <br><br>
-?A3: I—it's literally their fault. What are you even talking about?
+?A3b: I—it's literally their fault. What are you even talking about?
 <br><br>
-?A1: Okay! Better luck next time. See-you-then!
+?A1b: Okay! Better luck next time. See-you-then!
 <br><br>
-?A3: Wha—?!
-<center><span class='textinfo'>The End</span></center>
+?A3b: Wha—?!
+<center><span class='textinfo'>The End</span>
+<i>Medium Ending: Better Luck Next Time~!</i></center>
 <</if>>
 
 
