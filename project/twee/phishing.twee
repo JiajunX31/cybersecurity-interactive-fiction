@@ -79,7 +79,7 @@ The <<link"first email">><<script>>Dialog.setup("The Suspicious Email", "Email1"
     <<option "it's generic." 5>>
 <</cycle>>
 <br>
-And the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s weird because...
+And the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email2");Dialog.wiki(Story.get("Email2").processText());Dialog.open();<</script>><</link>>'s weird because...
 <<cycle "$email2Answer">>
     <<option "it's got a silly logo." 1>>
     <<option "it's trying to rush me!" 2>>
@@ -88,7 +88,7 @@ And the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email1"
     <<option "it reads like really bad automail." 5>>
 <</cycle>>
 <br>
-Finally, the <<link"third email">><<script>>Dialog.setup("The Strange Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s strange because...
+Finally, the <<link"third email">><<script>>Dialog.setup("The Strange Email", "Email3");Dialog.wiki(Story.get("Email3").processText());Dialog.open();<</script>><</link>>'s strange because...
 <<cycle "$email3Answer">>
     <<option "it's got a grainy logo." 1>>
     <<option "it's trying to hurry me up!" 2>>
@@ -104,13 +104,13 @@ Spear-phishing attacks are done to target a specific individual. The most common
 Look out for the following: quality of company logo, presence of unique information, use of a pressuring/threatening tone, bad or irregular formatting, poor grammar/spelling, if the email address corresponds with the address the sender is claiming to be (check if possible).
 
 :: Email1
-[img[email]]
+[img[email1]]
 
 :: Email2
-[img[email]]
+[img[email2]]
 
 :: Email3
-[img[email]]
+[img[email3]]
 
 
 
@@ -119,7 +119,7 @@ Look out for the following: quality of company logo, presence of unique informat
 ?A1 has much better instincts than you.
 <br>
 <br>
-?A1b: Obviously, the first email's got really weird formatting and the second email doesn't even have a logo. As for the third email, it looks like somebody used a really, really bad version of Google Translate to write it.
+?A1b: Obviously, the <<link"first email">><<script>>Dialog.setup("The Suspicious Email", "Email1");Dialog.wiki(Story.get("Email1").processText());Dialog.open();<</script>><</link>>'s got really weird formatting and the <<link"second email">><<script>>Dialog.setup("The Weird Email", "Email2");Dialog.wiki(Story.get("Email2").processText());Dialog.open();<</script>><</link>> has a weird logo. As for the <<link"third email">><<script>>Dialog.setup("The Strange Email", "Email3");Dialog.wiki(Story.get("Email3").processText());Dialog.open();<</script>><</link>>, it looks like somebody used a really, really bad version of Google Translate to write it.
 <<else>>
 <<set $points.phishing += 1>>
 ?A1b: Hey, you've got everything right! Looks like you're as good as me when it comes to figuring out who's trying to scam you!
