@@ -127,6 +127,40 @@ Second semester for ?A1 is full of stress due to trying to find housing and a se
     Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the <a href="https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime">Action Fraud</a> website or phone 0300 123 2040.
 <</if>>
 <br><span class='dinkus'>* * *</span><br>
+<center>$points.finance/3 questions answered correctly!</center>
+<br><br>
+<<if $points.finance eq 3>>
+?A1b: Whoa! We did really well! <<if $points.phishing eq 5>>Again!<</if>>
+<br><br>
+?A3b: And it's all thanks to me. You're welcome.
+<br><br>
+?A2b: Ah, don't listen to them. It's the result of your own hard work. You should be proud of yourself.
+<br><br>
+?A4b: Mn.
+<<elseif $points.finance eq 0>>
+?A4b: Hm.
+<br><br>
+?A2b: Ah. Better luck next time, I suppose. <<if $points.phishing eq 0>>We can't get zeros all the way through, can we?
+<br><br>
+?A3b: I suppose we'll be the first to find out.
+<br><br>
+?A1b: Oh, please don't say that, you're making it <i>worse</i>
+<<else>>
+<br><br>
+?A3b: Yeah. And maybe you should listen to me more? I <i>am</i> a CS major, you know.
+<br><br>
+?A1b: Okay then! I'll be in your care!
+<</if>>
+<<else>>
+?A3b: Huh.
+<br><br>
+?A2b: Hm.
+<br><br>
+?A1b: Mn.
+<br><br>
+?A4b: Okay, are all you guys just copying me now? Is that what it is?
+<</if>>
+<br><span class='dinkus'>* * *</span><br>
 Congratulations! You've finished <span class='textimportant'>Chapter Two: Financial Scams</span>!
 <p><br></p>
 <center>[[continue to the next chapter?|PasswordsA5Introduction]]</center>
