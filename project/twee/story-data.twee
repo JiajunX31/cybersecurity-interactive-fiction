@@ -131,6 +131,8 @@ A1 to A4 are tagged with 'noreturn' to reflect this. see script.js */
 
 
 :: Debug
+Note: Jumping to passages may affect points system
+
 Jump to...
 
  phishing.twee
@@ -149,6 +151,12 @@ passwords.twee
 
 <<button "Unlock Character Summaries">>
 <<set $isUnlockCharacterSummaries to true>>
+<<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
+<</button>>
+
+<<button "Unlock All Characters">>
+<<set $isUnlockA4 to true>>
+<<set $isUnlockA5 to true>>
 <<script>>state.display(state.active.title, null, "back")<</script>> /* refresh passage */
 <</button>>
 

@@ -148,3 +148,12 @@ $(document).on(':passageend', function (ev) {
 		check.addEventListener("click", checkOrder);
 	}
 });
+
+// scroll to the top of the passage, on passages tagged 'scrolltop'
+// https://stackoverflow.com/questions/10744299/scroll-back-to-the-top-of-scrollable-div
+$(document).on(':passageend', function (ev) {
+	if (ev.passage.tags.includes('scrolltop')) {
+		var myDiv = document.getElementById('passages');
+		myDiv.scrollTop = 0;
+	}
+});

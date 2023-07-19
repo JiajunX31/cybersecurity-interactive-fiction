@@ -85,6 +85,23 @@ button {
   font-size: 1.2em;
 }
 
+#ui-dialog-body img {
+  max-width:100%;
+  max-height:100%;
+  object-fit: contain;
+}
+ /* phishing email images only */
+#ui-dialog-body.Email1 {
+  padding: 0;
+}
+#ui-dialog-body.Email2 {
+  padding: 0;
+}
+#ui-dialog-body.Email3 {
+  padding: 0;
+}
+
+
 #ui-dialog-titlebar {
   background-color: #00539b;
   font-family: 'PT Sans', Helvetica, Arial, sans-serif;
