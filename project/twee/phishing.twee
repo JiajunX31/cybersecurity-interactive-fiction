@@ -235,6 +235,34 @@ Encryption: The process of encoding data or information in a way that makes it u
     You got it! But you still have to make sure that the website itself isn't insecure or a vector of attack in of itself.
 <</if>>
 <br><span class='dinkus'>* * *</span><br>
+<center>$points.phishing/5 questions answered correctly!</center>
+<br><br>
+<<if $points.phishing eq 5>>
+?A1b: Hey! Looks like you aced this chapter! Well done!
+<br><br>
+?A3b: Yeah, well, it wasn't like it was hard or anything.
+<br><br>
+?A2b: Oh, be a little nicer, why don't you? They still did really well.
+<<elseif $points.phishing eq 0>>
+?A3b: Wait, seriously? Not even a single question?
+<br><br>
+?A1b: Oh dear. I knew that it would be hopeless. You can't teach an old dog new tricks, after all.
+<br><br>
+?A2b: You're in your first year. You're a freshman!
+<br><br>
+?A1b: Yeah! And that's ancient in dog-years!
+<<else>>
+?A2b: Well, you win some, you lose some. That's what happens when you're learning!
+<br><br>
+?A1b: Looks like I still have a while to go though. 
+<br><br>
+?A3b: Eh. This stuff's really easy to pick up. I'm sure you'll get it in no time.
+<br><br>
+?A1b: Yeah? You really think so?
+<br><br>
+?A3b: Duh.
+<</if>>
+<br><span class='dinkus'>* * *</span><br>
 Congratulations! You've finished <span class='textimportant'>Chapter One: Phishing</span>!
 <p><br></p>
 <center>[[continue to the next chapter?|AccomodationScamsIntroduction]]</center>
