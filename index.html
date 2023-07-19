@@ -195,6 +195,40 @@ Second semester for ?A1 is full of stress due to trying to find housing and a se
     Home Office will never contact you directly to ask for payment. Nor will they ask to be paid by email, at a visa application centre, or into a personal bank account. You can only pay them at the official website. If you receive suspicious emails, letters, or telephone calls, you should really report them on the &lt;a href=&quot;https://www.actionfraud.police.uk/reporting-fraud-and-cyber-crime&quot;&gt;Action Fraud&lt;/a&gt; website or phone 0300 123 2040.
 &lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
+&lt;center&gt;$points.finance/3 questions answered correctly!&lt;/center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;&lt;if $points.finance eq 3&gt;&gt;
+?A1b: Whoa! We did really well! &lt;&lt;if $points.phishing eq 5&gt;&gt;Again!&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;br&gt;
+?A3b: And it&#39;s all thanks to me. You&#39;re welcome.
+&lt;br&gt;&lt;br&gt;
+?A2b: Ah, don&#39;t listen to them. It&#39;s the result of your own hard work. You should be proud of yourself.
+&lt;br&gt;&lt;br&gt;
+?A4b: Mn.
+&lt;&lt;elseif $points.finance eq 0&gt;&gt;
+?A4b: Hm.
+&lt;br&gt;&lt;br&gt;
+?A2b: Ah. Better luck next time, I suppose. &lt;&lt;if $points.phishing eq 0&gt;&gt;We can&#39;t get zeros all the way through, can we?
+&lt;br&gt;&lt;br&gt;
+?A3b: I suppose we&#39;ll be the first to find out.
+&lt;br&gt;&lt;br&gt;
+?A1b: Oh, please don&#39;t say that, you&#39;re making it &lt;i&gt;worse&lt;/i&gt;
+&lt;&lt;else&gt;&gt;
+&lt;br&gt;&lt;br&gt;
+?A3b: Yeah. And maybe you should listen to me more? I &lt;i&gt;am&lt;/i&gt; a CS major, you know.
+&lt;br&gt;&lt;br&gt;
+?A1b: Okay then! I&#39;ll be in your care!
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;else&gt;&gt;
+?A3b: Huh.
+&lt;br&gt;&lt;br&gt;
+?A2b: Hm.
+&lt;br&gt;&lt;br&gt;
+?A1b: Mn.
+&lt;br&gt;&lt;br&gt;
+?A4b: Okay, are all you guys just copying me now? Is that what it is?
+&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
 Congratulations! You&#39;ve finished &lt;span class=&#39;textimportant&#39;&gt;Chapter Two: Financial Scams&lt;/span&gt;!
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;center&gt;[[continue to the next chapter?|PasswordsA5Introduction]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="17" name="PasswordsA5Introduction" tags="nobr" position="850,225" size="100,100">&lt;&lt;set $currentChapter to &quot;passwords&quot;&gt;&gt;
@@ -313,7 +347,47 @@ The latter password is the 3 Random Word method recommended by the UK&#39;s NCC.
 &lt;&lt;if $isPassChoiceCorrect is false&gt;&gt;
     You didn&#39;t identify the two strongest passwords correctly. For more experience, try generating some passwords using websites, or try the 3 Random Words method.
 &lt;&lt;/if&gt;&gt;
-&lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
+&lt;center&gt;$points.passwords/2 questions answered correctly!&lt;/center&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;&lt;if $points.passwords eq 2&gt;&gt;
+?A5b: Wow! You&#39;re great at this!
+&lt;br&gt;&lt;br&gt;
+?A3b: Eh, the questions were kinda easy, weren&#39;t they?
+&lt;br&gt;&lt;br&gt;
+?A1b: Not to me.
+&lt;br&gt;&lt;br&gt;
+?A2b: But you learned, yeah?
+&lt;br&gt;&lt;br&gt;
+?A1b: Yeah!
+&lt;br&gt;&lt;br&gt;
+?A4b: Mhm!
+&lt;&lt;elseif $points.passwords eq 0&gt;&gt;
+?A5b: Wow! You&#39;re kinda bad at this!
+&lt;br&gt;&lt;br&gt;
+?A3b: You&#39;re not supposed to say that!
+&lt;br&gt;&lt;br&gt;
+?A2b: ?A3? Have you, have you finally learned how to talk more politely??
+&lt;br&gt;&lt;br&gt;
+?A3b: Out loud is what I mean! Just silently judge them like a normal person!
+&lt;br&gt;&lt;br&gt;
+?A4b: Hm.
+&lt;br&gt;&lt;br&gt;
+?A1b: You said it.
+&lt;&lt;else&gt;&gt;
+?A5b: Eh.
+&lt;br&gt;&lt;br&gt;
+?A3b: Eh.
+&lt;br&gt;&lt;br&gt;
+?A2b: Come on! Where&#39;s the support?
+&lt;br&gt;&lt;br&gt;
+?A1b: If we study harder, we&#39;ll do better next time?
+&lt;br&gt;&lt;br&gt;
+?A2b: That&#39;s the spirit!
+&lt;br&gt;&lt;br&gt;
+?A4b: Mn.
+&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
 Congratulations! You&#39;ve finished &lt;span class=&#39;textimportant&#39;&gt;Chapter Three: Passwords&lt;/span&gt;!
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;center&gt;[[continue to the end?|Ending]]&lt;/center&gt;</tw-passagedata><tw-passagedata pid="25" name="PasswordManagerTooltip" tags="" position="600,350" size="100,100">A password manager is a secure digital tool that helps users store, organize, and generate strong and unique passwords for their various online accounts. It typically operates through a master password, which grants access to an encrypted database containing all the user&#39;s passwords. Password managers eliminate the need to remember multiple complex passwords and enhance online security by promoting the use of strong, randomized passwords.</tw-passagedata><tw-passagedata pid="26" name="PhishingIntroduction" tags="nobr" position="725,350" size="100,100">&lt;&lt;set $currentChapter to &quot;phishing&quot;&gt;&gt;
@@ -482,6 +556,33 @@ HTTP (Hypertext Transfer Protocol): The protocol used for transmitting data over
 &lt;&lt;else&gt;&gt;
     &lt;&lt;set $points.phishing += 1&gt;&gt;
     You got it! But you still have to make sure that the website itself isn&#39;t insecure or a vector of attack in of itself.
+&lt;&lt;/if&gt;&gt;
+&lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
+&lt;center&gt;$points.phishing/5 questions answered correctly!&lt;/center&gt;
+&lt;&lt;if $points.phishing eq 5&gt;&gt;
+?A1b: Hey! Looks like you aced this chapter! Well done!
+&lt;br&gt;&lt;br&gt;
+?A3b: Yeah, well, it wasn&#39;t like it was hard or anything.
+&lt;br&gt;&lt;br&gt;
+?A2b: Oh, be a little nicer, why don&#39;t you? They still did really well.
+&lt;&lt;elseif $points.phishing eq 0&gt;&gt;
+?A3b: Wait, seriously? Not even a single question?
+&lt;br&gt;&lt;br&gt;
+?A1b: Oh dear. I knew that it would be hopeless. You can&#39;t teach an old dog new tricks, after all.
+&lt;br&gt;&lt;br&gt;
+?A2b: You&#39;re in your first year. You&#39;re a freshman!
+&lt;br&gt;&lt;br&gt;
+?A1b: Yeah! And that&#39;s ancient in dog-years!
+&lt;&lt;else&gt;&gt;
+?A2b: Well, you win some, you lose some. That&#39;s what happens when you&#39;re learning!
+&lt;br&gt;&lt;br&gt;
+?A1b: Looks like I still have a while to go though. 
+&lt;br&gt;&lt;br&gt;
+?A3b: Eh. This stuff&#39;s really easy to pick up. I&#39;m sure you&#39;ll get it in no time.
+&lt;br&gt;&lt;br&gt;
+?A1b: Yeah? You really think so?
+&lt;br&gt;&lt;br&gt;
+?A3b: Duh.
 &lt;&lt;/if&gt;&gt;
 &lt;br&gt;&lt;span class=&#39;dinkus&#39;&gt;* * *&lt;/span&gt;&lt;br&gt;
 Congratulations! You&#39;ve finished &lt;span class=&#39;textimportant&#39;&gt;Chapter One: Phishing&lt;/span&gt;!
