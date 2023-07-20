@@ -377,53 +377,72 @@ i {
   color: var(--text-color);
   padding: 0;
   list-style-type: none;
- }
- .draggable-list li {
+}
+.draggable-list li {
   background-color: #000;
   display: flex;
   flex: 1;
- }
- .draggable-list li:not(:last-of-type) {
+}
+.draggable-list li:not(:last-of-type) {
   border-bottom: 1px solid var(--border-color);
- }
- .draggable-list .number {
+}
+.draggable-list .number {
   background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   width: 2em;
- }
- .draggable-list li.over .draggable {  
+}
+.draggable-list li.over .draggable {  
   background-color: #a0a0a0;
- }
- .draggable-list .item-name {  
+}
+.draggable-list .item-name {  
   margin: 0 20px 0 0;
- }
- .draggable-list li.right .item-name {  
+}
+.draggable-list li.right .item-name {  
   color: #3ae374;
- }
- .draggable-list li.wrong .item-name {  
+}
+.draggable-list li.wrong .item-name {  
   color: #ff3838;
- }
- .draggable {  
+}
+
+.draggable {  
   cursor: pointer;
   display: flex;
   align-items: center;
   padding: 15px;
   flex: 1;
- }
- .check-btn {
-  background-color: var(--background-color);
-  border: none;
-  color: var(--text-color);
+}
+
+.check-btn {
+  background-color: #00539b;
+  color: #fff;
   font-size: 1em;
-  padding: .5em 1em;
+  font-weight: bold;
+  text-transform: none;
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  padding-top: 0.3em;
+  padding-right: 0.75em;
+  padding-bottom: 0.3em;
+  padding-left: 0.75em;
   cursor: pointer;
- }
- .check-btn:active {
+}
+.check-btn:hover {
+  background-color: #003e74;
+  border: none;
+  font-size: 1em;
+  padding-top: 0.3em;
+  padding-right: 0.75em;
+  padding-bottom: 0.3em;
+  padding-left: 0.75em;
+  cursor: pointer;
+}
+.check-btn:active {
   transform: scale(0.98);
- }
+  color: #202024;
+  background: #FFB400;
+}
 
 
 
