@@ -2,6 +2,10 @@
 
 github pages website: [https://jiajunx31.github.io/cybersecurity-interactive-fiction/](https://jiajunx31.github.io/cybersecurity-interactive-fiction/)
 
+## Development Environment Setup
+
+You need to have [NodeJS](docs/installing-node.md) and [Tweego](docs/installing-tweego.md) installed on your computer to compile Tweego source code.
+
 ## To successfully update website
 
 ### On Windows

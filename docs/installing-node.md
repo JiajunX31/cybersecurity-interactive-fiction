@@ -1,6 +1,18 @@
-## Installing NodeJS
+# Installing NodeJS
 
-You can install node from [here](https://nodejs.org/en/).  You want to grab the LTS version, usually the one on the left.  This will download an msi file, that will then install node on your system.
+You can install node from [here](https://nodejs.org/en/).  You want to grab the LTS version, usually the one on the left.  
+
+## MacOS
+
+This will download a pkg file, that will then install node on your system.
+
+### Alternatively through Homebrew
+
+If you have homebrew installed, you can also install node through that.  Simply run `brew install node` in a terminal.
+
+## Windows
+
+This will download an msi file, that will then install node on your system.
 
 The only thing to watch out for when installing Node is to make sure that it is added to your path, and that you include npm.  By default, both of these options will be enabled.  For best results, install node on your main hard drive (usually C) with your operating system.
 

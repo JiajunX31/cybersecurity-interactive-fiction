@@ -1,4 +1,6 @@
-## Installing Tweego
+# Installing Tweego
+
+## Windows
 
 On most versions of Windows, you can use [this installer](https://github.com/ChapelR/tweego-installer/releases) to set up Tweego instead of installing it manually. If you cannot use said installer or prefer to set it up manually, carry on with these instructions.
 
@@ -69,3 +71,49 @@ Set the variable name to `TWEEGO_PATH` and the value to the path that leads to y
 ### Step 5: Testing Tweego
 
 Open a command prompt and type `tweego`.  If the command is unrecognized, something was messed up, otherwise, an explanation of tweego should print out.  Type in `tweego --list-formats` to make sure you've installed all the formats correctly and set up `TWEEGO_PATH` correctly.  It should display all the formats you have in your `story-formats` directory.
+
+## MacOS
+
+Although this approach was tested on a Mac, it should work on other *nix operating systems as well.
+
+The recommended way to install Tweego on MacOS is building from source.  This is a bit more involved than the Windows installation, but it's not too bad.  
+
+First, you need to have [go](https://go.dev) installed on your computer. And then you can follow the instructions provided by [tweego](https://github.com/tmedwards/tweego) to build from source. 
+
+To make `tweego` accessible from anywhere, you need to add the path to the `tweego` binary to your `PATH` environment variable. You can do this by adding the following line to your `~/.bashrc` or `./zshrc` file dependeing on which shell you are using:
+
+```bash
+echo 'export PATH=$PATH:/path/to/tweego' >> ~/.bashrc && source ~/.bashrc # for bash
+echo 'export PATH=$PATH:/path/to/tweego' >> ~/.zshrc && source ~/.zshrc # for zsh
+```
+
+Now you have the tweego compiler, you may need to manually download some story formats from [here](https://github.com/ChapelR/tweego-installer/releases). You can choose either format of the compressed file as long as you can unzip it.
+
+![alt text](https://i.imgur.com/25gpDfT.png)
+
+Once you unzip the file, you are able to extract the story formats from `tweego-installer-x.x.x/pack/story-formats`
+
+![alt text](https://i.imgur.com/8MMZpHa.png)
+
+![alt text](https://imgur.com/aS1zLQu.png)
+
+You can copy the `story-formats` folder and paste it in the under the `tweego` directory.
+
+To test if `tweego` is installed correctly and you have valid story formats, you can run `tweego --list-formats` in your terminal. If you see a list of story formats as the following, then you are good to go.
+
+```bash
+$ tweego --list-formats
+
+Available formats:
+  ID                     Name (Version) [Details]
+  --------------------   ------------------------------
+  chapbook-1             Chapbook (1.0.0)
+  harlowe-1              Harlowe (1.2.4)
+  harlowe-2              Harlowe (2.1.0)
+  harlowe-3              Harlowe (3.1.0)
+  paperthin-1            Paperthin (1.0.0) [proofing]
+  snowman-1              Snowman (1.4.0)
+  snowman-2              Snowman (2.0.2)
+  sugarcube-1            SugarCube (1.0.35)
+  sugarcube-2            SugarCube (2.35.0)
+```
