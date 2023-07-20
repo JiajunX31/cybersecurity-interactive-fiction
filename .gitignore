@@ -63,3 +63,6 @@ typings/
 dist/*.html
 
 .DS_Store
+
+# tweego build log
+build.log
