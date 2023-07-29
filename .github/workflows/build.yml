@@ -22,11 +22,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+          cahce: 'npm'
 
       - name: build game
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
+          npm install
           npm run rebuild
           tweego dist/index.twee -o dist/index.html
 
